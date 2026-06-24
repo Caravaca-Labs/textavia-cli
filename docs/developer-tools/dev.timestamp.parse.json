@@ -1,0 +1,21 @@
+{
+  "id": "dev.timestamp.parse",
+  "name": "Parse timestamp",
+  "summary": "Parse a timestamp string.",
+  "description": "Parses an ISO 8601 string or Unix number into ISO and Unix forms.",
+  "category": "dev",
+  "command": "txv run dev.timestamp.parse",
+  "aliases": ["timestamp-parse"],
+  "examples": [
+    {
+      "title": "Parse",
+      "command": "txv timestamp parse \"2024-01-01T00:00:00Z\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/unix-time-converter",
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

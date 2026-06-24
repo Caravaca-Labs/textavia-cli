@@ -1,0 +1,21 @@
+{
+  "id": "dev.color.contrast",
+  "name": "Color contrast",
+  "summary": "Calculate WCAG contrast between two colors.",
+  "description": "Accepts two hex colors and reports contrast ratio plus WCAG AA/AAA pass booleans.",
+  "category": "dev",
+  "command": "txv run dev.color.contrast",
+  "aliases": ["color contrast"],
+  "examples": [
+    {
+      "title": "Check contrast",
+      "command": "txv color contrast \"#111111\" \"#ffffff\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/color-contrast-checker",
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

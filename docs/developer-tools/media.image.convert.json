@@ -1,0 +1,16 @@
+{
+  "id": "media.image.convert",
+  "name": "Image convert",
+  "summary": "Convert images between formats.",
+  "description": "Image conversion is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.image.convert",
+  "aliases": ["image convert"],
+  "examples": [],
+  "inputKind": ["image", "file"],
+  "outputKind": ["image", "file"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

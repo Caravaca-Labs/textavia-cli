@@ -1,0 +1,21 @@
+{
+  "id": "data.xml.format",
+  "name": "Format XML",
+  "summary": "Format XML with indentation.",
+  "description": "Tokenizes XML tags and text, then writes a consistently indented XML document.",
+  "category": "data",
+  "command": "txv run data.xml.format",
+  "aliases": ["xml format"],
+  "examples": [
+    {
+      "title": "Format XML",
+      "command": "txv xml format data.xml"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/xml-formatter",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

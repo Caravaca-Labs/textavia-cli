@@ -1,0 +1,21 @@
+{
+  "id": "data.json.to-markdown-table",
+  "name": "JSON to Markdown table",
+  "summary": "Convert JSON objects to a Markdown table.",
+  "description": "Converts a JSON object or array of objects to a GitHub-flavored Markdown table.",
+  "category": "data",
+  "command": "txv run data.json.to-markdown-table",
+  "aliases": ["json to-markdown-table", "json-to-markdown-table"],
+  "examples": [
+    {
+      "title": "JSON to Markdown",
+      "command": "txv json to-markdown-table users.json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-to-markdown-table",
+  "inputKind": ["json", "text", "file"],
+  "outputKind": ["markdown", "text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

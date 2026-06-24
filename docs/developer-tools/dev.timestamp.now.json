@@ -1,0 +1,21 @@
+{
+  "id": "dev.timestamp.now",
+  "name": "Timestamp now",
+  "summary": "Show the current timestamp.",
+  "description": "Returns the current ISO time and Unix epoch value.",
+  "category": "dev",
+  "command": "txv run dev.timestamp.now",
+  "aliases": ["timestamp-now", "now"],
+  "examples": [
+    {
+      "title": "Now",
+      "command": "txv timestamp now"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/unix-time-converter",
+  "inputKind": ["generated"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,22 @@
+{
+  "id": "encoding.base64.decode",
+  "name": "Base64 decode",
+  "summary": "Decode Base64 to text or bytes.",
+  "description": "Decodes a Base64 string to UTF-8 text by default, or raw bytes with --bytes.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.decode",
+  "aliases": ["b64decode", "base64-decode"],
+  "examples": [
+    {
+      "title": "Decode to text",
+      "command": "txv base64.decode \"SGVsbG8=\"",
+      "output": "Hello"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/base64-decode",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text", "bytes"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

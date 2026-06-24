@@ -1,0 +1,28 @@
+{
+  "id": "case.sentence",
+  "name": "Sentence case",
+  "summary": "Capitalize the first character only.",
+  "description": "Capitalize the first character only. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.sentence",
+  "aliases": ["sentence"],
+  "examples": [
+    {
+      "title": "Sentence case from positional text",
+      "command": "txv case sentence \"hello world\"",
+      "input": "hello world",
+      "output": "Hello world"
+    },
+    {
+      "title": "Sentence case from stdin",
+      "command": "echo \"hello world\" | txv case sentence"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-sentence",
+  "docsUrl": "https://textavia.com/tools/docs/case-sentence",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

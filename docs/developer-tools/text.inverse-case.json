@@ -1,0 +1,22 @@
+{
+  "id": "text.inverse-case",
+  "name": "Inverse case",
+  "summary": "Invert the case of every letter.",
+  "description": "Swaps uppercase and lowercase letters.",
+  "category": "text",
+  "command": "txv run text.inverse-case",
+  "aliases": ["invert-case"],
+  "examples": [
+    {
+      "title": "Inverse case",
+      "command": "txv text inverse-case \"aBcD\"",
+      "output": "AbCd"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/inverse-case",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

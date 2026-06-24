@@ -1,0 +1,28 @@
+{
+  "id": "case.camel",
+  "name": "camelCase",
+  "summary": "Convert to camelCase.",
+  "description": "Convert to camelCase. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.camel",
+  "aliases": ["camel"],
+  "examples": [
+    {
+      "title": "camelCase from positional text",
+      "command": "txv case camel \"Hello World\"",
+      "input": "Hello World",
+      "output": "helloWorld"
+    },
+    {
+      "title": "camelCase from stdin",
+      "command": "echo \"Hello World\" | txv case camel"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-camel",
+  "docsUrl": "https://textavia.com/tools/docs/case-camel",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "data.markdown.table-to-json",
+  "name": "Markdown table to JSON",
+  "summary": "Convert a Markdown table to JSON.",
+  "description": "Parses a GitHub-flavored Markdown table and emits JSON objects keyed by header.",
+  "category": "data",
+  "command": "txv run data.markdown.table-to-json",
+  "aliases": ["markdown table-to-json", "table markdown-to-json"],
+  "examples": [
+    {
+      "title": "Markdown table to JSON",
+      "command": "txv markdown table-to-json table.md"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/markdown-table-to-json",
+  "inputKind": ["table", "text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

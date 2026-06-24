@@ -1,0 +1,21 @@
+{
+  "id": "dev.cron.next",
+  "name": "Cron next runs",
+  "summary": "List upcoming cron run times.",
+  "description": "Computes upcoming UTC run times for a standard five-field cron expression.",
+  "category": "dev",
+  "command": "txv run dev.cron.next",
+  "aliases": ["cron next"],
+  "examples": [
+    {
+      "title": "Next runs",
+      "command": "txv cron next \"*/15 * * * *\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/cron-expression-generator",
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

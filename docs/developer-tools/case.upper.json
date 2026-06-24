@@ -1,0 +1,28 @@
+{
+  "id": "case.upper",
+  "name": "Uppercase",
+  "summary": "Convert text to uppercase.",
+  "description": "Convert text to uppercase. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.upper",
+  "aliases": ["upper"],
+  "examples": [
+    {
+      "title": "Uppercase from positional text",
+      "command": "txv case upper \"Hello World\"",
+      "input": "Hello World",
+      "output": "HELLO WORLD"
+    },
+    {
+      "title": "Uppercase from stdin",
+      "command": "echo \"Hello World\" | txv case upper"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-upper",
+  "docsUrl": "https://textavia.com/tools/docs/case-upper",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

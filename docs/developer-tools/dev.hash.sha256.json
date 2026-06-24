@@ -1,0 +1,26 @@
+{
+  "id": "dev.hash.sha256",
+  "name": "SHA256 hash",
+  "summary": "Compute the SHA256 digest.",
+  "description": "Hashes text, stdin, or a streaming file to a SHA256 hex digest.",
+  "category": "dev",
+  "command": "txv run dev.hash.sha256",
+  "aliases": ["sha256"],
+  "examples": [
+    {
+      "title": "Hash text",
+      "command": "txv hash sha256 \"abc\"",
+      "output": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    },
+    {
+      "title": "Hash a file",
+      "command": "txv hash sha256 --file big.bin"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/sha256-hash",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

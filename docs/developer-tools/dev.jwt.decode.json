@@ -1,0 +1,21 @@
+{
+  "id": "dev.jwt.decode",
+  "name": "JWT decode",
+  "summary": "Decode a JWT without verifying it.",
+  "description": "Decodes JWT header and payload locally. Signature not verified.",
+  "category": "dev",
+  "command": "txv run dev.jwt.decode",
+  "aliases": ["jwt decode"],
+  "examples": [
+    {
+      "title": "Decode JWT",
+      "command": "txv jwt decode token.txt"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/jwt-decoder",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

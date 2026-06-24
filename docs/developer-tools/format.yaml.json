@@ -1,0 +1,16 @@
+{
+  "id": "format.yaml",
+  "name": "YAML formatter",
+  "summary": "Format YAML source.",
+  "description": "YAML formatter is provided by the optional formatter plugin.",
+  "category": "format",
+  "command": "txv run format.yaml",
+  "aliases": ["format yaml"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-formatters"
+}

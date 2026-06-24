@@ -1,0 +1,16 @@
+{
+  "id": "media.pdf.extract-text",
+  "name": "PDF extract text",
+  "summary": "Extract text from a PDF.",
+  "description": "PDF text extraction is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.pdf.extract-text",
+  "aliases": ["pdf extract-text"],
+  "examples": [],
+  "inputKind": ["pdf", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

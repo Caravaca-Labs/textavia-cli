@@ -1,0 +1,16 @@
+{
+  "id": "media.pdf.merge",
+  "name": "PDF merge",
+  "summary": "Merge PDF files.",
+  "description": "PDF merging is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.pdf.merge",
+  "aliases": ["pdf merge"],
+  "examples": [],
+  "inputKind": ["pdf", "files"],
+  "outputKind": ["pdf", "file"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

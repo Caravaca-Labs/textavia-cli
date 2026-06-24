@@ -1,0 +1,22 @@
+{
+  "id": "text.reverse",
+  "name": "Reverse text",
+  "summary": "Reverse text by grapheme cluster.",
+  "description": "Reverses text by grapheme cluster so emoji and combining marks are preserved.",
+  "category": "text",
+  "command": "txv run text.reverse",
+  "aliases": ["reverse"],
+  "examples": [
+    {
+      "title": "Reverse",
+      "command": "txv text reverse \"abc 😀\"",
+      "output": "😀 cba"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/reverse-text",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

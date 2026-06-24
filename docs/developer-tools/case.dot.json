@@ -1,0 +1,28 @@
+{
+  "id": "case.dot",
+  "name": "dot.case",
+  "summary": "Convert to dot.case.",
+  "description": "Convert to dot.case. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.dot",
+  "aliases": ["dot"],
+  "examples": [
+    {
+      "title": "dot.case from positional text",
+      "command": "txv case dot \"Hello World\"",
+      "input": "Hello World",
+      "output": "hello.world"
+    },
+    {
+      "title": "dot.case from stdin",
+      "command": "echo \"Hello World\" | txv case dot"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-dot",
+  "docsUrl": "https://textavia.com/tools/docs/case-dot",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

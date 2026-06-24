@@ -1,0 +1,22 @@
+{
+  "id": "dev.json.minify",
+  "name": "Minify JSON",
+  "summary": "Minify JSON.",
+  "description": "Parses and re-emits compact JSON with no whitespace.",
+  "category": "dev",
+  "command": "txv run dev.json.minify",
+  "aliases": ["json-minify", "minify-json"],
+  "examples": [
+    {
+      "title": "Minify",
+      "command": "txv json minify '{\"a\": 1}'",
+      "output": "{\"a\":1}"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-minify",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

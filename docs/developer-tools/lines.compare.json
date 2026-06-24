@@ -1,0 +1,21 @@
+{
+  "id": "lines.compare",
+  "name": "Compare line lists",
+  "summary": "Compare two line lists.",
+  "description": "Compares --file (list A) against --other (list B) and reports items unique to each and shared.",
+  "category": "lines",
+  "command": "txv run lines.compare",
+  "aliases": ["compare"],
+  "examples": [
+    {
+      "title": "Compare",
+      "command": "txv lines compare --file a.txt --other b.txt"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/list-comparer",
+  "inputKind": ["files"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": true
+}

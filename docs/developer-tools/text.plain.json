@@ -1,0 +1,22 @@
+{
+  "id": "text.plain",
+  "name": "Plain text",
+  "summary": "Strip HTML/XML tags to plain text.",
+  "description": "Removes markup tags and collapses whitespace.",
+  "category": "text",
+  "command": "txv run text.plain",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Plain",
+      "command": "txv text plain \"<p>Hi</p>\"",
+      "output": "Hi"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/html-to-text",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

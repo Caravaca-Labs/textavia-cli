@@ -1,0 +1,21 @@
+{
+  "id": "dev.json.validate",
+  "name": "Validate JSON",
+  "summary": "Validate JSON and report diagnostics.",
+  "description": "Reports whether JSON is valid and includes parse diagnostics on failure.",
+  "category": "dev",
+  "command": "txv run dev.json.validate",
+  "aliases": ["json-validate", "validate-json"],
+  "examples": [
+    {
+      "title": "Validate",
+      "command": "txv json validate '{\"a\":1}'"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-validator",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

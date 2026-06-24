@@ -1,0 +1,21 @@
+{
+  "id": "text.remove-formatting",
+  "name": "Remove formatting",
+  "summary": "Remove zero-width and control characters.",
+  "description": "Removes zero-width characters, BOM, and non-printable control characters.",
+  "category": "text",
+  "command": "txv run text.remove-formatting",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Remove formatting",
+      "command": "txv text remove-formatting \"a\\u200Bb\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/remove-formatting",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

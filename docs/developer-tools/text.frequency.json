@@ -1,0 +1,21 @@
+{
+  "id": "text.frequency",
+  "name": "Word frequency",
+  "summary": "Count occurrences of each word.",
+  "description": "Produces a case-insensitive word frequency map.",
+  "category": "text",
+  "command": "txv run text.frequency",
+  "aliases": ["frequency"],
+  "examples": [
+    {
+      "title": "Frequency",
+      "command": "txv text frequency \"the the the\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/word-frequency",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

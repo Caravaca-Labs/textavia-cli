@@ -1,0 +1,28 @@
+{
+  "id": "case.kebab",
+  "name": "kebab-case",
+  "summary": "Convert to kebab-case.",
+  "description": "Convert to kebab-case. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.kebab",
+  "aliases": ["kebab"],
+  "examples": [
+    {
+      "title": "kebab-case from positional text",
+      "command": "txv case kebab \"Hello World\"",
+      "input": "Hello World",
+      "output": "hello-world"
+    },
+    {
+      "title": "kebab-case from stdin",
+      "command": "echo \"Hello World\" | txv case kebab"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-kebab",
+  "docsUrl": "https://textavia.com/tools/docs/case-kebab",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

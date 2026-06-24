@@ -1,0 +1,21 @@
+{
+  "id": "text.privacy-scrub",
+  "name": "Privacy scrub",
+  "summary": "Redact likely-sensitive substrings.",
+  "description": "Replaces emails, phone numbers, IPs, URLs, JWTs, basic auth, common API keys, and credit-card-like numbers with placeholders. Heuristic; review output before sharing.",
+  "category": "text",
+  "command": "txv run text.privacy-scrub",
+  "aliases": ["privacy-scrub", "scrub"],
+  "examples": [
+    {
+      "title": "Scrub",
+      "command": "txv text privacy-scrub \"email a@b.com from 1.2.3.4\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/data-privacy",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

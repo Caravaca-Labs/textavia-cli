@@ -1,0 +1,16 @@
+{
+  "id": "media.image.resize",
+  "name": "Image resize",
+  "summary": "Resize an image.",
+  "description": "Image resizing is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.image.resize",
+  "aliases": ["image resize"],
+  "examples": [],
+  "inputKind": ["image", "file"],
+  "outputKind": ["image", "file"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

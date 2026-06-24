@@ -1,0 +1,21 @@
+{
+  "id": "text.stats",
+  "name": "Text statistics",
+  "summary": "Report character, word, line, and sentence counts.",
+  "description": "Computes counts and byte size for the input text.",
+  "category": "text",
+  "command": "txv run text.stats",
+  "aliases": ["stats", "count"],
+  "examples": [
+    {
+      "title": "Stats",
+      "command": "txv text stats \"Hello world\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/word-count",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

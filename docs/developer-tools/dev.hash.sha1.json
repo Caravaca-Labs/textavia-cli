@@ -1,0 +1,26 @@
+{
+  "id": "dev.hash.sha1",
+  "name": "SHA1 hash",
+  "summary": "Compute the SHA1 digest.",
+  "description": "Hashes text, stdin, or a streaming file to a SHA1 hex digest.",
+  "category": "dev",
+  "command": "txv run dev.hash.sha1",
+  "aliases": ["sha1"],
+  "examples": [
+    {
+      "title": "Hash text",
+      "command": "txv hash sha1 \"abc\"",
+      "output": "a9993e364706816aba3e25717850c26c9cd0d89d"
+    },
+    {
+      "title": "Hash a file",
+      "command": "txv hash sha1 --file big.bin"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/sha1-hash",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

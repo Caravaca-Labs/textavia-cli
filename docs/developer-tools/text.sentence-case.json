@@ -1,0 +1,22 @@
+{
+  "id": "text.sentence-case",
+  "name": "Sentence case",
+  "summary": "Capitalize the first character only.",
+  "description": "Capitalizes the first character and lowercases the rest.",
+  "category": "text",
+  "command": "txv run text.sentence-case",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Sentence case",
+      "command": "txv text sentence-case \"hello world\"",
+      "output": "Hello world"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/sentence-case",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

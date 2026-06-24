@@ -1,0 +1,21 @@
+{
+  "id": "data.markdown.table-create",
+  "name": "Create Markdown table",
+  "summary": "Create a Markdown table from JSON or CSV.",
+  "description": "Creates a GitHub-flavored Markdown table from JSON object rows or CSV rows.",
+  "category": "data",
+  "command": "txv run data.markdown.table-create",
+  "aliases": ["markdown table-create", "table create"],
+  "examples": [
+    {
+      "title": "Create table",
+      "command": "txv table create users.csv"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/markdown-table-generator",
+  "inputKind": ["json", "csv", "text", "file"],
+  "outputKind": ["markdown", "text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

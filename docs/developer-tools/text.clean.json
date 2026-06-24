@@ -1,0 +1,22 @@
+{
+  "id": "text.clean",
+  "name": "Clean text",
+  "summary": "Collapse whitespace and trim.",
+  "description": "Collapses runs of whitespace into single spaces and trims the result.",
+  "category": "text",
+  "command": "txv run text.clean",
+  "aliases": ["clean"],
+  "examples": [
+    {
+      "title": "Clean",
+      "command": "txv text clean \"  a   b  \"",
+      "output": "a b"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/clean-text",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

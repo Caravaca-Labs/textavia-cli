@@ -1,0 +1,26 @@
+{
+  "id": "dev.hash.md5",
+  "name": "MD5 hash",
+  "summary": "Compute the MD5 digest.",
+  "description": "Hashes text, stdin, or a streaming file to a MD5 hex digest.",
+  "category": "dev",
+  "command": "txv run dev.hash.md5",
+  "aliases": ["md5"],
+  "examples": [
+    {
+      "title": "Hash text",
+      "command": "txv hash md5 \"abc\"",
+      "output": "900150983cd24fb0d6963f7d28e17f72"
+    },
+    {
+      "title": "Hash a file",
+      "command": "txv hash md5 --file big.bin"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/md5-hash",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

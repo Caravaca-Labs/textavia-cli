@@ -1,0 +1,21 @@
+{
+  "id": "data.xml.to-json",
+  "name": "XML to JSON",
+  "summary": "Convert XML to JSON.",
+  "description": "Converts XML elements, text, and attributes to a deterministic JSON object.",
+  "category": "data",
+  "command": "txv run data.xml.to-json",
+  "aliases": ["xml to-json", "xml-to-json"],
+  "examples": [
+    {
+      "title": "XML to JSON",
+      "command": "txv xml to-json data.xml"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/xml-to-json",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

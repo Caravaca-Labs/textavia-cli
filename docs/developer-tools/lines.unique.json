@@ -1,0 +1,21 @@
+{
+  "id": "lines.unique",
+  "name": "Unique lines",
+  "summary": "Remove duplicate lines.",
+  "description": "Removes duplicate lines, preserving first-seen order. Requires full input.",
+  "category": "lines",
+  "command": "txv run lines.unique",
+  "aliases": ["unique"],
+  "examples": [
+    {
+      "title": "Unique",
+      "command": "printf \"a\\nb\\na\" | txv lines unique"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/remove-duplicate-lines",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

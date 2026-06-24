@@ -1,0 +1,16 @@
+{
+  "id": "media.image.exif",
+  "name": "Image EXIF",
+  "summary": "View image EXIF metadata.",
+  "description": "EXIF inspection is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.image.exif",
+  "aliases": ["image exif"],
+  "examples": [],
+  "inputKind": ["image", "file"],
+  "outputKind": ["json"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

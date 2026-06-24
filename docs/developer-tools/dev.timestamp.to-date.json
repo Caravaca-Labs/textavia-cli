@@ -1,0 +1,21 @@
+{
+  "id": "dev.timestamp.to-date",
+  "name": "Unix to date",
+  "summary": "Convert a Unix timestamp to a date.",
+  "description": "Converts a Unix epoch value to an ISO and local date string.",
+  "category": "dev",
+  "command": "txv run dev.timestamp.to-date",
+  "aliases": ["from-unix", "timestamp-to-date"],
+  "examples": [
+    {
+      "title": "To date",
+      "command": "txv timestamp to-date 1704067200"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/unix-time-converter",
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

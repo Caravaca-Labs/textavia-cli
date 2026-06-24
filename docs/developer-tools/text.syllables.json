@@ -1,0 +1,21 @@
+{
+  "id": "text.syllables",
+  "name": "Syllable count",
+  "summary": "Estimate syllables in a word.",
+  "description": "Estimates syllable count using a heuristic vowel-group rule.",
+  "category": "text",
+  "command": "txv run text.syllables",
+  "aliases": ["syllables"],
+  "examples": [
+    {
+      "title": "Syllables",
+      "command": "txv text syllables \"hello\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/syllable-counter",
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

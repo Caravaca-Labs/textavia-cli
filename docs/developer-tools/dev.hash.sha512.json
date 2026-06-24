@@ -1,0 +1,26 @@
+{
+  "id": "dev.hash.sha512",
+  "name": "SHA512 hash",
+  "summary": "Compute the SHA512 digest.",
+  "description": "Hashes text, stdin, or a streaming file to a SHA512 hex digest.",
+  "category": "dev",
+  "command": "txv run dev.hash.sha512",
+  "aliases": ["sha512"],
+  "examples": [
+    {
+      "title": "Hash text",
+      "command": "txv hash sha512 \"abc\"",
+      "output": "ddaf35a193617abacc417349ae20413112e6fa4e89a97ea20a9eeee64b55d39a2192992a274fc1a836ba3c23a3feebbd454d4423643ce80e2a9ac94fa54ca49f"
+    },
+    {
+      "title": "Hash a file",
+      "command": "txv hash sha512 --file big.bin"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/sha512-hash",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

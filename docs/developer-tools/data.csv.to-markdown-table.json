@@ -1,0 +1,21 @@
+{
+  "id": "data.csv.to-markdown-table",
+  "name": "CSV to Markdown table",
+  "summary": "Convert CSV to a Markdown table.",
+  "description": "Converts CSV rows into a GitHub-flavored Markdown table using the first row as headers.",
+  "category": "data",
+  "command": "txv run data.csv.to-markdown-table",
+  "aliases": ["csv to-markdown-table", "csv-to-markdown-table"],
+  "examples": [
+    {
+      "title": "CSV to Markdown",
+      "command": "txv csv to-markdown-table users.csv --out users.md"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/csv-to-markdown-table",
+  "inputKind": ["csv", "text", "file"],
+  "outputKind": ["markdown", "text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "unicode.inspect",
+  "name": "Unicode inspect",
+  "summary": "Inspect code points in text.",
+  "description": "Reports each code point with its value, hex, name, and combining status.",
+  "category": "unicode",
+  "command": "txv run unicode.inspect",
+  "aliases": ["inspect"],
+  "examples": [
+    {
+      "title": "Inspect",
+      "command": "txv unicode.inspect \"A😀\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/unicode-info",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,16 @@
+{
+  "id": "encoding.base64.normalize",
+  "name": "Base64 normalize",
+  "summary": "Normalize a Base64 string (whitespace and padding).",
+  "description": "Future tool: normalizes whitespace and padding in a Base64 string.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.normalize",
+  "aliases": [],
+  "examples": [],
+  "webUrl": "https://textavia.com/tools/base64-normalize",
+  "inputKind": ["text"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

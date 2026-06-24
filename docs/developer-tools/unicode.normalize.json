@@ -1,0 +1,21 @@
+{
+  "id": "unicode.normalize",
+  "name": "Unicode normalize",
+  "summary": "Normalize Unicode text.",
+  "description": "Normalizes text to NFC, NFD, NFKC, or NFKD.",
+  "category": "unicode",
+  "command": "txv run unicode.normalize",
+  "aliases": ["normalize"],
+  "examples": [
+    {
+      "title": "Normalize",
+      "command": "txv unicode.normalize \"é\" --form NFC"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/unicode-normalizer",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

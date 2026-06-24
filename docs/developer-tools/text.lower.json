@@ -1,0 +1,22 @@
+{
+  "id": "text.lower",
+  "name": "Lowercase text",
+  "summary": "Lowercase text.",
+  "description": "Lowercases all characters. Supports stdin, positional text, and files.",
+  "category": "text",
+  "command": "txv run text.lower",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Lowercase",
+      "command": "txv text lower \"HeLLo\"",
+      "output": "hello"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/lowercase",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "lines.sort",
+  "name": "Sort lines",
+  "summary": "Sort lines.",
+  "description": "Sorts lines with optional direction, numeric, and case-insensitive flags.",
+  "category": "lines",
+  "command": "txv run lines.sort",
+  "aliases": ["sort"],
+  "examples": [
+    {
+      "title": "Sort",
+      "command": "printf \"c\\na\\nb\" | txv lines sort"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/sort-text",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

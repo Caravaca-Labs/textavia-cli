@@ -1,0 +1,21 @@
+{
+  "id": "encoding.base64.data-url",
+  "name": "Base64 data URL",
+  "summary": "Convert between bytes and a Base64 data URL.",
+  "description": "Encodes bytes to a data URL or decodes a data URL to bytes (use --decode).",
+  "category": "encoding",
+  "command": "txv run encoding.base64.data-url",
+  "aliases": ["data-url"],
+  "examples": [
+    {
+      "title": "Data URL",
+      "command": "txv data-url --file logo.png --mimeType image/png"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/base64-data-url",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text", "bytes"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

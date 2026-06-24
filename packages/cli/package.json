@@ -1,0 +1,38 @@
+{
+  "name": "textavia",
+  "version": "0.1.0",
+  "description": "Fast, local-first command-line toolkit for text, data, encoding, formatting, and developer utilities.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "textavia": "./dist/cli.js",
+    "txv": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@textavia/core": "workspace:*",
+    "@textavia/node-adapters": "workspace:*",
+    "@textavia/plugin-standard": "workspace:*",
+    "@textavia/schemas": "workspace:*",
+    "commander": "^12.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "execa": "^9.5.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "dev.utm.build",
+  "name": "UTM builder",
+  "summary": "Build a URL with UTM parameters.",
+  "description": "Adds utm_source, utm_medium, utm_campaign, utm_term, and utm_content to a base URL.",
+  "category": "dev",
+  "command": "txv run dev.utm.build",
+  "aliases": ["utm build"],
+  "examples": [
+    {
+      "title": "Build UTM URL",
+      "command": "txv utm build \"https://example.com\" --source newsletter --medium email"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/utm-builder",
+  "inputKind": ["text"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

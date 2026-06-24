@@ -1,0 +1,21 @@
+{
+  "id": "lines.count",
+  "name": "Count lines",
+  "summary": "Count the number of lines.",
+  "description": "Reports the line count.",
+  "category": "lines",
+  "command": "txv run lines.count",
+  "aliases": ["line-count"],
+  "examples": [
+    {
+      "title": "Count",
+      "command": "printf \"a\\nb\\nc\" | txv lines count"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/line-count",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

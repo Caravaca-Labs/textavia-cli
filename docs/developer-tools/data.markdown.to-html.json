@@ -1,0 +1,21 @@
+{
+  "id": "data.markdown.to-html",
+  "name": "Markdown to HTML",
+  "summary": "Convert Markdown to HTML.",
+  "description": "Converts a conservative Markdown subset to HTML without network access.",
+  "category": "data",
+  "command": "txv run data.markdown.to-html",
+  "aliases": ["markdown to-html", "markdown-to-html"],
+  "examples": [
+    {
+      "title": "Markdown to HTML",
+      "command": "txv markdown to-html README.md --out README.html"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/markdown-to-html",
+  "inputKind": ["text", "file"],
+  "outputKind": ["html", "text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

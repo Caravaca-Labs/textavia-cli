@@ -1,0 +1,22 @@
+{
+  "id": "encoding.url.encode",
+  "name": "URL encode",
+  "summary": "URL-encode text.",
+  "description": "Encodes text for use in a URL component or full URL.",
+  "category": "encoding",
+  "command": "txv run encoding.url.encode",
+  "aliases": ["urlencode", "url-encode"],
+  "examples": [
+    {
+      "title": "URL encode",
+      "command": "txv url.encode \"a b&c\"",
+      "output": "a%20b%26c"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/url-encode",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

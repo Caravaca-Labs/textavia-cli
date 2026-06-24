@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    { "path": "packages/core" },
+    { "path": "packages/schemas" },
+    { "path": "packages/node-adapters" },
+    { "path": "packages/plugin-standard" },
+    { "path": "packages/cli" },
+    { "path": "packages/plugin-formatters" },
+    { "path": "packages/plugin-media" },
+    { "path": "packages/mcp" },
+    { "path": "packages/agent-skills" }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "data.json.to-yaml",
+  "name": "JSON to YAML",
+  "summary": "Convert JSON to YAML.",
+  "description": "Serializes JSON-compatible data to Textavia’s deterministic YAML subset.",
+  "category": "data",
+  "command": "txv run data.json.to-yaml",
+  "aliases": ["json to-yaml", "json-to-yaml"],
+  "examples": [
+    {
+      "title": "JSON to YAML",
+      "command": "txv json to-yaml data.json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-to-yaml",
+  "inputKind": ["json", "text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

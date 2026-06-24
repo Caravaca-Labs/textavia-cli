@@ -1,0 +1,16 @@
+{
+  "id": "media.pdf.info",
+  "name": "PDF info",
+  "summary": "Inspect PDF metadata.",
+  "description": "PDF inspection is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.pdf.info",
+  "aliases": ["pdf info"],
+  "examples": [],
+  "inputKind": ["pdf", "file"],
+  "outputKind": ["json"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

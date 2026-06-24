@@ -1,0 +1,21 @@
+{
+  "id": "data.html.escape",
+  "name": "HTML escape",
+  "summary": "Escape HTML-sensitive characters.",
+  "description": "Escapes ampersands, angle brackets, quotes, and apostrophes for HTML text nodes.",
+  "category": "data",
+  "command": "txv run data.html.escape",
+  "aliases": ["html escape"],
+  "examples": [
+    {
+      "title": "Escape HTML",
+      "command": "txv html escape \"<b>x</b>\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/html-escape",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

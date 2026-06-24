@@ -1,0 +1,16 @@
+{
+  "id": "media.wordcloud",
+  "name": "Word cloud",
+  "summary": "Generate a word cloud image.",
+  "description": "Word cloud generation is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.wordcloud",
+  "aliases": ["wordcloud"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["image", "file"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

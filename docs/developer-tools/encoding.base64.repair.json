@@ -1,0 +1,16 @@
+{
+  "id": "encoding.base64.repair",
+  "name": "Base64 repair",
+  "summary": "Attempt to repair a malformed Base64 string.",
+  "description": "Future tool: repairs common Base64 formatting errors.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.repair",
+  "aliases": [],
+  "examples": [],
+  "webUrl": "https://textavia.com/tools/base64-repair",
+  "inputKind": ["text"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

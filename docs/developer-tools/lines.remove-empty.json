@@ -1,0 +1,21 @@
+{
+  "id": "lines.remove-empty",
+  "name": "Remove empty lines",
+  "summary": "Remove empty lines.",
+  "description": "Drops lines that are empty after trimming.",
+  "category": "lines",
+  "command": "txv run lines.remove-empty",
+  "aliases": ["remove-empty"],
+  "examples": [
+    {
+      "title": "Remove empty",
+      "command": "printf \"a\\n\\nb\" | txv lines remove-empty"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/remove-empty-lines",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

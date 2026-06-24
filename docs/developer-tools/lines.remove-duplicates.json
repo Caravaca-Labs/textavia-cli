@@ -1,0 +1,21 @@
+{
+  "id": "lines.remove-duplicates",
+  "name": "Remove duplicate lines",
+  "summary": "Remove duplicate lines.",
+  "description": "Alias for unique that removes duplicate lines, preserving order.",
+  "category": "lines",
+  "command": "txv run lines.remove-duplicates",
+  "aliases": ["remove-duplicates", "dedupe"],
+  "examples": [
+    {
+      "title": "Remove duplicates",
+      "command": "printf \"a\\nb\\na\" | txv lines remove-duplicates"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/remove-duplicate-lines",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

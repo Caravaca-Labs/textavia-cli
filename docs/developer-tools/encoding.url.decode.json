@@ -1,0 +1,22 @@
+{
+  "id": "encoding.url.decode",
+  "name": "URL decode",
+  "summary": "URL-decode text.",
+  "description": "Decodes a URL-encoded component or full URL.",
+  "category": "encoding",
+  "command": "txv run encoding.url.decode",
+  "aliases": ["urldecode", "url-decode"],
+  "examples": [
+    {
+      "title": "URL decode",
+      "command": "txv url.decode \"a%20b\"",
+      "output": "a b"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/url-decode",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

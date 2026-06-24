@@ -1,0 +1,21 @@
+{
+  "id": "data.csv.clean",
+  "name": "Clean CSV",
+  "summary": "Trim CSV cells and remove empty rows.",
+  "description": "Parses CSV, trims every cell, drops fully empty rows, and writes deterministic CSV.",
+  "category": "data",
+  "command": "txv run data.csv.clean",
+  "aliases": ["csv clean"],
+  "examples": [
+    {
+      "title": "Clean CSV",
+      "command": "txv csv clean users.csv"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/csv-cleaner",
+  "inputKind": ["csv", "text", "file"],
+  "outputKind": ["csv", "text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

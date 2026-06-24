@@ -1,0 +1,26 @@
+{
+  "title": "Textavia for Developers",
+  "sections": [
+    "CLI",
+    "npm package",
+    "core library",
+    "MCP server",
+    "agent skills",
+    "GitHub",
+    "examples",
+    "privacy/local-first"
+  ],
+  "privacy": {
+    "telemetry": false,
+    "accountRequired": false,
+    "apiKeyRequired": false,
+    "networkDefault": false
+  },
+  "links": {
+    "developers": "https://textavia.com/developers",
+    "tools": "https://textavia.com/tools",
+    "cli": "https://textavia.com/developers/cli",
+    "mcp": "https://textavia.com/developers/mcp",
+    "agentSkills": "https://textavia.com/developers/agent-skills"
+  }
+}

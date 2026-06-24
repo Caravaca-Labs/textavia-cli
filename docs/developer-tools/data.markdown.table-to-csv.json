@@ -1,0 +1,21 @@
+{
+  "id": "data.markdown.table-to-csv",
+  "name": "Markdown table to CSV",
+  "summary": "Convert a Markdown table to CSV.",
+  "description": "Parses a GitHub-flavored Markdown table and emits deterministic CSV.",
+  "category": "data",
+  "command": "txv run data.markdown.table-to-csv",
+  "aliases": ["markdown table-to-csv", "table markdown-to-csv"],
+  "examples": [
+    {
+      "title": "Markdown table to CSV",
+      "command": "txv markdown table-to-csv table.md"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/markdown-table-to-csv",
+  "inputKind": ["table", "text", "file"],
+  "outputKind": ["csv", "text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

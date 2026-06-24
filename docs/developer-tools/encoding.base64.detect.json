@@ -1,0 +1,16 @@
+{
+  "id": "encoding.base64.detect",
+  "name": "Base64 detect",
+  "summary": "Detect whether text is likely Base64.",
+  "description": "Future tool: heuristic detection of Base64 content.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.detect",
+  "aliases": [],
+  "examples": [],
+  "webUrl": "https://textavia.com/tools/base64-detect",
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

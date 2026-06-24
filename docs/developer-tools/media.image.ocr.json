@@ -1,0 +1,16 @@
+{
+  "id": "media.image.ocr",
+  "name": "Image OCR",
+  "summary": "Extract text from an image.",
+  "description": "OCR is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.image.ocr",
+  "aliases": ["image ocr"],
+  "examples": [],
+  "inputKind": ["image", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

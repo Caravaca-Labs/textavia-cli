@@ -1,0 +1,28 @@
+{
+  "id": "case.snake",
+  "name": "snake_case",
+  "summary": "Convert to snake_case.",
+  "description": "Convert to snake_case. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.snake",
+  "aliases": ["snake"],
+  "examples": [
+    {
+      "title": "snake_case from positional text",
+      "command": "txv case snake \"Hello World\"",
+      "input": "Hello World",
+      "output": "hello_world"
+    },
+    {
+      "title": "snake_case from stdin",
+      "command": "echo \"Hello World\" | txv case snake"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-snake",
+  "docsUrl": "https://textavia.com/tools/docs/case-snake",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

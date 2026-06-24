@@ -26,7 +26,7 @@ txv case slug "Hello World!"          # hello-world
 echo "HeLLo" | txv lower              # hello
 txv hash sha256 abc                   # ba7816bf...
 txv json format package.json --write  # pretty-print in place
-txv base64.encode "Hello"             # SGVsbG8=
+txv base64 encode "Hello"             # SGVsbG8=
 txv random uuid                       # a UUID v4
 ```
 
@@ -36,7 +36,6 @@ txv random uuid                       # a UUID v4
 txv <namespace> <operation> [input] [options]
 txv run <tool-id> [input] [options]
 txv tools list | search <q> | info <id> | docs <id>
-txv recipe <name> [input] [options]
 txv agent run <tool-id> | txv agent manifest
 ```
 
@@ -76,17 +75,20 @@ Errors are structured too. Exit codes: `0` success, `1` usage/validation, `2` fi
 
 ## Recipes
 
-Named pipelines of registry tool ids (see [docs/recipes.md](docs/recipes.md)):
+Recipes are named pipelines of registry tool IDs (see [docs/recipes.md](docs/recipes.md)):
 
 ```sh
 txv recipe clean-keywords --file keywords.txt
+txv recipe json-api '{"name":"Ada"}' --json
 ```
 
-Built-in recipes: `seo-slugs`, `clean-keywords`, `normalize-lines`, `safe-filenames`, `json-api`, `csv-clean`.
+Built-in recipes: `seo-slugs`, `clean-keywords`, `normalize-lines`,
+`safe-filenames`, `json-api`, `csv-clean`.
 
 ## MCP server
 
-An MCP server exposes the same registry to MCP clients:
+The MCP package exposes registry-generated tools and executes the same core
+tool implementations as the CLI.
 
 ```sh
 npx @textavia/mcp

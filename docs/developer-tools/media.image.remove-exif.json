@@ -1,0 +1,16 @@
+{
+  "id": "media.image.remove-exif",
+  "name": "Remove image EXIF",
+  "summary": "Remove image EXIF metadata.",
+  "description": "EXIF removal is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.image.remove-exif",
+  "aliases": ["image remove-exif"],
+  "examples": [],
+  "inputKind": ["image", "file"],
+  "outputKind": ["image", "file"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

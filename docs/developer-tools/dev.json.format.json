@@ -1,0 +1,26 @@
+{
+  "id": "dev.json.format",
+  "name": "Format JSON",
+  "summary": "Pretty-print JSON.",
+  "description": "Parses and reformats JSON with configurable indentation. Supports --write and --backup.",
+  "category": "dev",
+  "command": "txv run dev.json.format",
+  "aliases": ["json-format", "pretty-json", "format json"],
+  "examples": [
+    {
+      "title": "Format",
+      "command": "txv json format '{\"a\":1}'",
+      "output": "{\n  \"a\": 1\n}"
+    },
+    {
+      "title": "Format a file in place",
+      "command": "txv json format package.json --write --backup"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-formatter",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

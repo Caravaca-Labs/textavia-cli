@@ -1,0 +1,28 @@
+{
+  "id": "case.lower",
+  "name": "Lowercase",
+  "summary": "Convert text to lowercase.",
+  "description": "Convert text to lowercase. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.lower",
+  "aliases": ["lower"],
+  "examples": [
+    {
+      "title": "Lowercase from positional text",
+      "command": "txv case lower \"Hello World\"",
+      "input": "Hello World",
+      "output": "hello world"
+    },
+    {
+      "title": "Lowercase from stdin",
+      "command": "echo \"Hello World\" | txv case lower"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-lower",
+  "docsUrl": "https://textavia.com/tools/docs/case-lower",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

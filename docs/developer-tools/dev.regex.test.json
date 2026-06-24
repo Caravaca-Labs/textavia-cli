@@ -1,0 +1,21 @@
+{
+  "id": "dev.regex.test",
+  "name": "Regex test",
+  "summary": "Test a regular expression with timeout protection.",
+  "description": "Evaluates a JavaScript regex in a worker thread so catastrophic backtracking can be terminated.",
+  "category": "dev",
+  "command": "txv run dev.regex.test",
+  "aliases": ["regex test"],
+  "examples": [
+    {
+      "title": "Test a pattern",
+      "command": "txv regex test \"^[a-z0-9-]+$\" \"hello-world\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/regex-tester",
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

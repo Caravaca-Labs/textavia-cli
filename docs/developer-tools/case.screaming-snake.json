@@ -1,0 +1,28 @@
+{
+  "id": "case.screaming-snake",
+  "name": "SCREAMING_SNAKE",
+  "summary": "Convert to SCREAMING_SNAKE_CASE.",
+  "description": "Convert to SCREAMING_SNAKE_CASE. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.screaming-snake",
+  "aliases": ["screaming-snake"],
+  "examples": [
+    {
+      "title": "SCREAMING_SNAKE from positional text",
+      "command": "txv case screaming-snake \"hello world\"",
+      "input": "hello world",
+      "output": "HELLO_WORLD"
+    },
+    {
+      "title": "SCREAMING_SNAKE from stdin",
+      "command": "echo \"hello world\" | txv case screaming-snake"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-screaming-snake",
+  "docsUrl": "https://textavia.com/tools/docs/case-screaming-snake",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

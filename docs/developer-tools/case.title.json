@@ -1,0 +1,28 @@
+{
+  "id": "case.title",
+  "name": "Title case",
+  "summary": "Capitalize the first letter of each word.",
+  "description": "Capitalize the first letter of each word. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.title",
+  "aliases": ["title"],
+  "examples": [
+    {
+      "title": "Title case from positional text",
+      "command": "txv case title \"hello world\"",
+      "input": "hello world",
+      "output": "Hello World"
+    },
+    {
+      "title": "Title case from stdin",
+      "command": "echo \"hello world\" | txv case title"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-title",
+  "docsUrl": "https://textavia.com/tools/docs/case-title",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

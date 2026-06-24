@@ -1,0 +1,21 @@
+{
+  "id": "data.json.to-csv",
+  "name": "JSON to CSV",
+  "summary": "Convert JSON objects to CSV.",
+  "description": "Converts a JSON object or array of objects to deterministic CSV with stable headers.",
+  "category": "data",
+  "command": "txv run data.json.to-csv",
+  "aliases": ["json to-csv", "json-to-csv"],
+  "examples": [
+    {
+      "title": "JSON to CSV",
+      "command": "txv json to-csv users.json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-to-csv",
+  "inputKind": ["json", "text", "file"],
+  "outputKind": ["csv", "text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "lines.duplicates",
+  "name": "Find duplicate lines",
+  "summary": "List lines that appear more than once.",
+  "description": "Reports each duplicate line once. Requires full input.",
+  "category": "lines",
+  "command": "txv run lines.duplicates",
+  "aliases": ["duplicates"],
+  "examples": [
+    {
+      "title": "Duplicates",
+      "command": "printf \"a\\nb\\na\" | txv lines duplicates"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/find-duplicate-lines",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

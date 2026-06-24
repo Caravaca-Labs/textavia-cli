@@ -1,0 +1,22 @@
+{
+  "id": "text.replace",
+  "name": "Replace text",
+  "summary": "Replace all occurrences of a substring.",
+  "description": "Replaces every occurrence of --search with --replacement.",
+  "category": "text",
+  "command": "txv run text.replace",
+  "aliases": ["replace"],
+  "examples": [
+    {
+      "title": "Replace",
+      "command": "txv text replace \"banana\" --search a --replacement o",
+      "output": "bonono"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/find-and-replace",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

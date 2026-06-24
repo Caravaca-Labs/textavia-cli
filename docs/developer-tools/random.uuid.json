@@ -1,0 +1,21 @@
+{
+  "id": "random.uuid",
+  "name": "Random UUID",
+  "summary": "Generate cryptographically secure UUIDs.",
+  "description": "Generates RFC 4122 v4 UUIDs using node:crypto.",
+  "category": "random",
+  "command": "txv run random.uuid",
+  "aliases": ["uuid"],
+  "examples": [
+    {
+      "title": "UUID",
+      "command": "txv random uuid"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/uuid-generator",
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

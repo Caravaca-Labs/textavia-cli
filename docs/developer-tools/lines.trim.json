@@ -1,0 +1,21 @@
+{
+  "id": "lines.trim",
+  "name": "Trim lines",
+  "summary": "Trim whitespace from every line.",
+  "description": "Trims surrounding whitespace from each line.",
+  "category": "lines",
+  "command": "txv run lines.trim",
+  "aliases": ["trim"],
+  "examples": [
+    {
+      "title": "Trim",
+      "command": "printf \" a \\n b \" | txv lines trim"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/trim-lines",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

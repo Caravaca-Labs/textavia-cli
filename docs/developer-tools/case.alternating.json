@@ -1,0 +1,28 @@
+{
+  "id": "case.alternating",
+  "name": "Alternating case",
+  "summary": "Alternate letter case.",
+  "description": "Alternate letter case. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.alternating",
+  "aliases": ["alternating"],
+  "examples": [
+    {
+      "title": "Alternating case from positional text",
+      "command": "txv case alternating \"hello\"",
+      "input": "hello",
+      "output": "HeLlO"
+    },
+    {
+      "title": "Alternating case from stdin",
+      "command": "echo \"hello\" | txv case alternating"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-alternating",
+  "docsUrl": "https://textavia.com/tools/docs/case-alternating",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

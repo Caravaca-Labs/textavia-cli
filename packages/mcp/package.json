@@ -1,0 +1,36 @@
+{
+  "name": "@textavia/mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing Textavia tools generated from the shared registry.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "textavia-mcp": "./dist/server.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "@textavia/core": "workspace:*",
+    "@textavia/node-adapters": "workspace:*",
+    "@textavia/plugin-standard": "workspace:*",
+    "@textavia/schemas": "workspace:*",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

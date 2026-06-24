@@ -1,0 +1,22 @@
+{
+  "id": "text.upper",
+  "name": "Uppercase text",
+  "summary": "Uppercase text.",
+  "description": "Uppercases all characters.",
+  "category": "text",
+  "command": "txv run text.upper",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Uppercase",
+      "command": "txv text upper \"hello\"",
+      "output": "HELLO"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/uppercase",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

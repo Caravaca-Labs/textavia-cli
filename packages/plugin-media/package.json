@@ -1,0 +1,30 @@
+{
+  "name": "@textavia/plugin-media",
+  "version": "0.1.0",
+  "description": "Optional media tools (image, PDF, OCR, EXIF, ASCII image, wordcloud) for Textavia.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@textavia/core": "workspace:*",
+    "@textavia/node-adapters": "workspace:*",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

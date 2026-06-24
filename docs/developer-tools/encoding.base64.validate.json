@@ -1,0 +1,21 @@
+{
+  "id": "encoding.base64.validate",
+  "name": "Base64 validate",
+  "summary": "Check whether text is valid Base64.",
+  "description": "Reports whether the input is well-formed Base64.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.validate",
+  "aliases": ["base64-validate"],
+  "examples": [
+    {
+      "title": "Validate",
+      "command": "txv base64.validate \"SGVsbG8=\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/base64-validate",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

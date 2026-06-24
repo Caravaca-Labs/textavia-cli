@@ -1,0 +1,28 @@
+{
+  "id": "case.slug",
+  "name": "URL slug",
+  "summary": "Convert to a URL slug.",
+  "description": "Convert to a URL slug. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.slug",
+  "aliases": ["slug"],
+  "examples": [
+    {
+      "title": "URL slug from positional text",
+      "command": "txv case slug \"Hello World\"",
+      "input": "Hello World",
+      "output": "hello-world"
+    },
+    {
+      "title": "URL slug from stdin",
+      "command": "echo \"Hello World\" | txv case slug"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-slug",
+  "docsUrl": "https://textavia.com/tools/docs/case-slug",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

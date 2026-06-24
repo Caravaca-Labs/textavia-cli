@@ -1,0 +1,28 @@
+{
+  "id": "case.inverse",
+  "name": "Inverse case",
+  "summary": "Invert the case of every letter.",
+  "description": "Invert the case of every letter. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.inverse",
+  "aliases": ["inverse"],
+  "examples": [
+    {
+      "title": "Inverse case from positional text",
+      "command": "txv case inverse \"aBcD\"",
+      "input": "aBcD",
+      "output": "AbCd"
+    },
+    {
+      "title": "Inverse case from stdin",
+      "command": "echo \"aBcD\" | txv case inverse"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-inverse",
+  "docsUrl": "https://textavia.com/tools/docs/case-inverse",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

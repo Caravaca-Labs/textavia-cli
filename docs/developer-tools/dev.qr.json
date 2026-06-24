@@ -1,0 +1,21 @@
+{
+  "id": "dev.qr",
+  "name": "QR SVG",
+  "summary": "Generate a local QR code SVG.",
+  "description": "Generates a standards-compliant QR code SVG for the input text. No network access is used.",
+  "category": "dev",
+  "command": "txv run dev.qr",
+  "aliases": ["qr"],
+  "examples": [
+    {
+      "title": "Generate SVG",
+      "command": "txv qr \"https://textavia.com\" --out qr.svg"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/qr-code-generator",
+  "inputKind": ["text"],
+  "outputKind": ["text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

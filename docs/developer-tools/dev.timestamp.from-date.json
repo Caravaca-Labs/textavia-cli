@@ -1,0 +1,21 @@
+{
+  "id": "dev.timestamp.from-date",
+  "name": "Date to Unix",
+  "summary": "Convert a date to a Unix timestamp.",
+  "description": "Parses a date string and returns the Unix epoch value.",
+  "category": "dev",
+  "command": "txv run dev.timestamp.from-date",
+  "aliases": ["to-unix", "timestamp-from-date"],
+  "examples": [
+    {
+      "title": "From date",
+      "command": "txv timestamp from-date \"2024-01-01T00:00:00Z\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/unix-time-converter",
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,22 @@
+{
+  "id": "text.title-case",
+  "name": "Title case",
+  "summary": "Capitalize the first letter of each word.",
+  "description": "Title-cases the text.",
+  "category": "text",
+  "command": "txv run text.title-case",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Title case",
+      "command": "txv text title-case \"hello world\"",
+      "output": "Hello World"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/title-case",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

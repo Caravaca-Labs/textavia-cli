@@ -1,0 +1,21 @@
+{
+  "id": "data.csv.to-json",
+  "name": "CSV to JSON",
+  "summary": "Convert header-based CSV to JSON.",
+  "description": "Converts a CSV file with a unique header row into an array of JSON objects.",
+  "category": "data",
+  "command": "txv run data.csv.to-json",
+  "aliases": ["csv to-json", "csv-to-json"],
+  "examples": [
+    {
+      "title": "Convert CSV",
+      "command": "txv csv to-json users.csv"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/csv-to-json",
+  "inputKind": ["csv", "text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

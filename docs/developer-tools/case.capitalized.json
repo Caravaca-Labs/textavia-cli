@@ -1,0 +1,28 @@
+{
+  "id": "case.capitalized",
+  "name": "Capitalized",
+  "summary": "Capitalize the first character, keep the rest.",
+  "description": "Capitalize the first character, keep the rest. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.capitalized",
+  "aliases": ["capitalized"],
+  "examples": [
+    {
+      "title": "Capitalized from positional text",
+      "command": "txv case capitalized \"heLLo\"",
+      "input": "heLLo",
+      "output": "HeLLo"
+    },
+    {
+      "title": "Capitalized from stdin",
+      "command": "echo \"heLLo\" | txv case capitalized"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-capitalized",
+  "docsUrl": "https://textavia.com/tools/docs/case-capitalized",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

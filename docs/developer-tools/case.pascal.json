@@ -1,0 +1,28 @@
+{
+  "id": "case.pascal",
+  "name": "PascalCase",
+  "summary": "Convert to PascalCase.",
+  "description": "Convert to PascalCase. Supports stdin, positional text, and file input.",
+  "category": "case",
+  "command": "txv run case.pascal",
+  "aliases": ["pascal"],
+  "examples": [
+    {
+      "title": "PascalCase from positional text",
+      "command": "txv case pascal \"hello world\"",
+      "input": "hello world",
+      "output": "HelloWorld"
+    },
+    {
+      "title": "PascalCase from stdin",
+      "command": "echo \"hello world\" | txv case pascal"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/case-pascal",
+  "docsUrl": "https://textavia.com/tools/docs/case-pascal",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

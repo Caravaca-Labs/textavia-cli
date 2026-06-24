@@ -1,0 +1,26 @@
+{
+  "id": "encoding.base64.encode",
+  "name": "Base64 encode",
+  "summary": "Encode text or bytes to Base64.",
+  "description": "Encodes UTF-8 text or raw bytes to a Base64 string. File input is read as bytes.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.encode",
+  "aliases": ["b64encode", "base64-encode"],
+  "examples": [
+    {
+      "title": "Encode text",
+      "command": "txv base64.encode \"Hello\"",
+      "output": "SGVsbG8="
+    },
+    {
+      "title": "Encode a file",
+      "command": "txv base64.encode --file image.png"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/base64-encode",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

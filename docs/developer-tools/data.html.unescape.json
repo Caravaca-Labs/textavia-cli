@@ -1,0 +1,21 @@
+{
+  "id": "data.html.unescape",
+  "name": "HTML unescape",
+  "summary": "Unescape common HTML entities.",
+  "description": "Unescapes the named entities emitted by Textavia HTML escape.",
+  "category": "data",
+  "command": "txv run data.html.unescape",
+  "aliases": ["html unescape"],
+  "examples": [
+    {
+      "title": "Unescape HTML",
+      "command": "txv html unescape \"&lt;b&gt;\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/html-unescape",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

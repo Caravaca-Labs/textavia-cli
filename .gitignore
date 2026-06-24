@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+**/node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+**/dist/
+build/
+**/build/
+lib/
+**/lib/
+*.tsbuildinfo
+
+# Test and coverage output
+coverage/
+**/coverage/
+.nyc_output/
+test-results/
+playwright-report/
+
+# Caches
+.cache/
+.kiro/
+.parcel-cache/
+.turbo/
+.vite/
+.vitest/
+.eslintcache
+*.cache
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+!.env.*.example
+textavia.config.local.json
+.textavia.config.local.json
+.textaviarc.local
+.textaviarc.local.json
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+*.tmp
+*.temp
+
+# Package manager artifacts
+*.tgz
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

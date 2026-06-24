@@ -1,0 +1,16 @@
+{
+  "id": "media.image.ascii",
+  "name": "Image ASCII art",
+  "summary": "Render image pixels as ASCII art.",
+  "description": "Image ASCII art is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.image.ascii",
+  "aliases": ["image ascii"],
+  "examples": [],
+  "inputKind": ["image", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}
