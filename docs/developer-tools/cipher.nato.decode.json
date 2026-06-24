@@ -1,0 +1,22 @@
+{
+  "id": "cipher.nato.decode",
+  "name": "NATO decode",
+  "summary": "Decode NATO phonetic words.",
+  "description": "Converts NATO phonetic words back to letters.",
+  "category": "cipher",
+  "command": "txv run cipher.nato.decode",
+  "aliases": ["nato decode"],
+  "examples": [
+    {
+      "title": "NATO decode",
+      "command": "txv nato decode \"Alfa Zulu\"",
+      "output": "AZ"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/nato-phonetic",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

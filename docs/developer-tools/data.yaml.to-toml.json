@@ -1,0 +1,21 @@
+{
+  "id": "data.yaml.to-toml",
+  "name": "YAML to TOML",
+  "summary": "Convert YAML to TOML.",
+  "description": "Converts the built-in YAML subset to simple TOML.",
+  "category": "data",
+  "command": "txv run data.yaml.to-toml",
+  "aliases": ["yaml to-toml"],
+  "examples": [
+    {
+      "title": "YAML to TOML",
+      "command": "txv yaml to-toml \"name: Ada\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/yaml-to-toml",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "encoding.base64.basic-auth-decode",
+  "name": "Basic auth decode",
+  "summary": "Decode a Basic auth header.",
+  "description": "Decodes a Basic base64 user:password value. Decoded only; not verified.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.basic-auth-decode",
+  "aliases": ["base64 basic-auth-decode"],
+  "examples": [
+    {
+      "title": "Basic auth",
+      "command": "txv base64 basic-auth-decode \"Basic dXNlcjpwYXNz\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/basic-auth-decoder",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -3,7 +3,7 @@ name: textavia-privacy-scrubber
 description: "Use this skill for local redaction of likely-sensitive text, secrets, tokens, email addresses, phone numbers, IDs, and logs before pasting into issues, prompts, tickets, or public documents with the Textavia CLI."
 version: 0.1.0
 author: Caravaca Labs
-homepage: https://textavia.com/developers/agent-skills/privacy-scrubber
+homepage: https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md#textavia-privacy-scrubber
 metadata:
   openclaw:
     tags: ["privacy","redaction","security","textavia","cli"]

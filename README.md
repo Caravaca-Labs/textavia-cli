@@ -1,10 +1,9 @@
 # Textavia CLI
 
-[![Textavia CLI docs](https://img.shields.io/badge/docs-Textavia_CLI-155EEF)](https://textavia.com/developers/textavia-cli)
-[![Repo docs](https://img.shields.io/badge/repo-docs-24292F)](docs/README.md)
+[![Docs](https://img.shields.io/badge/docs-GitHub-24292F)](docs/README.md)
 [![npm package](https://img.shields.io/npm/v/textavia?label=npm)](https://www.npmjs.com/package/textavia)
 [![Pi package](https://img.shields.io/badge/Pi-package-3B82F6)](https://pi.dev/packages?search=textavia)
-[![Agent skills](https://img.shields.io/badge/agent_skills-SKILL.md-0F766E)](https://textavia.com/developers/agent-skills)
+[![Agent skills](https://img.shields.io/badge/agent_skills-SKILL.md-0F766E)](docs/agent-skills.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](packages/cli/LICENSE)
 
 Fast, local-first command-line toolkit for text, data, encoding, formatting, and developer utilities. Built on a shared tool registry so the CLI, docs, MCP server, and agent manifests never drift apart.
@@ -174,12 +173,9 @@ runtime behavior, and safety rules.
 
 ## Online tools
 
-Prefer a browser UI or developer docs?
+Prefer a browser UI?
 
-- [Textavia CLI docs](https://textavia.com/developers/textavia-cli)
 - [Textavia](https://textavia.com)
-- [Textavia agent skills](https://textavia.com/developers/agent-skills)
-- [Textavia MCP docs](https://textavia.com/developers/mcp)
 - [Textavia JSON formatter](https://textavia.com/tools/json-formatter)
 - [Textavia Base64 tools](https://textavia.com/tools/base64)
 - [Textavia text cleaner](https://textavia.com/tools/text-cleaner)

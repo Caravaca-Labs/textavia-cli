@@ -1,0 +1,21 @@
+{
+  "id": "encoding.base64.gzip-encode",
+  "name": "Base64 gzip encode",
+  "summary": "Gzip text and encode as Base64.",
+  "description": "Compresses UTF-8 text with gzip and emits Base64.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.gzip-encode",
+  "aliases": ["base64 gzip-encode"],
+  "examples": [
+    {
+      "title": "Gzip encode",
+      "command": "txv base64 gzip-encode \"hello\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/base64-gzip-check",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

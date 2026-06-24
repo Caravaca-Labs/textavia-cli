@@ -1,0 +1,22 @@
+{
+  "id": "encoding.hex.encode",
+  "name": "Hex encode",
+  "summary": "Encode text or bytes as hexadecimal.",
+  "description": "Encodes UTF-8 text or file bytes to a hex string.",
+  "category": "encoding",
+  "command": "txv run encoding.hex.encode",
+  "aliases": ["hex encode"],
+  "examples": [
+    {
+      "title": "Hex encode",
+      "command": "txv hex encode \"Hi\"",
+      "output": "4869"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/hex-encoder",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,16 @@
+{
+  "id": "media.pdf.extract-images",
+  "name": "PDF extract images",
+  "summary": "Extract images from a PDF.",
+  "description": "PDF image extraction is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.pdf.extract-images",
+  "aliases": ["pdf extract-images"],
+  "examples": [],
+  "inputKind": ["pdf", "file"],
+  "outputKind": ["file"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

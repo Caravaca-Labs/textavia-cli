@@ -1,0 +1,16 @@
+{
+  "id": "style.strike",
+  "name": "Style strike",
+  "summary": "Apply the strike text style.",
+  "description": "strike styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.strike",
+  "aliases": ["style strike"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

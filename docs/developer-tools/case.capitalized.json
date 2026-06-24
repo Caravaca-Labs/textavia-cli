@@ -19,7 +19,7 @@
     }
   ],
   "webUrl": "https://textavia.com/tools/case-capitalized",
-  "docsUrl": "https://textavia.com/tools/docs/case-capitalized",
+  "docsUrl": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/developer-tools/case.capitalized.json",
   "inputKind": ["text", "file"],
   "outputKind": ["text"],
   "stability": "stable",

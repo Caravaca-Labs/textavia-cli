@@ -1,0 +1,22 @@
+{
+  "id": "data.markdown.strip",
+  "name": "Strip Markdown",
+  "summary": "Strip common Markdown syntax.",
+  "description": "Removes common Markdown markup while preserving readable text.",
+  "category": "data",
+  "command": "txv run data.markdown.strip",
+  "aliases": ["markdown strip"],
+  "examples": [
+    {
+      "title": "Strip Markdown",
+      "command": "txv markdown strip \"# Title\"",
+      "output": "Title"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/markdown-strip",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

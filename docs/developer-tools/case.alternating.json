@@ -19,7 +19,7 @@
     }
   ],
   "webUrl": "https://textavia.com/tools/case-alternating",
-  "docsUrl": "https://textavia.com/tools/docs/case-alternating",
+  "docsUrl": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/developer-tools/case.alternating.json",
   "inputKind": ["text", "file"],
   "outputKind": ["text"],
   "stability": "stable",

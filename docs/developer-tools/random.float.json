@@ -1,0 +1,21 @@
+{
+  "id": "random.float",
+  "name": "Random float",
+  "summary": "Generate random floats.",
+  "description": "Alias-style float generator for decimal random values.",
+  "category": "random",
+  "command": "txv run random.float",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Random float",
+      "command": "txv random float"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/random-number",
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

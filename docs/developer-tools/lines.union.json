@@ -1,0 +1,21 @@
+{
+  "id": "lines.union",
+  "name": "Union lines",
+  "summary": "Return unique lines from both lists.",
+  "description": "Computes a first-seen union. Use --other or separate blocks with a line containing \"---\".",
+  "category": "lines",
+  "command": "txv run lines.union",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Union lines",
+      "command": "txv lines union \"a\\nb\" --other \"b\\nc\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/list-union",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -3,7 +3,7 @@ name: textavia-csv-cleaner
 description: "Use this skill for CSV cleanup, CSV to JSON conversion, JSON to CSV conversion, CSV to Markdown table conversion, delimiter-safe tabular transforms, and local data preparation with the Textavia CLI."
 version: 0.1.0
 author: Caravaca Labs
-homepage: https://textavia.com/developers/agent-skills/csv-cleaner
+homepage: https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md#textavia-csv-cleaner
 metadata:
   openclaw:
     tags: ["csv","json","markdown","data-cleaning","textavia","cli"]

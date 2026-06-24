@@ -1,0 +1,22 @@
+{
+  "id": "cipher.morse.decode",
+  "name": "Morse decode",
+  "summary": "Decode Morse code to text.",
+  "description": "Decodes Morse words separated by slash characters.",
+  "category": "cipher",
+  "command": "txv run cipher.morse.decode",
+  "aliases": ["morse decode"],
+  "examples": [
+    {
+      "title": "Morse decode",
+      "command": "txv morse decode \"... --- ...\"",
+      "output": "SOS"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/morse-code",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

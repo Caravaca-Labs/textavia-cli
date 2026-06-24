@@ -1,0 +1,16 @@
+{
+  "id": "media.pdf.images-to-pdf",
+  "name": "Images to PDF",
+  "summary": "Create a PDF from images.",
+  "description": "Image-to-PDF conversion is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.pdf.images-to-pdf",
+  "aliases": ["pdf images-to-pdf"],
+  "examples": [],
+  "inputKind": ["files"],
+  "outputKind": ["pdf", "file"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

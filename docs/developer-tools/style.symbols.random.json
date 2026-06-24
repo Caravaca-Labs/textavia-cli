@@ -1,0 +1,16 @@
+{
+  "id": "style.symbols.random",
+  "name": "Random symbol",
+  "summary": "Pick a random Unicode symbol.",
+  "description": "Random symbols are provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.symbols.random",
+  "aliases": ["symbols random"],
+  "examples": [],
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

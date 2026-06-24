@@ -1,0 +1,21 @@
+{
+  "id": "lorem.words",
+  "name": "Lorem words",
+  "summary": "Generate lorem ipsum words.",
+  "description": "Generates placeholder lorem ipsum words.",
+  "category": "lorem",
+  "command": "txv run lorem.words",
+  "aliases": ["lorem words"],
+  "examples": [
+    {
+      "title": "Lorem words",
+      "command": "txv lorem words --count 10"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/lorem-ipsum",
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

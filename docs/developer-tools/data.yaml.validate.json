@@ -1,0 +1,21 @@
+{
+  "id": "data.yaml.validate",
+  "name": "Validate YAML",
+  "summary": "Validate Textavia YAML subset.",
+  "description": "Validates YAML accepted by the built-in YAML to JSON converter.",
+  "category": "data",
+  "command": "txv run data.yaml.validate",
+  "aliases": ["yaml validate"],
+  "examples": [
+    {
+      "title": "Validate YAML",
+      "command": "txv yaml validate \"name: Ada\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/yaml-validator",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,16 @@
+{
+  "id": "style.slash",
+  "name": "Style slash",
+  "summary": "Apply the slash text style.",
+  "description": "slash styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.slash",
+  "aliases": ["style slash"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "data.csv.dedupe",
+  "name": "CSV dedupe",
+  "summary": "Remove duplicate CSV rows.",
+  "description": "Removes duplicate CSV rows while preserving the first occurrence.",
+  "category": "data",
+  "command": "txv run data.csv.dedupe",
+  "aliases": ["csv dedupe"],
+  "examples": [
+    {
+      "title": "CSV dedupe",
+      "command": "txv csv dedupe \"a\\n1\\n1\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/csv-dedupe",
+  "inputKind": ["csv", "text", "file"],
+  "outputKind": ["csv", "text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

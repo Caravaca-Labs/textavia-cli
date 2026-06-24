@@ -1,0 +1,22 @@
+{
+  "id": "encoding.base64.to-hex",
+  "name": "Base64 to hex",
+  "summary": "Decode Base64 and emit hex.",
+  "description": "Decodes Base64 bytes and prints a hexadecimal string.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.to-hex",
+  "aliases": ["base64 to-hex"],
+  "examples": [
+    {
+      "title": "Base64 to hex",
+      "command": "txv base64 to-hex SGk=",
+      "output": "4869"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/base64-to-hex",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

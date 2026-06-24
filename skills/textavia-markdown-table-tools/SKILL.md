@@ -3,7 +3,7 @@ name: textavia-markdown-table-tools
 description: "Use this skill for Markdown table creation, Markdown table to JSON conversion, Markdown table to CSV conversion, JSON to Markdown table conversion, CSV to Markdown table conversion, and local documentation table workflows with the Textavia CLI."
 version: 0.1.0
 author: Caravaca Labs
-homepage: https://textavia.com/developers/agent-skills/markdown-table-tools
+homepage: https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md#textavia-markdown-table-tools
 metadata:
   openclaw:
     tags: ["markdown","tables","csv","json","textavia","cli"]

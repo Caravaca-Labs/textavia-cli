@@ -1,0 +1,16 @@
+{
+  "id": "data.excel.to-json",
+  "name": "Excel to-json",
+  "summary": "Run Excel to-json.",
+  "description": "Excel to-json is provided by the optional data plugin.",
+  "category": "data",
+  "command": "txv run data.excel.to-json",
+  "aliases": ["excel to-json"],
+  "examples": [],
+  "inputKind": ["file", "bytes"],
+  "outputKind": ["json"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-data"
+}

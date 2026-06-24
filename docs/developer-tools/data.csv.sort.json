@@ -1,0 +1,21 @@
+{
+  "id": "data.csv.sort",
+  "name": "CSV sort",
+  "summary": "Sort CSV rows.",
+  "description": "Sorts CSV rows by a header column, preserving the header row.",
+  "category": "data",
+  "command": "txv run data.csv.sort",
+  "aliases": ["csv sort"],
+  "examples": [
+    {
+      "title": "CSV sort",
+      "command": "txv csv sort \"name\\nB\\nA\" --by name"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/csv-sort",
+  "inputKind": ["csv", "text", "file"],
+  "outputKind": ["csv", "text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

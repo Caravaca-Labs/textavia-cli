@@ -14,6 +14,8 @@ import type { TextaviaToolDefinition } from '../packages/core/src/index.ts';
 const REPO_ROOT = resolve(new URL('.', import.meta.url).pathname, '..');
 const CLI_SKILLS_DIR = join(REPO_ROOT, 'packages', 'cli', 'skills');
 const ROOT_SKILLS_DIR = join(REPO_ROOT, 'skills');
+const REPO_DOCS_URL =
+  'https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs';
 
 interface SkillSpec {
   readonly dir: string;
@@ -41,7 +43,7 @@ const SKILLS: readonly SkillSpec[] = [
       'Format, minify, validate, and convert JSON using the local Textavia CLI.',
     description:
       'Use this skill for JSON formatting, minification, validation, YAML conversion, CSV conversion, Markdown table conversion, API responses, package manifests, config files, and generated structured data with the local Textavia CLI.',
-    docsPath: '/developers/agent-skills/json-tools',
+    docsPath: '#textavia-json-tools',
     hermesCategory: 'software-dev',
     tags: ['json', 'developer-tools', 'textavia', 'cli'],
     toolIds: [
@@ -61,7 +63,7 @@ const SKILLS: readonly SkillSpec[] = [
       'Encode, decode, validate, normalize, repair, detect, and inspect Base64 locally.',
     description:
       'Use this skill for Base64 encoding, decoding, validation, normalization, repair, detection, data URL conversion, gzip checks, copied Base64 payload debugging, and local binary/text Base64 workflows with the Textavia CLI.',
-    docsPath: '/developers/agent-skills/base64-debugger',
+    docsPath: '#textavia-base64-debugger',
     hermesCategory: 'software-dev',
     tags: ['base64', 'encoding', 'debugging', 'textavia', 'cli'],
     toolIds: [
@@ -82,7 +84,7 @@ const SKILLS: readonly SkillSpec[] = [
     summary: 'Use this skill to clean, normalize, and inspect text locally.',
     description:
       'Use this skill for text cleanup, whitespace normalization, formatting removal, word and character counts, plain text extraction, line trimming, duplicate line removal, and local text inspection with the Textavia CLI.',
-    docsPath: '/developers/agent-skills/text-cleaner',
+    docsPath: '#textavia-text-cleaner',
     hermesCategory: 'writing',
     tags: ['text-cleanup', 'plain-text', 'developer-tools', 'textavia', 'cli'],
     toolIds: ['text.clean', 'text.remove-formatting', 'text.stats'],
@@ -94,7 +96,7 @@ const SKILLS: readonly SkillSpec[] = [
     summary: 'Clean CSV and convert between CSV, JSON, and Markdown locally.',
     description:
       'Use this skill for CSV cleanup, CSV to JSON conversion, JSON to CSV conversion, CSV to Markdown table conversion, delimiter-safe tabular transforms, and local data preparation with the Textavia CLI.',
-    docsPath: '/developers/agent-skills/csv-cleaner',
+    docsPath: '#textavia-csv-cleaner',
     hermesCategory: 'data',
     tags: ['csv', 'json', 'markdown', 'data-cleaning', 'textavia', 'cli'],
     toolIds: [
@@ -111,7 +113,7 @@ const SKILLS: readonly SkillSpec[] = [
     summary: 'Redact likely-sensitive text locally before sharing it.',
     description:
       'Use this skill for local redaction of likely-sensitive text, secrets, tokens, email addresses, phone numbers, IDs, and logs before pasting into issues, prompts, tickets, or public documents with the Textavia CLI.',
-    docsPath: '/developers/agent-skills/privacy-scrubber',
+    docsPath: '#textavia-privacy-scrubber',
     hermesCategory: 'security',
     tags: ['privacy', 'redaction', 'security', 'textavia', 'cli'],
     toolIds: ['text.privacy-scrub'],
@@ -123,7 +125,7 @@ const SKILLS: readonly SkillSpec[] = [
     summary: 'Create and convert Markdown tables from JSON or CSV locally.',
     description:
       'Use this skill for Markdown table creation, Markdown table to JSON conversion, Markdown table to CSV conversion, JSON to Markdown table conversion, CSV to Markdown table conversion, and local documentation table workflows with the Textavia CLI.',
-    docsPath: '/developers/agent-skills/markdown-table-tools',
+    docsPath: '#textavia-markdown-table-tools',
     hermesCategory: 'software-dev',
     tags: ['markdown', 'tables', 'csv', 'json', 'textavia', 'cli'],
     toolIds: [
@@ -142,7 +144,7 @@ const SKILLS: readonly SkillSpec[] = [
       'Test JavaScript regular expressions locally with timeout protection.',
     description:
       'Use this skill for local regular expression testing, match inspection, timeout-protected regex debugging, generated pattern validation, and safe regex experimentation with the Textavia CLI.',
-    docsPath: '/developers/agent-skills/regex-helper',
+    docsPath: '#textavia-regex-helper',
     hermesCategory: 'software-dev',
     tags: ['regex', 'testing', 'developer-tools', 'textavia', 'cli'],
     toolIds: ['dev.regex.test'],
@@ -155,7 +157,7 @@ const SKILLS: readonly SkillSpec[] = [
       'Convert URL components, YAML, XML, timestamps, UTM URLs, and QR inputs locally.',
     description:
       'Use this skill for local developer conversions including URL encoding and decoding, YAML to JSON, XML formatting, XML to JSON, timestamp parsing, Unix time conversion, UTM URL construction, and QR SVG generation with the Textavia CLI.',
-    docsPath: '/developers/agent-skills/dev-converters',
+    docsPath: '#textavia-dev-converters',
     hermesCategory: 'software-dev',
     tags: [
       'converters',
@@ -261,7 +263,7 @@ function renderSkill(
     `description: ${JSON.stringify(skill.description)}`,
     'version: 0.1.0',
     'author: Caravaca Labs',
-    `homepage: https://textavia.com${skill.docsPath}`,
+    `homepage: ${REPO_DOCS_URL}/agent-skills.md${skill.docsPath}`,
     'metadata:',
     '  openclaw:',
     `    tags: ${JSON.stringify(skill.tags)}`,

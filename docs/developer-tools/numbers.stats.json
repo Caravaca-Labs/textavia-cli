@@ -1,0 +1,21 @@
+{
+  "id": "numbers.stats",
+  "name": "Number statistics",
+  "summary": "Summarize numeric values.",
+  "description": "Reports count, min, max, sum, mean, and median.",
+  "category": "numbers",
+  "command": "txv run numbers.stats",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Number stats",
+      "command": "txv numbers stats \"1 2 3\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/number-statistics",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

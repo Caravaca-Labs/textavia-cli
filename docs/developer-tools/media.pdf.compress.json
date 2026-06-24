@@ -1,0 +1,16 @@
+{
+  "id": "media.pdf.compress",
+  "name": "PDF compress",
+  "summary": "Compress a PDF file.",
+  "description": "PDF compression is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.pdf.compress",
+  "aliases": ["pdf compress"],
+  "examples": [],
+  "inputKind": ["pdf", "file"],
+  "outputKind": ["pdf", "file"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

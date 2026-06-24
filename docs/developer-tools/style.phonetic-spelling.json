@@ -1,0 +1,16 @@
+{
+  "id": "style.phonetic-spelling",
+  "name": "Style phonetic-spelling",
+  "summary": "Apply the phonetic-spelling text style.",
+  "description": "phonetic-spelling styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.phonetic-spelling",
+  "aliases": ["style phonetic-spelling"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

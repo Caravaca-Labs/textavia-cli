@@ -1,0 +1,21 @@
+{
+  "id": "encoding.base64.css-data-uri",
+  "name": "CSS data URI",
+  "summary": "Create a CSS url(data:...) value.",
+  "description": "Encodes text or file bytes as a data URL wrapped for CSS.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.css-data-uri",
+  "aliases": ["base64 css-data-uri"],
+  "examples": [
+    {
+      "title": "CSS data URI",
+      "command": "txv base64 css-data-uri \"Hi\" --mimeType text/plain"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/css-data-uri",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

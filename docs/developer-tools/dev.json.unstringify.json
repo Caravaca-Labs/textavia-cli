@@ -1,0 +1,22 @@
+{
+  "id": "dev.json.unstringify",
+  "name": "JSON unstringify text",
+  "summary": "Decode a JSON string literal.",
+  "description": "Parses a JSON string literal and outputs raw text.",
+  "category": "dev",
+  "command": "txv run dev.json.unstringify",
+  "aliases": ["json unstringify"],
+  "examples": [
+    {
+      "title": "Unstringify",
+      "command": "txv json unstringify \"\\\"hello\\\"\"",
+      "output": "hello"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-unstringify-text",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

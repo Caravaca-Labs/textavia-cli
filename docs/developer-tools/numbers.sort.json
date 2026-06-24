@@ -1,0 +1,22 @@
+{
+  "id": "numbers.sort",
+  "name": "Sort numbers",
+  "summary": "Sort numeric values.",
+  "description": "Parses whitespace/comma-separated numbers and sorts them.",
+  "category": "numbers",
+  "command": "txv run numbers.sort",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Sort numbers",
+      "command": "txv numbers sort \"3 1 2\"",
+      "output": "1\\n2\\n3"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/number-sorter",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

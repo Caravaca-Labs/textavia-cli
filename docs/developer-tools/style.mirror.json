@@ -1,0 +1,16 @@
+{
+  "id": "style.mirror",
+  "name": "Style mirror",
+  "summary": "Apply the mirror text style.",
+  "description": "mirror styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.mirror",
+  "aliases": ["style mirror"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

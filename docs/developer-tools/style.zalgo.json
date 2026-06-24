@@ -1,0 +1,16 @@
+{
+  "id": "style.zalgo",
+  "name": "Style zalgo",
+  "summary": "Apply the zalgo text style.",
+  "description": "zalgo styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.zalgo",
+  "aliases": ["style zalgo"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "data.sheets.to-csv",
+  "name": "Google Sheets to-csv",
+  "summary": "Run Google Sheets to-csv.",
+  "description": "Google Sheets to-csv is provided by the optional data plugin and requires --allow-network.",
+  "category": "data",
+  "command": "txv run data.sheets.to-csv",
+  "aliases": ["sheets to-csv"],
+  "examples": [],
+  "inputKind": ["text"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-data"
+}

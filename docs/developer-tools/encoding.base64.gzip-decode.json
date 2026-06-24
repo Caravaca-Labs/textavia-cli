@@ -1,0 +1,21 @@
+{
+  "id": "encoding.base64.gzip-decode",
+  "name": "Base64 gzip decode",
+  "summary": "Decode gzipped Base64 bytes.",
+  "description": "Utility companion for gzip-check; decodes and gunzips Base64 input.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.gzip-decode",
+  "aliases": ["base64 gzip-decode"],
+  "examples": [
+    {
+      "title": "Gzip decode",
+      "command": "txv base64 gzip-decode H4sI..."
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/base64-gzip-check",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

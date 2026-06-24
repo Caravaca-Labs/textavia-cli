@@ -3,7 +3,7 @@ name: textavia-json-tools
 description: "Use this skill for JSON formatting, minification, validation, YAML conversion, CSV conversion, Markdown table conversion, API responses, package manifests, config files, and generated structured data with the local Textavia CLI."
 version: 0.1.0
 author: Caravaca Labs
-homepage: https://textavia.com/developers/agent-skills/json-tools
+homepage: https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md#textavia-json-tools
 metadata:
   openclaw:
     tags: ["json","developer-tools","textavia","cli"]

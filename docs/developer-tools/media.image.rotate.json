@@ -1,0 +1,16 @@
+{
+  "id": "media.image.rotate",
+  "name": "Image rotate",
+  "summary": "Rotate an image.",
+  "description": "Image rotation is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.image.rotate",
+  "aliases": ["image rotate"],
+  "examples": [],
+  "inputKind": ["image", "file"],
+  "outputKind": ["image", "file"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "random.ip",
+  "name": "Random IPv4",
+  "summary": "Generate random IPv4 addresses.",
+  "description": "Generates random IPv4 addresses.",
+  "category": "random",
+  "command": "txv run random.ip",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Random IP",
+      "command": "txv random ip"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/random-ip",
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

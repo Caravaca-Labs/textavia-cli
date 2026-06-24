@@ -1,0 +1,21 @@
+{
+  "id": "random.boolean",
+  "name": "Random boolean",
+  "summary": "Generate random booleans.",
+  "description": "Outputs true or false with equal probability.",
+  "category": "random",
+  "command": "txv run random.boolean",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Random boolean",
+      "command": "txv random boolean"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/random-boolean",
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

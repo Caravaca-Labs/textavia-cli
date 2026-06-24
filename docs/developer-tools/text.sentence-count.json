@@ -1,0 +1,21 @@
+{
+  "id": "text.sentence-count",
+  "name": "Sentence count",
+  "summary": "Count sentences in text.",
+  "description": "Counts sentences using the same heuristic as text stats.",
+  "category": "text",
+  "command": "txv run text.sentence-count",
+  "aliases": ["sentence-count"],
+  "examples": [
+    {
+      "title": "Sentence count",
+      "command": "txv text sentence-count \"One. Two!\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/sentence-counter",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -3,7 +3,7 @@ name: textavia-text-cleaner
 description: "Use this skill for text cleanup, whitespace normalization, formatting removal, word and character counts, plain text extraction, line trimming, duplicate line removal, and local text inspection with the Textavia CLI."
 version: 0.1.0
 author: Caravaca Labs
-homepage: https://textavia.com/developers/agent-skills/text-cleaner
+homepage: https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md#textavia-text-cleaner
 metadata:
   openclaw:
     tags: ["text-cleanup","plain-text","developer-tools","textavia","cli"]

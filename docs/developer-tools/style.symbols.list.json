@@ -1,0 +1,16 @@
+{
+  "id": "style.symbols.list",
+  "name": "Symbol list",
+  "summary": "List Unicode symbols.",
+  "description": "Symbol listing is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.symbols.list",
+  "aliases": ["symbols list"],
+  "examples": [],
+  "inputKind": ["generated"],
+  "outputKind": ["json"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "dev.hash.sha384",
+  "name": "SHA384 hash",
+  "summary": "Compute the SHA384 digest.",
+  "description": "Hashes text, stdin, or a streaming file to a SHA384 hex digest.",
+  "category": "dev",
+  "command": "txv run dev.hash.sha384",
+  "aliases": ["sha384"],
+  "examples": [
+    {
+      "title": "Hash text",
+      "command": "txv hash sha384 \"abc\"",
+      "output": "cb00753f45a35e8bb5a03d699ac65007272c32ab0eded1631a8b605a43ff5bed8086072ba1e7cc2358baeca134c825a7"
+    },
+    {
+      "title": "Hash a file",
+      "command": "txv hash sha384 --file big.bin"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/sha384-hash",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

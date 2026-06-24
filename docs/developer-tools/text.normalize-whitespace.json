@@ -1,0 +1,22 @@
+{
+  "id": "text.normalize-whitespace",
+  "name": "Normalize whitespace",
+  "summary": "Collapse whitespace and trim.",
+  "description": "Collapses repeated whitespace into single spaces and trims the result.",
+  "category": "text",
+  "command": "txv run text.normalize-whitespace",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Normalize whitespace",
+      "command": "txv text normalize-whitespace \" a   b \"",
+      "output": "a b"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/whitespace-remover",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

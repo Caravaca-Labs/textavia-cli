@@ -1,0 +1,21 @@
+{
+  "id": "dev.hash.file",
+  "name": "Hash file",
+  "summary": "Hash text, stdin, or a file with a selected algorithm.",
+  "description": "Convenience wrapper around the hash tools. Defaults to SHA256 and reads files byte-safely.",
+  "category": "dev",
+  "command": "txv run dev.hash.file",
+  "aliases": ["hash file"],
+  "examples": [
+    {
+      "title": "Hash file",
+      "command": "txv hash file --file package.json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/hash-file",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

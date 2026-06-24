@@ -1,0 +1,21 @@
+{
+  "id": "data.xml.validate",
+  "name": "Validate XML",
+  "summary": "Validate basic XML tag balance.",
+  "description": "Checks whether XML-like input has balanced tags using a conservative scanner.",
+  "category": "data",
+  "command": "txv run data.xml.validate",
+  "aliases": ["xml validate"],
+  "examples": [
+    {
+      "title": "Validate XML",
+      "command": "txv xml validate \"<root></root>\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/xml-validator",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

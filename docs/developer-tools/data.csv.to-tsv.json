@@ -1,0 +1,21 @@
+{
+  "id": "data.csv.to-tsv",
+  "name": "CSV to TSV",
+  "summary": "Convert CSV to TSV.",
+  "description": "Converts simple delimited rows from comma-separated to tab-separated.",
+  "category": "data",
+  "command": "txv run data.csv.to-tsv",
+  "aliases": ["csv to-tsv"],
+  "examples": [
+    {
+      "title": "CSV to TSV",
+      "command": "txv csv to-tsv \"a,b\\n1,2\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/csv-to-tsv",
+  "inputKind": ["csv", "text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

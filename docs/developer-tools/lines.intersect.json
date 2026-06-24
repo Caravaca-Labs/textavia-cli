@@ -1,0 +1,21 @@
+{
+  "id": "lines.intersect",
+  "name": "Intersect lines",
+  "summary": "Return lines present in both lists.",
+  "description": "Computes line intersection. Use --other or separate blocks with a line containing \"---\".",
+  "category": "lines",
+  "command": "txv run lines.intersect",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Intersect lines",
+      "command": "txv lines intersect \"a\\nb\" --other \"b\\nc\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/list-intersect",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

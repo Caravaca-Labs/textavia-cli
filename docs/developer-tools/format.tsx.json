@@ -1,0 +1,16 @@
+{
+  "id": "format.tsx",
+  "name": "TSX formatter",
+  "summary": "Format TSX source.",
+  "description": "TSX formatter is provided by the optional formatter plugin.",
+  "category": "format",
+  "command": "txv run format.tsx",
+  "aliases": ["format tsx"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-formatters"
+}

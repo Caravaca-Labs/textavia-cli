@@ -19,7 +19,7 @@
     }
   ],
   "webUrl": "https://textavia.com/tools/case-upper",
-  "docsUrl": "https://textavia.com/tools/docs/case-upper",
+  "docsUrl": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/developer-tools/case.upper.json",
   "inputKind": ["text", "file"],
   "outputKind": ["text"],
   "stability": "stable",

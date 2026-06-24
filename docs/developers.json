@@ -17,10 +17,10 @@
     "networkDefault": false
   },
   "links": {
-    "developers": "https://textavia.com/developers",
+    "docs": "https://github.com/Caravaca-Labs/textavia-cli/tree/main/docs",
     "tools": "https://textavia.com/tools",
-    "cli": "https://textavia.com/developers/textavia-cli",
-    "mcp": "https://textavia.com/developers/mcp",
-    "agentSkills": "https://textavia.com/developers/agent-skills"
+    "cli": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/cli.md",
+    "mcp": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/mcp.md",
+    "agentSkills": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md"
   }
 }

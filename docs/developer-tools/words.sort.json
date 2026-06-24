@@ -1,0 +1,22 @@
+{
+  "id": "words.sort",
+  "name": "Sort words",
+  "summary": "Sort words alphabetically.",
+  "description": "Splits input into words and sorts them alphabetically.",
+  "category": "words",
+  "command": "txv run words.sort",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Sort words",
+      "command": "txv words sort \"banana apple\"",
+      "output": "apple banana"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/sort-words",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

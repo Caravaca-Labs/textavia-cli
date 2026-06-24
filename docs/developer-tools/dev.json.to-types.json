@@ -1,0 +1,21 @@
+{
+  "id": "dev.json.to-types",
+  "name": "JSON to TypeScript types",
+  "summary": "Infer TypeScript interfaces from JSON.",
+  "description": "Generates a basic TypeScript interface from a representative JSON object.",
+  "category": "dev",
+  "command": "txv run dev.json.to-types",
+  "aliases": ["json to-types"],
+  "examples": [
+    {
+      "title": "JSON to types",
+      "command": "txv json to-types \"{\\\"name\\\":\\\"Ada\\\"}\" --name User"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-to-types",
+  "inputKind": ["json", "text", "file"],
+  "outputKind": ["text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

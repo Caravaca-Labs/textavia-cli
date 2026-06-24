@@ -1,0 +1,16 @@
+{
+  "id": "style.discord",
+  "name": "Style discord",
+  "summary": "Apply the discord text style.",
+  "description": "discord styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.discord",
+  "aliases": ["style discord"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

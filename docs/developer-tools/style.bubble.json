@@ -1,0 +1,16 @@
+{
+  "id": "style.bubble",
+  "name": "Style bubble",
+  "summary": "Apply the bubble text style.",
+  "description": "bubble styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.bubble",
+  "aliases": ["style bubble"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

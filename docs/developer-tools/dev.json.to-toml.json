@@ -1,0 +1,21 @@
+{
+  "id": "dev.json.to-toml",
+  "name": "JSON to TOML",
+  "summary": "Convert a flat JSON object to TOML.",
+  "description": "Converts a flat JSON object with scalar or array values to TOML.",
+  "category": "dev",
+  "command": "txv run dev.json.to-toml",
+  "aliases": ["json to-toml"],
+  "examples": [
+    {
+      "title": "JSON to TOML",
+      "command": "txv json to-toml \"{\\\"name\\\":\\\"Ada\\\"}\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-to-toml",
+  "inputKind": ["json", "text", "file"],
+  "outputKind": ["text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

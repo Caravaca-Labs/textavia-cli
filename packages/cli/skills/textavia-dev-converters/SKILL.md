@@ -3,7 +3,7 @@ name: textavia-dev-converters
 description: "Use this skill for local developer conversions including URL encoding and decoding, YAML to JSON, XML formatting, XML to JSON, timestamp parsing, Unix time conversion, UTM URL construction, and QR SVG generation with the Textavia CLI."
 version: 0.1.0
 author: Caravaca Labs
-homepage: https://textavia.com/developers/agent-skills/dev-converters
+homepage: https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md#textavia-dev-converters
 metadata:
   openclaw:
     tags: ["converters","url-encoding","timestamp","xml","yaml","textavia"]

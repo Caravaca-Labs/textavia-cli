@@ -1,0 +1,16 @@
+{
+  "id": "style.stacked",
+  "name": "Style stacked",
+  "summary": "Apply the stacked text style.",
+  "description": "stacked styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.stacked",
+  "aliases": ["style stacked"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

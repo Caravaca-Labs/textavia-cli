@@ -1,0 +1,16 @@
+{
+  "id": "style.typewriter",
+  "name": "Style typewriter",
+  "summary": "Apply the typewriter text style.",
+  "description": "typewriter styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.typewriter",
+  "aliases": ["style typewriter"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

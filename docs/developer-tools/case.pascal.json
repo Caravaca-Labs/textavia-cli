@@ -19,7 +19,7 @@
     }
   ],
   "webUrl": "https://textavia.com/tools/case-pascal",
-  "docsUrl": "https://textavia.com/tools/docs/case-pascal",
+  "docsUrl": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/developer-tools/case.pascal.json",
   "inputKind": ["text", "file"],
   "outputKind": ["text"],
   "stability": "stable",

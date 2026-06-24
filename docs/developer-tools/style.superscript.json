@@ -1,0 +1,16 @@
+{
+  "id": "style.superscript",
+  "name": "Style superscript",
+  "summary": "Apply the superscript text style.",
+  "description": "superscript styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.superscript",
+  "aliases": ["style superscript"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

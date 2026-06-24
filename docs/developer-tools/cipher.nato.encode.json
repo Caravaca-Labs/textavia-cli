@@ -1,0 +1,22 @@
+{
+  "id": "cipher.nato.encode",
+  "name": "NATO encode",
+  "summary": "Encode text with the NATO alphabet.",
+  "description": "Converts A-Z letters to NATO phonetic words.",
+  "category": "cipher",
+  "command": "txv run cipher.nato.encode",
+  "aliases": ["nato encode"],
+  "examples": [
+    {
+      "title": "NATO encode",
+      "command": "txv nato encode AZ",
+      "output": "Alfa Zulu"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/nato-phonetic",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

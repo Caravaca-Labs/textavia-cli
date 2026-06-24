@@ -1,0 +1,22 @@
+{
+  "id": "encoding.utf8.decode",
+  "name": "UTF-8 decode",
+  "summary": "Decode UTF-8 hex bytes.",
+  "description": "Decodes space-separated UTF-8 hex bytes into text.",
+  "category": "encoding",
+  "command": "txv run encoding.utf8.decode",
+  "aliases": ["utf8 decode"],
+  "examples": [
+    {
+      "title": "UTF-8 decode",
+      "command": "txv utf8 decode \"c3 a9\"",
+      "output": "é"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/utf8-encoding",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

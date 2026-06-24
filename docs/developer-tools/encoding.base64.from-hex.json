@@ -1,0 +1,22 @@
+{
+  "id": "encoding.base64.from-hex",
+  "name": "Hex to Base64",
+  "summary": "Encode hex bytes as Base64.",
+  "description": "Converts a hexadecimal byte string to Base64.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.from-hex",
+  "aliases": ["base64 from-hex"],
+  "examples": [
+    {
+      "title": "Hex to Base64",
+      "command": "txv base64 from-hex 4869",
+      "output": "SGk="
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/hex-to-base64",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

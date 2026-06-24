@@ -1,0 +1,22 @@
+{
+  "id": "encoding.base64.to-ascii",
+  "name": "Base64 to ASCII",
+  "summary": "Decode Base64 as ASCII text.",
+  "description": "Decodes Base64 bytes using ASCII encoding.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.to-ascii",
+  "aliases": ["base64 to-ascii"],
+  "examples": [
+    {
+      "title": "Base64 to ASCII",
+      "command": "txv base64 to-ascii SGk=",
+      "output": "Hi"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/base64-to-ascii",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

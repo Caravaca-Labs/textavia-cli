@@ -1,0 +1,16 @@
+{
+  "id": "data.excel.to-markdown-table",
+  "name": "Excel to-markdown-table",
+  "summary": "Run Excel to-markdown-table.",
+  "description": "Excel to-markdown-table is provided by the optional data plugin.",
+  "category": "data",
+  "command": "txv run data.excel.to-markdown-table",
+  "aliases": ["excel to-markdown-table"],
+  "examples": [],
+  "inputKind": ["file", "bytes"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-data"
+}

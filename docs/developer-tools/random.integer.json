@@ -1,0 +1,21 @@
+{
+  "id": "random.integer",
+  "name": "Random integer",
+  "summary": "Generate random integers.",
+  "description": "Generates random integers between --min and --max.",
+  "category": "random",
+  "command": "txv run random.integer",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Random integer",
+      "command": "txv random integer --min 1 --max 6"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/random-number",
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

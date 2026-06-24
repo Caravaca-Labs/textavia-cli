@@ -31,21 +31,40 @@ at the repo `skills/` directory.
 
 ## Included skills
 
-- `textavia-json-tools` - format, validate, repair, query, minify, and convert
-  JSON.
-- `textavia-base64-debugger` - encode, decode, validate, normalize, repair, and
-  inspect Base64 payloads.
-- `textavia-text-cleaner` - normalize whitespace, clean copied text, remove
-  formatting, and produce plain text.
-- `textavia-csv-cleaner` - clean CSV, validate rows, convert CSV to JSON, and
-  create Markdown tables.
-- `textavia-privacy-scrubber` - redact emails, phone numbers, tokens, IP
-  addresses, and similar sensitive strings locally.
-- `textavia-markdown-table-tools` - create, clean, and convert Markdown tables.
-- `textavia-regex-helper` - test and explain regular expressions with timeout
-  protection.
-- `textavia-dev-converters` - use hashes, timestamps, URL encoding, HTML
-  escaping, JWT decoding, QR SVG generation, and color utilities.
+### textavia-json-tools
+
+Format, validate, repair, query, minify, and convert JSON.
+
+### textavia-base64-debugger
+
+Encode, decode, validate, normalize, repair, and inspect Base64 payloads.
+
+### textavia-text-cleaner
+
+Normalize whitespace, clean copied text, remove formatting, and produce plain
+text.
+
+### textavia-csv-cleaner
+
+Clean CSV, validate rows, convert CSV to JSON, and create Markdown tables.
+
+### textavia-privacy-scrubber
+
+Redact emails, phone numbers, tokens, IP addresses, and similar sensitive
+strings locally.
+
+### textavia-markdown-table-tools
+
+Create, clean, and convert Markdown tables.
+
+### textavia-regex-helper
+
+Test and explain regular expressions with timeout protection.
+
+### textavia-dev-converters
+
+Use hashes, timestamps, URL encoding, HTML escaping, JWT decoding, QR SVG
+generation, and color utilities.
 
 ## Runtime behavior
 
@@ -81,5 +100,4 @@ missing, the agent should ask the user before installing the CLI.
 
 - Package skills: `packages/cli/skills/`
 - Repo mirror: `skills/`
-- Website docs: [Textavia agent skills](https://textavia.com/developers/agent-skills)
-
+- Repo docs: `docs/agent-skills.md`

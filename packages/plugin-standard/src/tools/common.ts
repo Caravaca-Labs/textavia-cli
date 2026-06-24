@@ -12,6 +12,10 @@ import { requireText } from '@textavia/core';
 /** Base URL for matching online Textavia tools. */
 export const WEB_BASE = 'https://textavia.com/tools';
 
+/** Base URL for repo-hosted generated tool metadata. */
+export const REPO_TOOL_DOCS_BASE =
+  'https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/developer-tools';
+
 /** Builds a tool-shaped success result for text output. */
 export function textResult(
   output: string,

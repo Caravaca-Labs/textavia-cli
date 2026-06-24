@@ -1,0 +1,16 @@
+{
+  "id": "data.excel.sheets",
+  "name": "Excel sheets",
+  "summary": "Run Excel sheets.",
+  "description": "Excel sheets is provided by the optional data plugin.",
+  "category": "data",
+  "command": "txv run data.excel.sheets",
+  "aliases": ["excel sheets"],
+  "examples": [],
+  "inputKind": ["file", "bytes"],
+  "outputKind": ["json"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-data"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "encoding.base64.data-url-to-file",
+  "name": "Data URL to file bytes",
+  "summary": "Decode a Base64 data URL to bytes.",
+  "description": "Returns decoded bytes from a data URL; use --out to write the file.",
+  "category": "encoding",
+  "command": "txv run encoding.base64.data-url-to-file",
+  "aliases": ["base64 data-url-to-file"],
+  "examples": [
+    {
+      "title": "Data URL to file",
+      "command": "txv base64 data-url-to-file --file data-url.txt --out image.bin"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/base64-data-url",
+  "inputKind": ["text", "file"],
+  "outputKind": ["bytes"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

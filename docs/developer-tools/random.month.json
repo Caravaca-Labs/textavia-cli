@@ -1,0 +1,21 @@
+{
+  "id": "random.month",
+  "name": "Random month",
+  "summary": "Generate random month names.",
+  "description": "Picks random month names.",
+  "category": "random",
+  "command": "txv run random.month",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Random month",
+      "command": "txv random month"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/random-month",
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

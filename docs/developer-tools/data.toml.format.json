@@ -1,0 +1,21 @@
+{
+  "id": "data.toml.format",
+  "name": "Format TOML",
+  "summary": "Format a conservative TOML subset.",
+  "description": "Parses simple TOML and re-emits keys in sorted order.",
+  "category": "data",
+  "command": "txv run data.toml.format",
+  "aliases": ["toml format"],
+  "examples": [
+    {
+      "title": "Format TOML",
+      "command": "txv toml format \"b = 2\\na = 1\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/toml-formatter",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

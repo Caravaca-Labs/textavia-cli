@@ -1,0 +1,21 @@
+{
+  "id": "lines.subtract",
+  "name": "Subtract lines",
+  "summary": "Return lines only in the first list.",
+  "description": "Computes A minus B. Use --other or separate blocks with a line containing \"---\".",
+  "category": "lines",
+  "command": "txv run lines.subtract",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Subtract lines",
+      "command": "txv lines subtract \"a\\nb\" --other \"b\\nc\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/list-subtract",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

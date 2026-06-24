@@ -1,0 +1,26 @@
+{
+  "id": "dev.hash.sha224",
+  "name": "SHA224 hash",
+  "summary": "Compute the SHA224 digest.",
+  "description": "Hashes text, stdin, or a streaming file to a SHA224 hex digest.",
+  "category": "dev",
+  "command": "txv run dev.hash.sha224",
+  "aliases": ["sha224"],
+  "examples": [
+    {
+      "title": "Hash text",
+      "command": "txv hash sha224 \"abc\"",
+      "output": "23097d223405d8228642a477bda255b32aadbce4bda0b3f7e36c9da7"
+    },
+    {
+      "title": "Hash a file",
+      "command": "txv hash sha224 --file big.bin"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/sha224-hash",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "data.toml.to-yaml",
+  "name": "TOML to YAML",
+  "summary": "Convert TOML to YAML.",
+  "description": "Converts simple TOML to a JSON-compatible YAML subset.",
+  "category": "data",
+  "command": "txv run data.toml.to-yaml",
+  "aliases": ["toml to-yaml"],
+  "examples": [
+    {
+      "title": "TOML to YAML",
+      "command": "txv toml to-yaml \"name = \\\"Ada\\\"\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/toml-to-yaml",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

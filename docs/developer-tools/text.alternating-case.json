@@ -1,0 +1,22 @@
+{
+  "id": "text.alternating-case",
+  "name": "Alternating case",
+  "summary": "Alternate letter case.",
+  "description": "Alternates casing across letters in the input text.",
+  "category": "text",
+  "command": "txv run text.alternating-case",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Alternating",
+      "command": "txv text alternating-case \"hello\"",
+      "output": "HeLlO"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/alternating-case",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

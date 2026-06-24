@@ -1,0 +1,21 @@
+{
+  "id": "dev.json.sort-keys",
+  "name": "JSON sort keys",
+  "summary": "Sort JSON object keys recursively.",
+  "description": "Parses JSON and re-emits it with recursively sorted object keys.",
+  "category": "dev",
+  "command": "txv run dev.json.sort-keys",
+  "aliases": ["json sort-keys"],
+  "examples": [
+    {
+      "title": "Sort keys",
+      "command": "txv json sort-keys \"{\\\"b\\\":2,\\\"a\\\":1}\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-sort-keys",
+  "inputKind": ["json", "text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

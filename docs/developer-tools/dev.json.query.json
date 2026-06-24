@@ -1,0 +1,21 @@
+{
+  "id": "dev.json.query",
+  "name": "JSON query",
+  "summary": "Read a dot-path from JSON.",
+  "description": "Queries a JSON value with a simple dot path. Arrays use numeric path segments.",
+  "category": "dev",
+  "command": "txv run dev.json.query",
+  "aliases": ["json query"],
+  "examples": [
+    {
+      "title": "JSON query",
+      "command": "txv json query \"{\\\"a\\\":1}\" --path a --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-query",
+  "inputKind": ["json", "text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

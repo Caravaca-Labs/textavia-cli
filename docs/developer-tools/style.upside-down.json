@@ -1,0 +1,16 @@
+{
+  "id": "style.upside-down",
+  "name": "Style upside-down",
+  "summary": "Apply the upside-down text style.",
+  "description": "upside-down styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.upside-down",
+  "aliases": ["style upside-down"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

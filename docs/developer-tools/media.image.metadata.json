@@ -1,0 +1,16 @@
+{
+  "id": "media.image.metadata",
+  "name": "Image metadata",
+  "summary": "View image metadata.",
+  "description": "Image metadata inspection is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.image.metadata",
+  "aliases": ["image metadata"],
+  "examples": [],
+  "inputKind": ["image", "file"],
+  "outputKind": ["json"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

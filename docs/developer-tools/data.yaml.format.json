@@ -1,0 +1,21 @@
+{
+  "id": "data.yaml.format",
+  "name": "Format YAML",
+  "summary": "Format Textavia YAML subset.",
+  "description": "Parses the built-in YAML subset and re-emits deterministic YAML.",
+  "category": "data",
+  "command": "txv run data.yaml.format",
+  "aliases": ["yaml format"],
+  "examples": [
+    {
+      "title": "Format YAML",
+      "command": "txv yaml format \"name: Ada\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/yaml-formatter",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

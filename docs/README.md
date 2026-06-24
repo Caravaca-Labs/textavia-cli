@@ -31,11 +31,12 @@ generated docs, MCP server, and `SKILL.md` agent instructions.
 - `@textavia/schemas` exports Zod and JSON schema helpers.
 - `@textavia/mcp` exposes the registry through MCP.
 
-## Website docs
+## Website tools
 
-The repo docs are mirrored by browser-oriented pages on Textavia:
+Textavia keeps developer documentation in this GitHub repo. Browser tools live
+on the website:
 
-- [Textavia CLI docs](https://textavia.com/developers/textavia-cli)
-- [Textavia agent skills](https://textavia.com/developers/agent-skills)
-- [Textavia MCP docs](https://textavia.com/developers/mcp)
-
+- [Textavia](https://textavia.com)
+- [Textavia JSON formatter](https://textavia.com/tools/json-formatter)
+- [Textavia Base64 tools](https://textavia.com/tools/base64)
+- [Textavia text cleaner](https://textavia.com/tools/text-cleaner)

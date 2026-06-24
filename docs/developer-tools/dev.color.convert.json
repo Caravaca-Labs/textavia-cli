@@ -1,0 +1,21 @@
+{
+  "id": "dev.color.convert",
+  "name": "Color convert",
+  "summary": "Convert a hex color to RGB.",
+  "description": "Converts a 6-digit hex color to RGB and CSS rgb() output.",
+  "category": "dev",
+  "command": "txv run dev.color.convert",
+  "aliases": ["color convert"],
+  "examples": [
+    {
+      "title": "Color convert",
+      "command": "txv color convert \"#ff0000\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/color-converter",
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

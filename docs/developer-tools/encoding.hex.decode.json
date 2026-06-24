@@ -1,0 +1,22 @@
+{
+  "id": "encoding.hex.decode",
+  "name": "Hex decode",
+  "summary": "Decode hexadecimal to text or bytes.",
+  "description": "Decodes a hex string to UTF-8 text by default, or bytes with --bytes.",
+  "category": "encoding",
+  "command": "txv run encoding.hex.decode",
+  "aliases": ["hex decode"],
+  "examples": [
+    {
+      "title": "Hex decode",
+      "command": "txv hex decode 4869",
+      "output": "Hi"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/hex-decoder",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text", "bytes"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

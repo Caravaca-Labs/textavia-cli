@@ -19,7 +19,7 @@
     }
   ],
   "webUrl": "https://textavia.com/tools/case-title",
-  "docsUrl": "https://textavia.com/tools/docs/case-title",
+  "docsUrl": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/developer-tools/case.title.json",
   "inputKind": ["text", "file"],
   "outputKind": ["text"],
   "stability": "stable",

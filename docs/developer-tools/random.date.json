@@ -1,0 +1,21 @@
+{
+  "id": "random.date",
+  "name": "Random date",
+  "summary": "Generate random dates.",
+  "description": "Generates random ISO dates between --from and --to.",
+  "category": "random",
+  "command": "txv run random.date",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Random date",
+      "command": "txv random date --from 2024-01-01 --to 2024-12-31"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/random-date",
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

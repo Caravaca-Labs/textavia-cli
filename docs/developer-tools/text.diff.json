@@ -1,0 +1,21 @@
+{
+  "id": "text.diff",
+  "name": "Text diff",
+  "summary": "Compare two text blocks line by line.",
+  "description": "Reports added, removed, and unchanged lines. Use --other or separate blocks with a line containing \"---\".",
+  "category": "text",
+  "command": "txv run text.diff",
+  "aliases": ["diff"],
+  "examples": [
+    {
+      "title": "Diff",
+      "command": "txv text diff \"a\" --other \"a\\nb\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/diff-checker",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

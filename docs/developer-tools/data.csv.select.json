@@ -1,0 +1,21 @@
+{
+  "id": "data.csv.select",
+  "name": "CSV select",
+  "summary": "Select CSV columns.",
+  "description": "Selects columns by header name from a simple delimited table.",
+  "category": "data",
+  "command": "txv run data.csv.select",
+  "aliases": ["csv select"],
+  "examples": [
+    {
+      "title": "CSV select",
+      "command": "txv csv select \"name,age\\nAda,37\" --columns name"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/csv-select",
+  "inputKind": ["csv", "text", "file"],
+  "outputKind": ["csv", "text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

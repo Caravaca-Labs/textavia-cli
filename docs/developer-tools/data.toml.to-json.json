@@ -1,0 +1,21 @@
+{
+  "id": "data.toml.to-json",
+  "name": "TOML to JSON",
+  "summary": "Convert TOML to JSON.",
+  "description": "Converts simple key/value TOML to JSON.",
+  "category": "data",
+  "command": "txv run data.toml.to-json",
+  "aliases": ["toml to-json"],
+  "examples": [
+    {
+      "title": "TOML to JSON",
+      "command": "txv toml to-json \"name = \\\"Ada\\\"\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/toml-to-json",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

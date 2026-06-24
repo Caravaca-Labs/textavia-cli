@@ -81,7 +81,9 @@ describe('release readiness metadata', () => {
     });
     expect(mcp.bin).toEqual({ 'textavia-mcp': './dist/server.js' });
     expect(mcp.files).toEqual(['dist']);
-    expect(mcp.homepage).toBe('https://textavia.com/developers/mcp');
+    expect(mcp.homepage).toBe(
+      'https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/mcp.md',
+    );
     expect(mcp.keywords).toContain('model-context-protocol');
     expect(skills.private).toBe(true);
   });

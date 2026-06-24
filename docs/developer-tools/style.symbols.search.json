@@ -1,0 +1,16 @@
+{
+  "id": "style.symbols.search",
+  "name": "Symbol search",
+  "summary": "Search Unicode symbols.",
+  "description": "Symbol search is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.symbols.search",
+  "aliases": ["symbols search"],
+  "examples": [],
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

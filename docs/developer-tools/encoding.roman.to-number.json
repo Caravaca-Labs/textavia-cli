@@ -1,0 +1,21 @@
+{
+  "id": "encoding.roman.to-number",
+  "name": "Roman to number",
+  "summary": "Convert a Roman numeral to a number.",
+  "description": "Parses canonical Roman numerals from I to MMMCMXCIX.",
+  "category": "encoding",
+  "command": "txv run encoding.roman.to-number",
+  "aliases": ["roman to-number"],
+  "examples": [
+    {
+      "title": "Roman to number",
+      "command": "txv roman to-number XIV --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/roman-numeral-converter",
+  "inputKind": ["text"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

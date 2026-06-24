@@ -1,0 +1,16 @@
+{
+  "id": "style.italic",
+  "name": "Style italic",
+  "summary": "Apply the italic text style.",
+  "description": "italic styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.italic",
+  "aliases": ["style italic"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

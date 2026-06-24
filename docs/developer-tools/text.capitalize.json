@@ -1,0 +1,22 @@
+{
+  "id": "text.capitalize",
+  "name": "Capitalize text",
+  "summary": "Capitalize each word.",
+  "description": "Capitalizes each word for a readable capitalized style.",
+  "category": "text",
+  "command": "txv run text.capitalize",
+  "aliases": ["text capitalized"],
+  "examples": [
+    {
+      "title": "Capitalize",
+      "command": "txv text capitalize \"hello world\"",
+      "output": "Hello World"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/capitalized-case",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,22 @@
+{
+  "id": "cipher.caesar",
+  "name": "Caesar cipher",
+  "summary": "Apply a Caesar shift.",
+  "description": "Shifts A-Z letters by --shift positions. Default shift is 3.",
+  "category": "cipher",
+  "command": "txv run cipher.caesar",
+  "aliases": ["caesar"],
+  "examples": [
+    {
+      "title": "Caesar",
+      "command": "txv cipher caesar abc --shift 3",
+      "output": "def"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/caesar-cipher",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

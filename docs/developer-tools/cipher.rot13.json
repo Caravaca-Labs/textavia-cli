@@ -1,0 +1,22 @@
+{
+  "id": "cipher.rot13",
+  "name": "ROT13",
+  "summary": "Apply ROT13 substitution.",
+  "description": "Applies the reversible ROT13 substitution cipher.",
+  "category": "cipher",
+  "command": "txv run cipher.rot13",
+  "aliases": ["rot13"],
+  "examples": [
+    {
+      "title": "ROT13",
+      "command": "txv cipher rot13 \"uryyb\"",
+      "output": "hello"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/rot13",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

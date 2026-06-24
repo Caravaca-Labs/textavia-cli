@@ -1,0 +1,21 @@
+{
+  "id": "text.remove-line-breaks",
+  "name": "Remove line breaks",
+  "summary": "Replace line breaks with spaces.",
+  "description": "Converts multi-line text into a single line with normalized spacing.",
+  "category": "text",
+  "command": "txv run text.remove-line-breaks",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Remove line breaks",
+      "command": "printf \"a\\nb\" | txv text remove-line-breaks"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/remove-line-breaks",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

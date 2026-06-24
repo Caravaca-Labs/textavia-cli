@@ -1,0 +1,16 @@
+{
+  "id": "style.cursive",
+  "name": "Style cursive",
+  "summary": "Apply the cursive text style.",
+  "description": "cursive styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.cursive",
+  "aliases": ["style cursive"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

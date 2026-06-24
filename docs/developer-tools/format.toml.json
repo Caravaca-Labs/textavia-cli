@@ -1,0 +1,16 @@
+{
+  "id": "format.toml",
+  "name": "TOML formatter",
+  "summary": "Format TOML source.",
+  "description": "TOML formatter is provided by the optional formatter plugin.",
+  "category": "format",
+  "command": "txv run format.toml",
+  "aliases": ["format toml"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-formatters"
+}

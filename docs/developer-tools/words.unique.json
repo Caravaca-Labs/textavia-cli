@@ -1,0 +1,22 @@
+{
+  "id": "words.unique",
+  "name": "Unique words",
+  "summary": "Remove duplicate words.",
+  "description": "Splits input into words and preserves the first occurrence of each word.",
+  "category": "words",
+  "command": "txv run words.unique",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Unique words",
+      "command": "txv words unique \"the the cat\"",
+      "output": "the cat"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/unique-words",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,16 @@
+{
+  "id": "data.excel.info",
+  "name": "Excel info",
+  "summary": "Run Excel info.",
+  "description": "Excel info is provided by the optional data plugin.",
+  "category": "data",
+  "command": "txv run data.excel.info",
+  "aliases": ["excel info"],
+  "examples": [],
+  "inputKind": ["file", "bytes"],
+  "outputKind": ["json"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-data"
+}

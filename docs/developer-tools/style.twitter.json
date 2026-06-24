@@ -1,0 +1,16 @@
+{
+  "id": "style.twitter",
+  "name": "Style twitter",
+  "summary": "Apply the twitter text style.",
+  "description": "twitter styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.twitter",
+  "aliases": ["style twitter"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

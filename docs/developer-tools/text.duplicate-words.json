@@ -1,0 +1,21 @@
+{
+  "id": "text.duplicate-words",
+  "name": "Duplicate words",
+  "summary": "List repeated words.",
+  "description": "Reports case-insensitive words that appear more than once.",
+  "category": "text",
+  "command": "txv run text.duplicate-words",
+  "aliases": ["duplicate-words"],
+  "examples": [
+    {
+      "title": "Duplicate words",
+      "command": "txv text duplicate-words \"the cat and the dog\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/duplicate-word-finder",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

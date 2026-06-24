@@ -1,0 +1,21 @@
+{
+  "id": "dev.json.repair",
+  "name": "Repair JSON",
+  "summary": "Repair common JSON formatting mistakes.",
+  "description": "Attempts conservative repairs such as removing trailing commas before parsing.",
+  "category": "dev",
+  "command": "txv run dev.json.repair",
+  "aliases": ["json repair"],
+  "examples": [
+    {
+      "title": "JSON repair",
+      "command": "txv json repair \"{\\\"a\\\":1,}\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-repair",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

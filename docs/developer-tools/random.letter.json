@@ -1,0 +1,21 @@
+{
+  "id": "random.letter",
+  "name": "Random letter",
+  "summary": "Generate random letters.",
+  "description": "Generates random lowercase letters.",
+  "category": "random",
+  "command": "txv run random.letter",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Random letter",
+      "command": "txv random letter"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/random-letter",
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

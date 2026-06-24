@@ -1,10 +1,9 @@
 # Textavia
 
-[![Textavia CLI docs](https://img.shields.io/badge/docs-Textavia_CLI-155EEF)](https://textavia.com/developers/textavia-cli)
-[![Repo docs](https://img.shields.io/badge/repo-docs-24292F)](https://github.com/Caravaca-Labs/textavia-cli/tree/main/docs)
+[![Docs](https://img.shields.io/badge/docs-GitHub-24292F)](https://github.com/Caravaca-Labs/textavia-cli/tree/main/docs)
 [![npm package](https://img.shields.io/npm/v/textavia?label=npm)](https://www.npmjs.com/package/textavia)
 [![Pi package](https://img.shields.io/badge/Pi-package-3B82F6)](https://pi.dev/packages?search=textavia)
-[![Agent skills](https://img.shields.io/badge/agent_skills-SKILL.md-0F766E)](https://textavia.com/developers/agent-skills)
+[![Agent skills](https://img.shields.io/badge/agent_skills-SKILL.md-0F766E)](https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Fast, local-first command-line toolkit for text, data, encoding, formatting,
@@ -102,11 +101,9 @@ More docs:
 
 ## Online tools
 
-Prefer a browser UI or developer docs?
+Prefer a browser UI?
 
-- [Textavia CLI docs](https://textavia.com/developers/textavia-cli)
 - [Textavia](https://textavia.com)
-- [Textavia agent skills](https://textavia.com/developers/agent-skills)
 - [Textavia JSON formatter](https://textavia.com/tools/json-formatter)
 - [Textavia Base64 tools](https://textavia.com/tools/base64)
 - [Textavia text cleaner](https://textavia.com/tools/text-cleaner)

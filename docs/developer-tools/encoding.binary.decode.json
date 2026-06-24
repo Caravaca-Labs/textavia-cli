@@ -1,0 +1,22 @@
+{
+  "id": "encoding.binary.decode",
+  "name": "Binary decode",
+  "summary": "Decode 8-bit binary groups to text.",
+  "description": "Decodes whitespace-separated 8-bit binary groups into UTF-8 text.",
+  "category": "encoding",
+  "command": "txv run encoding.binary.decode",
+  "aliases": ["binary decode"],
+  "examples": [
+    {
+      "title": "Binary decode",
+      "command": "txv binary decode 01000001",
+      "output": "A"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/binary",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

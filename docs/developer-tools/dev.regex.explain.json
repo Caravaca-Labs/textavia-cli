@@ -1,0 +1,21 @@
+{
+  "id": "dev.regex.explain",
+  "name": "Regex explain",
+  "summary": "Explain simple regex features.",
+  "description": "Provides a concise structural summary of a JavaScript regular expression.",
+  "category": "dev",
+  "command": "txv run dev.regex.explain",
+  "aliases": ["regex explain"],
+  "examples": [
+    {
+      "title": "Regex explain",
+      "command": "txv regex explain \"^[a-z]+$\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/regex-tester",
+  "inputKind": ["text"],
+  "outputKind": ["text"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

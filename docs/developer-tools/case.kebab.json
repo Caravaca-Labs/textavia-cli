@@ -19,7 +19,7 @@
     }
   ],
   "webUrl": "https://textavia.com/tools/case-kebab",
-  "docsUrl": "https://textavia.com/tools/docs/case-kebab",
+  "docsUrl": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/developer-tools/case.kebab.json",
   "inputKind": ["text", "file"],
   "outputKind": ["text"],
   "stability": "stable",

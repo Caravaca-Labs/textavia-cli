@@ -1,0 +1,22 @@
+{
+  "id": "encoding.binary.encode",
+  "name": "Binary encode",
+  "summary": "Encode text or bytes as binary.",
+  "description": "Encodes UTF-8 text or file bytes into 8-bit binary groups.",
+  "category": "encoding",
+  "command": "txv run encoding.binary.encode",
+  "aliases": ["binary encode"],
+  "examples": [
+    {
+      "title": "Binary encode",
+      "command": "txv binary encode A",
+      "output": "01000001"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/binary",
+  "inputKind": ["text", "bytes", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

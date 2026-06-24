@@ -19,7 +19,7 @@
     }
   ],
   "webUrl": "https://textavia.com/tools/case-lower",
-  "docsUrl": "https://textavia.com/tools/docs/case-lower",
+  "docsUrl": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/developer-tools/case.lower.json",
   "inputKind": ["text", "file"],
   "outputKind": ["text"],
   "stability": "stable",

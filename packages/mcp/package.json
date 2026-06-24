@@ -4,7 +4,7 @@
   "description": "MCP server exposing Textavia tools generated from the shared registry.",
   "license": "MIT",
   "type": "module",
-  "homepage": "https://textavia.com/developers/mcp",
+  "homepage": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/mcp.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Caravaca-Labs/textavia-cli.git",

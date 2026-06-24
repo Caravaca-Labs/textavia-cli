@@ -3,7 +3,7 @@ name: textavia-regex-helper
 description: "Use this skill for local regular expression testing, match inspection, timeout-protected regex debugging, generated pattern validation, and safe regex experimentation with the Textavia CLI."
 version: 0.1.0
 author: Caravaca Labs
-homepage: https://textavia.com/developers/agent-skills/regex-helper
+homepage: https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md#textavia-regex-helper
 metadata:
   openclaw:
     tags: ["regex","testing","developer-tools","textavia","cli"]

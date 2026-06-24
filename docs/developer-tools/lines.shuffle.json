@@ -1,0 +1,21 @@
+{
+  "id": "lines.shuffle",
+  "name": "Shuffle lines",
+  "summary": "Shuffle line order.",
+  "description": "Randomly shuffles input lines locally.",
+  "category": "lines",
+  "command": "txv run lines.shuffle",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Shuffle lines",
+      "command": "printf \"a\\nb\" | txv lines shuffle"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/shuffle-lines",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

@@ -1,0 +1,16 @@
+{
+  "id": "style.aesthetic",
+  "name": "Style aesthetic",
+  "summary": "Apply the aesthetic text style.",
+  "description": "aesthetic styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.aesthetic",
+  "aliases": ["style aesthetic"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

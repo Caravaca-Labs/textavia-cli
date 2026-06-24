@@ -1,0 +1,22 @@
+{
+  "id": "encoding.utf8.encode",
+  "name": "UTF-8 encode",
+  "summary": "Show UTF-8 bytes for text.",
+  "description": "Encodes text to space-separated UTF-8 hex bytes.",
+  "category": "encoding",
+  "command": "txv run encoding.utf8.encode",
+  "aliases": ["utf8 encode"],
+  "examples": [
+    {
+      "title": "UTF-8 encode",
+      "command": "txv utf8 encode \"é\"",
+      "output": "c3 a9"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/utf8-encoding",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

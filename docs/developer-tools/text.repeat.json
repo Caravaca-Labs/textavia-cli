@@ -1,0 +1,22 @@
+{
+  "id": "text.repeat",
+  "name": "Repeat text",
+  "summary": "Repeat input text.",
+  "description": "Repeats the input --count times with an optional separator.",
+  "category": "text",
+  "command": "txv run text.repeat",
+  "aliases": ["repeat"],
+  "examples": [
+    {
+      "title": "Repeat",
+      "command": "txv text repeat \"ha\" --count 3",
+      "output": "hahaha"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/repeat-text",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

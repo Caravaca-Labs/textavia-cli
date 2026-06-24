@@ -1,0 +1,21 @@
+{
+  "id": "data.toml.validate",
+  "name": "Validate TOML",
+  "summary": "Validate a conservative TOML subset.",
+  "description": "Validates simple key/value TOML used by Textavia conversion tools.",
+  "category": "data",
+  "command": "txv run data.toml.validate",
+  "aliases": ["toml validate"],
+  "examples": [
+    {
+      "title": "Validate TOML",
+      "command": "txv toml validate \"name = \\\"Ada\\\"\" --json"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/toml-validator",
+  "inputKind": ["text", "file"],
+  "outputKind": ["json"],
+  "stability": "experimental",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

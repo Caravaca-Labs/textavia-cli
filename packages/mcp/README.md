@@ -10,9 +10,7 @@ npx @textavia/mcp
 
 - [Repo MCP docs](https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/mcp.md)
 - [Repo tool registry](https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/registry.md)
-- [Textavia MCP docs](https://textavia.com/developers/mcp)
 - [Textavia](https://textavia.com)
-- [Textavia developer tools](https://textavia.com/developers/textavia-cli)
 - [Textavia JSON formatter](https://textavia.com/tools/json-formatter)
 - [Textavia Base64 tools](https://textavia.com/tools/base64)
 - [Textavia privacy scrubber](https://textavia.com/tools/privacy-scrubber)

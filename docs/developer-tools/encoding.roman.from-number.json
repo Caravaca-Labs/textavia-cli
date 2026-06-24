@@ -1,0 +1,22 @@
+{
+  "id": "encoding.roman.from-number",
+  "name": "Number to Roman",
+  "summary": "Convert a number to Roman numerals.",
+  "description": "Converts integers from 1 to 3999 into canonical Roman numerals.",
+  "category": "encoding",
+  "command": "txv run encoding.roman.from-number",
+  "aliases": ["roman from-number"],
+  "examples": [
+    {
+      "title": "Number to Roman",
+      "command": "txv roman from-number 14",
+      "output": "XIV"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/roman-numeral-converter",
+  "inputKind": ["text"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

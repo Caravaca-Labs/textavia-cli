@@ -19,7 +19,7 @@
     }
   ],
   "webUrl": "https://textavia.com/tools/case-snake",
-  "docsUrl": "https://textavia.com/tools/docs/case-snake",
+  "docsUrl": "https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/developer-tools/case.snake.json",
   "inputKind": ["text", "file"],
   "outputKind": ["text"],
   "stability": "stable",

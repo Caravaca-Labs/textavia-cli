@@ -1,0 +1,21 @@
+{
+  "id": "lines.reverse",
+  "name": "Reverse lines",
+  "summary": "Reverse line order.",
+  "description": "Reverses the order of input lines.",
+  "category": "lines",
+  "command": "txv run lines.reverse",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Reverse lines",
+      "command": "printf \"a\\nb\" | txv lines reverse"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/reverse-lines",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

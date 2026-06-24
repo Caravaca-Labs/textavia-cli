@@ -1,0 +1,21 @@
+{
+  "id": "random.number",
+  "name": "Random number",
+  "summary": "Generate random numbers.",
+  "description": "Generates random floating point numbers between --min and --max.",
+  "category": "random",
+  "command": "txv run random.number",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Random number",
+      "command": "txv random number --min 1 --max 10"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/random-number",
+  "inputKind": ["generated"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

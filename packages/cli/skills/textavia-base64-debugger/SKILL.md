@@ -3,7 +3,7 @@ name: textavia-base64-debugger
 description: "Use this skill for Base64 encoding, decoding, validation, normalization, repair, detection, data URL conversion, gzip checks, copied Base64 payload debugging, and local binary/text Base64 workflows with the Textavia CLI."
 version: 0.1.0
 author: Caravaca Labs
-homepage: https://textavia.com/developers/agent-skills/base64-debugger
+homepage: https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md#textavia-base64-debugger
 metadata:
   openclaw:
     tags: ["base64","encoding","debugging","textavia","cli"]

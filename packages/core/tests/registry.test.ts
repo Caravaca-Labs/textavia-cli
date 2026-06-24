@@ -151,7 +151,8 @@ describe('ToolRegistry.manifest', () => {
     registry.register(
       makeTool({
         webUrl: 'https://textavia.com/slug',
-        docsUrl: 'https://textavia.com/docs/slug',
+        docsUrl:
+          'https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/developer-tools/case.slug.json',
       }),
     );
     const manifest = registry.manifest();

@@ -1,0 +1,16 @@
+{
+  "id": "media.image.crop",
+  "name": "Image crop",
+  "summary": "Crop an image.",
+  "description": "Image cropping is provided by the optional media plugin.",
+  "category": "media",
+  "command": "txv run media.image.crop",
+  "aliases": ["image crop"],
+  "examples": [],
+  "inputKind": ["image", "file"],
+  "outputKind": ["image", "file"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-media"
+}

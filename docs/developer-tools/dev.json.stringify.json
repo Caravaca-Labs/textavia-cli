@@ -1,0 +1,22 @@
+{
+  "id": "dev.json.stringify",
+  "name": "JSON stringify text",
+  "summary": "Escape text as a JSON string.",
+  "description": "Converts raw text into a JSON string literal.",
+  "category": "dev",
+  "command": "txv run dev.json.stringify",
+  "aliases": ["json stringify"],
+  "examples": [
+    {
+      "title": "Stringify",
+      "command": "txv json stringify \"hello\"",
+      "output": "\"hello\""
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/json-stringify-text",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

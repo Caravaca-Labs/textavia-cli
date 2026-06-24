@@ -1,0 +1,21 @@
+{
+  "id": "random.choice",
+  "name": "Random choice",
+  "summary": "Pick random items from input lines.",
+  "description": "Chooses one or more random non-empty lines from the input.",
+  "category": "random",
+  "command": "txv run random.choice",
+  "aliases": [],
+  "examples": [
+    {
+      "title": "Random choice",
+      "command": "printf \"a\\nb\" | txv random choice"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/random-choice",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

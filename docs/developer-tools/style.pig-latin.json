@@ -1,0 +1,16 @@
+{
+  "id": "style.pig-latin",
+  "name": "Style pig-latin",
+  "summary": "Apply the pig-latin text style.",
+  "description": "pig-latin styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.pig-latin",
+  "aliases": ["style pig-latin"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

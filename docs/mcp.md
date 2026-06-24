@@ -37,4 +37,3 @@ All MCP execution calls the same registry executors used by the CLI.
 - [Repo docs index](README.md)
 - [Tool registry](registry.md)
 - [CLI commands](cli.md)
-- [Website MCP docs](https://textavia.com/developers/mcp)

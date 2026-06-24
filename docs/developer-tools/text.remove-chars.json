@@ -1,0 +1,22 @@
+{
+  "id": "text.remove-chars",
+  "name": "Remove characters",
+  "summary": "Remove selected characters from text.",
+  "description": "Removes every character listed in --chars from the input.",
+  "category": "text",
+  "command": "txv run text.remove-chars",
+  "aliases": ["character-remove"],
+  "examples": [
+    {
+      "title": "Remove chars",
+      "command": "txv text remove-chars \"banana\" --chars an",
+      "output": "b"
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/character-remover",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}

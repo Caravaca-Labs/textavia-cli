@@ -1,0 +1,16 @@
+{
+  "id": "style.facebook",
+  "name": "Style facebook",
+  "summary": "Apply the facebook text style.",
+  "description": "facebook styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.facebook",
+  "aliases": ["style facebook"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

@@ -1,10 +1,10 @@
 {
   "name": "textavia",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Fast, local-first command-line toolkit for text, data, encoding, formatting, and developer utilities.",
   "license": "MIT",
   "type": "module",
-  "homepage": "https://textavia.com/developers/textavia-cli",
+  "homepage": "https://github.com/Caravaca-Labs/textavia-cli#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Caravaca-Labs/textavia-cli.git",

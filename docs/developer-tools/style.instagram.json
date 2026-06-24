@@ -1,0 +1,16 @@
+{
+  "id": "style.instagram",
+  "name": "Style instagram",
+  "summary": "Apply the instagram text style.",
+  "description": "instagram styling is provided by the optional style plugin.",
+  "category": "style",
+  "command": "txv run style.instagram",
+  "aliases": ["style instagram"],
+  "examples": [],
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-style"
+}

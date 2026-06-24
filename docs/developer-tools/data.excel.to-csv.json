@@ -1,0 +1,16 @@
+{
+  "id": "data.excel.to-csv",
+  "name": "Excel to-csv",
+  "summary": "Run Excel to-csv.",
+  "description": "Excel to-csv is provided by the optional data plugin.",
+  "category": "data",
+  "command": "txv run data.excel.to-csv",
+  "aliases": ["excel to-csv"],
+  "examples": [],
+  "inputKind": ["file", "bytes"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-data"
+}

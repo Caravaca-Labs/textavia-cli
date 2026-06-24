@@ -117,7 +117,11 @@ function renderRecipesDoc(): string {
 function renderMcpDoc(): string {
   return `# Textavia MCP
 
-Run the MCP server:
+\`@textavia/mcp\` exposes Textavia registry tools through the Model Context
+Protocol. It is a thin server layer over the same tool implementations used by
+the CLI.
+
+Run the server:
 
 \`\`\`bash
 npx @textavia/mcp
@@ -125,7 +129,9 @@ npx @textavia/mcp
 
 Default behavior is local-first. Network tools are hidden unless enabled by config, and filesystem use can be disabled by the MCP host config.
 
-Example generated tools:
+## What it exposes
+
+Tools are generated from canonical registry IDs. Examples:
 
 - \`textavia.case_convert\` style names are generated from canonical registry IDs.
 - \`textavia.base64_encode\`
@@ -134,6 +140,20 @@ Example generated tools:
 - \`textavia.regex_test\`
 
 All MCP execution calls the same registry executors used by the CLI.
+
+## Safety model
+
+- Standard tools run locally.
+- Network tools are opt-in.
+- Filesystem access can be disabled by the MCP host config.
+- JSON outputs are deterministic and use the same error codes/contracts as the
+  CLI where applicable.
+
+## Related docs
+
+- [Repo docs index](README.md)
+- [Tool registry](registry.md)
+- [CLI commands](cli.md)
 `;
 }
 
@@ -192,11 +212,12 @@ function writeDeveloperHubData(): void {
           networkDefault: false,
         },
         links: {
-          developers: 'https://textavia.com/developers',
+          docs: 'https://github.com/Caravaca-Labs/textavia-cli/tree/main/docs',
           tools: 'https://textavia.com/tools',
-          cli: 'https://textavia.com/developers/textavia-cli',
-          mcp: 'https://textavia.com/developers/mcp',
-          agentSkills: 'https://textavia.com/developers/agent-skills',
+          cli: 'https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/cli.md',
+          mcp: 'https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/mcp.md',
+          agentSkills:
+            'https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md',
         },
       },
       null,

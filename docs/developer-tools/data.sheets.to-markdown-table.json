@@ -1,0 +1,16 @@
+{
+  "id": "data.sheets.to-markdown-table",
+  "name": "Google Sheets to-markdown-table",
+  "summary": "Run Google Sheets to-markdown-table.",
+  "description": "Google Sheets to-markdown-table is provided by the optional data plugin and requires --allow-network.",
+  "category": "data",
+  "command": "txv run data.sheets.to-markdown-table",
+  "aliases": ["sheets to-markdown-table"],
+  "examples": [],
+  "inputKind": ["text"],
+  "outputKind": ["text"],
+  "stability": "future",
+  "requiresNetwork": false,
+  "requiresFilesystem": false,
+  "requiresOptionalPlugin": "@textavia/plugin-data"
+}

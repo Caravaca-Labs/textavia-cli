@@ -8,7 +8,7 @@
 import { type TextaviaToolDefinition, requireText } from '@textavia/core';
 import { z } from 'zod';
 import { type CaseMode, convertCase } from '../transforms/case.js';
-import { WEB_BASE, textResult } from './common.js';
+import { REPO_TOOL_DOCS_BASE, WEB_BASE, textResult } from './common.js';
 
 interface CaseModeMeta {
   readonly mode: CaseMode;
@@ -127,7 +127,7 @@ function caseToolBase(meta: CaseModeMeta): TextaviaToolDefinition {
     inputKind: ['text', 'file'],
     outputKind: ['text'],
     webUrl: `${WEB_BASE}/case-${meta.mode}`,
-    docsUrl: `${WEB_BASE}/docs/case-${meta.mode}`,
+    docsUrl: `${REPO_TOOL_DOCS_BASE}/case.${meta.mode}.json`,
     optionsSchema: CaseOptionsSchema,
     examples: [
       {

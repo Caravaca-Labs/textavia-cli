@@ -1,0 +1,22 @@
+{
+  "id": "cipher.morse.encode",
+  "name": "Morse encode",
+  "summary": "Encode text as Morse code.",
+  "description": "Encodes alphanumeric text to Morse code.",
+  "category": "cipher",
+  "command": "txv run cipher.morse.encode",
+  "aliases": ["morse encode"],
+  "examples": [
+    {
+      "title": "Morse encode",
+      "command": "txv morse encode SOS",
+      "output": "... --- ..."
+    }
+  ],
+  "webUrl": "https://textavia.com/tools/morse-code",
+  "inputKind": ["text", "file"],
+  "outputKind": ["text"],
+  "stability": "stable",
+  "requiresNetwork": false,
+  "requiresFilesystem": false
+}
