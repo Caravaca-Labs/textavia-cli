@@ -14,7 +14,7 @@ import { GLOBAL_OPTIONS } from './global-options.js';
 import { buildCliRegistry, loadOptionalPlugin } from './registry-builder.js';
 import { runCli } from './router.js';
 
-export const CLI_VERSION = '0.1.3';
+export const CLI_VERSION = '0.1.4';
 export const CLI_NAME = 'txv';
 
 /** Builds a Commander program used to render help and version output. */

@@ -656,6 +656,6 @@ describe('CLI help and version', () => {
   it('prints version', async () => {
     const result = await run(registry(), ['version']);
     expect(result.code).toBe(0);
-    expect(result.stdout.trim()).toBe('0.1.3');
+    expect(result.stdout.trim()).toBe('0.1.4');
   });
 });
