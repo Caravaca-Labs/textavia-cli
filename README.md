@@ -1,12 +1,26 @@
 # Textavia CLI
 
 [![Textavia CLI docs](https://img.shields.io/badge/docs-Textavia_CLI-155EEF)](https://textavia.com/developers/textavia-cli)
+[![Repo docs](https://img.shields.io/badge/repo-docs-24292F)](docs/README.md)
 [![npm package](https://img.shields.io/npm/v/textavia?label=npm)](https://www.npmjs.com/package/textavia)
 [![Pi package](https://img.shields.io/badge/Pi-package-3B82F6)](https://pi.dev/packages?search=textavia)
 [![Agent skills](https://img.shields.io/badge/agent_skills-SKILL.md-0F766E)](https://textavia.com/developers/agent-skills)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](packages/cli/LICENSE)
 
 Fast, local-first command-line toolkit for text, data, encoding, formatting, and developer utilities. Built on a shared tool registry so the CLI, docs, MCP server, and agent manifests never drift apart.
+
+## What it is
+
+Textavia is a set of small, composable developer tools exposed through one CLI.
+It is meant for work that is too frequent to open a browser tab for and too
+annoying to rewrite as one-off shell snippets: formatting JSON, decoding
+Base64, cleaning pasted text, converting CSV, hashing files, testing regexes,
+generating UUIDs, scrubbing private strings, and preparing agent-readable JSON
+output.
+
+The npm package is also an agent distribution asset. Installing `textavia`
+ships the `txv` / `textavia` binaries plus bundled `SKILL.md` instructions for
+Pi, Hermes, OpenClaw, and other skill-based agent systems.
 
 ## Why Textavia CLI
 
@@ -36,7 +50,7 @@ txv base64 encode "Hello"             # SGVsbG8=
 txv random uuid                       # a UUID v4
 ```
 
-## Commands
+## Command model
 
 ```sh
 txv <namespace> <operation> [input] [options]
@@ -45,7 +59,39 @@ txv tools list | search <q> | info <id> | docs <id>
 txv agent run <tool-id> | txv agent manifest
 ```
 
-Run `txv tools list` to see every tool. See [docs/cli.md](docs/cli.md) for the generated command reference and [docs/registry.md](docs/registry.md) for full registry metadata.
+Use the short namespace form for humans:
+
+```sh
+txv json format '{"a":1}'
+txv base64 decode SGVsbG8=
+txv text clean --file notes.txt
+```
+
+Use canonical tool IDs for scripts and agents:
+
+```sh
+txv run dev.json.format '{"a":1}' --json
+txv run encoding.base64.decode SGVsbG8= --json
+txv run text.privacy-scrub --file support-log.txt --json
+```
+
+Run `txv tools list` to see every tool. See [docs/README.md](docs/README.md)
+for repo docs, [docs/cli.md](docs/cli.md) for the generated command reference,
+and [docs/registry.md](docs/registry.md) for full registry metadata.
+
+## Tool families
+
+Textavia currently covers these tool families:
+
+| Family | Examples |
+| --- | --- |
+| Case and text | slug, camelCase, title case, cleanup, plain text, statistics, privacy scrubbing |
+| Encoding | Base64, URL encoding, hex, binary, UTF-8, Roman numerals |
+| Data formats | JSON, CSV, YAML, TOML, XML, HTML, Markdown tables |
+| Developer utilities | hashes, JWT decode, regex test/explain, timestamps, cron, UTM URLs, QR SVG |
+| Lines and lists | trim, sort, dedupe, compare, intersect, subtract, shuffle |
+| Random generators | UUIDs, passwords, integers, dates, booleans, choices |
+| Optional plugins | code formatters, Unicode/text styles, media/PDF/OCR helpers |
 
 A positional string is treated as **text**, not a file path:
 
@@ -112,6 +158,19 @@ npx @textavia/mcp
 ```
 
 See [docs/mcp.md](docs/mcp.md).
+
+## Agent skills
+
+The `textavia` npm package bundles `SKILL.md` folders under `skills/`, and the
+repo mirrors them at the root `skills/` directory for GitHub-based discovery.
+Pi can load them directly from npm:
+
+```sh
+pi install npm:textavia
+```
+
+See [docs/agent-skills.md](docs/agent-skills.md) for the included skills,
+runtime behavior, and safety rules.
 
 ## Online tools
 

@@ -29,6 +29,14 @@ describe('release readiness metadata', () => {
   it('keeps the preferred npm package name and CLI bins', () => {
     const pkg = readJson(resolve(root, 'packages/cli/package.json'));
     expect(pkg.name).toBe('textavia');
+    expect(pkg.repository).toEqual({
+      type: 'git',
+      url: 'git+https://github.com/Caravaca-Labs/textavia-cli.git',
+      directory: 'packages/cli',
+    });
+    expect(pkg.bugs).toEqual({
+      url: 'https://github.com/Caravaca-Labs/textavia-cli/issues',
+    });
     expect(pkg.bin).toEqual({
       textavia: './dist/cli.js',
       txv: './dist/cli.js',
@@ -63,6 +71,14 @@ describe('release readiness metadata', () => {
     const skills = readJson(
       resolve(root, 'packages/agent-skills/package.json'),
     );
+    expect(mcp.repository).toEqual({
+      type: 'git',
+      url: 'git+https://github.com/Caravaca-Labs/textavia-cli.git',
+      directory: 'packages/mcp',
+    });
+    expect(mcp.bugs).toEqual({
+      url: 'https://github.com/Caravaca-Labs/textavia-cli/issues',
+    });
     expect(mcp.bin).toEqual({ 'textavia-mcp': './dist/server.js' });
     expect(mcp.files).toEqual(['dist']);
     expect(mcp.homepage).toBe('https://textavia.com/developers/mcp');

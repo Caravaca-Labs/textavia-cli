@@ -7,11 +7,11 @@
   "homepage": "https://textavia.com/developers/mcp",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Caravaca-Labs/textavia.git",
+    "url": "git+https://github.com/Caravaca-Labs/textavia-cli.git",
     "directory": "packages/mcp"
   },
   "bugs": {
-    "url": "https://github.com/Caravaca-Labs/textavia/issues"
+    "url": "https://github.com/Caravaca-Labs/textavia-cli/issues"
   },
   "keywords": [
     "mcp",
