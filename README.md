@@ -23,9 +23,9 @@ The package exposes both `textavia` and `txv` binaries.
 
 ```sh
 txv case slug "Hello World!"          # hello-world
-echo "HeLLo" | txv lower              # hello
+echo "HeLLo" | txv case lower         # hello
 txv hash sha256 abc                   # ba7816bf...
-txv json format package.json --write  # pretty-print in place
+txv json format --file package.json --write  # pretty-print in place
 txv base64 encode "Hello"             # SGVsbG8=
 txv random uuid                       # a UUID v4
 ```
@@ -41,7 +41,18 @@ txv agent run <tool-id> | txv agent manifest
 
 Run `txv tools list` to see every tool. See [docs/cli.md](docs/cli.md) for the generated command reference and [docs/registry.md](docs/registry.md) for full registry metadata.
 
-A positional string is treated as **text**, not a file path: `txv slug "my file.txt"` slugifies the string. Use `--file` to read a file.
+A positional string is treated as **text**, not a file path:
+
+```sh
+txv case slug "my file.txt"
+```
+
+This slugifies the literal string `my file.txt`. Use `--file` to read from
+disk:
+
+```sh
+txv case slug --file title.txt
+```
 
 ## Input and output
 
@@ -49,7 +60,7 @@ Input priority: `--input`, `--file`, positional argument, stdin, interactive pro
 
 ```sh
 txv case upper --file notes.txt              # read a file
-txv json format notes.json --write --backup  # in place with a .bak
+txv json format --file notes.json --write --backup  # in place with a .bak
 txv hash sha256 --file big.bin               # streamed, memory-bounded
 txv case lower "Hi" --out result.txt         # write to a file
 ```
@@ -98,7 +109,17 @@ See [docs/mcp.md](docs/mcp.md).
 
 ## Online tools
 
-The website hosts many SEO-specific pages. The CLI consolidates them into fewer, stronger primitives. Use `pnpm import:sitemap <url>` to see how website pages map to CLI commands.
+Prefer a browser UI or developer docs?
+
+- [Textavia CLI docs](https://textavia.com/developers/textavia-cli)
+- [Textavia](https://textavia.com)
+- [Textavia agent skills](https://textavia.com/developers/agent-skills)
+- [Textavia MCP docs](https://textavia.com/developers/mcp)
+- [Textavia JSON formatter](https://textavia.com/tools/json-formatter)
+- [Textavia Base64 tools](https://textavia.com/tools/base64)
+- [Textavia text cleaner](https://textavia.com/tools/text-cleaner)
+- [Textavia privacy scrubber](https://textavia.com/tools/privacy-scrubber)
+- [Textavia CSV to JSON converter](https://textavia.com/tools/csv-to-json)
 
 ## Privacy
 
@@ -118,16 +139,19 @@ pnpm lint
 pnpm generate:docs
 ```
 
+Maintainers can run `pnpm import:sitemap <url>` to inspect how website pages map
+to CLI commands.
+
 The repo is a pnpm monorepo:
 
 - `@textavia/core` — pure tool contracts and the registry.
 - `@textavia/schemas` — Zod schemas and JSON schema exports.
 - `@textavia/node-adapters` — filesystem, stream, crypto, and worker helpers.
 - `@textavia/plugin-standard` — bundled default tools.
-- `textavia` — the CLI package.
-- `@textavia/plugin-formatters`, `@textavia/plugin-media` — optional plugins.
+- `textavia` — the CLI package, including bundled `skills/`.
+- `@textavia/plugin-formatters` — optional formatter plugin.
+- `@textavia/plugin-media` — optional media/PDF/OCR plugin.
 - `@textavia/mcp` — the MCP server.
-- `textavia-agent-skills` — generated agent skills.
 
 ## License
 

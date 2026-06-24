@@ -5,7 +5,7 @@
   "description": "Removes zero-width characters, BOM, and non-printable control characters.",
   "category": "text",
   "command": "txv run text.remove-formatting",
-  "aliases": [],
+  "aliases": ["text strip-formatting", "strip-formatting"],
   "examples": [
     {
       "title": "Remove formatting",

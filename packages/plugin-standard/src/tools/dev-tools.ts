@@ -57,7 +57,7 @@ export const jsonTools: readonly TextaviaToolDefinition[] = [
       },
       {
         title: 'Format a file in place',
-        command: 'txv json format package.json --write --backup',
+        command: 'txv json format --file package.json --write --backup',
       },
     ],
     stability: 'stable',

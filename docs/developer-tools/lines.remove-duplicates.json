@@ -5,7 +5,7 @@
   "description": "Alias for unique that removes duplicate lines, preserving order.",
   "category": "lines",
   "command": "txv run lines.remove-duplicates",
-  "aliases": ["remove-duplicates", "dedupe"],
+  "aliases": ["remove-duplicates", "dedupe", "text remove-duplicates"],
   "examples": [
     {
       "title": "Remove duplicates",

@@ -5,7 +5,7 @@
   "description": "Estimates syllable count using a heuristic vowel-group rule.",
   "category": "text",
   "command": "txv run text.syllables",
-  "aliases": ["syllables"],
+  "aliases": ["syllables", "syllable-count", "text syllable-count"],
   "examples": [
     {
       "title": "Syllables",

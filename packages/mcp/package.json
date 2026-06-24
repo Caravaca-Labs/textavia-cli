@@ -4,6 +4,24 @@
   "description": "MCP server exposing Textavia tools generated from the shared registry.",
   "license": "MIT",
   "type": "module",
+  "homepage": "https://textavia.com/developers/mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caravaca-Labs/textavia.git",
+    "directory": "packages/mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/Caravaca-Labs/textavia/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "developer-tools",
+    "text-tools",
+    "json",
+    "base64",
+    "privacy"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {

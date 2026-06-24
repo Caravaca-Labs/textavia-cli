@@ -9,7 +9,7 @@
   "examples": [
     {
       "title": "Decode JWT",
-      "command": "txv jwt decode token.txt"
+      "command": "txv jwt decode --file token.txt"
     }
   ],
   "webUrl": "https://textavia.com/tools/jwt-decoder",

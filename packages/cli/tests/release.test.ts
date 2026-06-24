@@ -37,16 +37,36 @@ describe('release readiness metadata', () => {
         default: './dist/index.js',
       },
     });
-    expect(pkg.files).toEqual(['dist']);
+    expect(pkg.files).toEqual(['dist', 'skills', 'README.md', 'LICENSE']);
+    expect(pkg.pi).toEqual({ skills: ['./skills'] });
+    expect(pkg.keywords).toContain('agent-skills');
+    expect(pkg.keywords).toContain('pi-package');
   });
 
-  it('keeps MCP and agent packages publishable through generated artifacts', () => {
+  it('keeps MCP publishable and agent skills bundled in textavia', () => {
     const mcp = readJson(resolve(root, 'packages/mcp/package.json'));
     const skills = readJson(
       resolve(root, 'packages/agent-skills/package.json'),
     );
     expect(mcp.bin).toEqual({ 'textavia-mcp': './dist/server.js' });
     expect(mcp.files).toEqual(['dist']);
-    expect(skills.files).toEqual(['dist', 'skills']);
+    expect(mcp.homepage).toBe('https://textavia.com/developers/mcp');
+    expect(mcp.keywords).toContain('model-context-protocol');
+    expect(skills.private).toBe(true);
+  });
+
+  it('keeps generated skills in the textavia package and repo mirror', () => {
+    const packageSkill = readFileSync(
+      resolve(root, 'packages/cli/skills/textavia-json-tools/SKILL.md'),
+      'utf8',
+    );
+    const rootSkill = readFileSync(
+      resolve(root, 'skills/textavia-json-tools/SKILL.md'),
+      'utf8',
+    );
+    expect(packageSkill).toContain('name: textavia-json-tools');
+    expect(packageSkill).toContain('metadata:');
+    expect(packageSkill).toContain('txv json format');
+    expect(rootSkill).toBe(packageSkill);
   });
 });

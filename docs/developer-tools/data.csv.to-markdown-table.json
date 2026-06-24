@@ -9,7 +9,7 @@
   "examples": [
     {
       "title": "CSV to Markdown",
-      "command": "txv csv to-markdown-table users.csv --out users.md"
+      "command": "txv csv to-markdown-table --file users.csv --out users.md"
     }
   ],
   "webUrl": "https://textavia.com/tools/csv-to-markdown-table",

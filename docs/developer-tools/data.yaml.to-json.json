@@ -9,7 +9,7 @@
   "examples": [
     {
       "title": "YAML to JSON",
-      "command": "txv yaml to-json data.yaml"
+      "command": "txv yaml to-json --file data.yaml"
     }
   ],
   "webUrl": "https://textavia.com/tools/yaml-to-json",

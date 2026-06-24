@@ -5,7 +5,7 @@
   "description": "Word cloud generation is provided by the optional media plugin.",
   "category": "media",
   "command": "txv run media.wordcloud",
-  "aliases": ["wordcloud"],
+  "aliases": ["wordcloud", "wordcloud generate"],
   "examples": [],
   "inputKind": ["text", "file"],
   "outputKind": ["image", "file"],

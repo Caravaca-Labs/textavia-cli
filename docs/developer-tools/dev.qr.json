@@ -5,7 +5,7 @@
   "description": "Generates a standards-compliant QR code SVG for the input text. No network access is used.",
   "category": "dev",
   "command": "txv run dev.qr",
-  "aliases": ["qr"],
+  "aliases": ["qr", "qr generate"],
   "examples": [
     {
       "title": "Generate SVG",

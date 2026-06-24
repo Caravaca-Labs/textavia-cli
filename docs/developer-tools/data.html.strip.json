@@ -5,7 +5,7 @@
   "description": "Removes HTML tags and script/style blocks while preserving text content.",
   "category": "data",
   "command": "txv run data.html.strip",
-  "aliases": ["html strip"],
+  "aliases": ["html strip", "text strip-html"],
   "examples": [
     {
       "title": "Strip HTML",

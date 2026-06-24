@@ -9,7 +9,7 @@
   "examples": [
     {
       "title": "XML to JSON",
-      "command": "txv xml to-json data.xml"
+      "command": "txv xml to-json --file data.xml"
     }
   ],
   "webUrl": "https://textavia.com/tools/xml-to-json",

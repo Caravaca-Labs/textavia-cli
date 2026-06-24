@@ -9,7 +9,7 @@
   "examples": [
     {
       "title": "Format XML",
-      "command": "txv xml format data.xml"
+      "command": "txv xml format --file data.xml"
     }
   ],
   "webUrl": "https://textavia.com/tools/xml-formatter",

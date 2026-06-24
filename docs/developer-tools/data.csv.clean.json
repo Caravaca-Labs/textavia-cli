@@ -9,7 +9,7 @@
   "examples": [
     {
       "title": "Clean CSV",
-      "command": "txv csv clean users.csv"
+      "command": "txv csv clean --file users.csv"
     }
   ],
   "webUrl": "https://textavia.com/tools/csv-cleaner",

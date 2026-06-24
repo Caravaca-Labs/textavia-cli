@@ -1,7 +1,8 @@
 {
   "name": "textavia-agent-skills",
   "version": "0.1.0",
-  "description": "Generated agent skills derived from the Textavia registry.",
+  "private": true,
+  "description": "Internal compatibility workspace. The v1 npm package ships agent skills inside textavia.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,7 +14,7 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "skills"],
+  "files": ["dist"],
   "scripts": {
     "build": "tsc -b",
     "typecheck": "tsc --noEmit"

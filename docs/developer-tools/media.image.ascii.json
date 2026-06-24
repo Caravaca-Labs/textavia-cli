@@ -5,7 +5,7 @@
   "description": "Image ASCII art is provided by the optional media plugin.",
   "category": "media",
   "command": "txv run media.image.ascii",
-  "aliases": ["image ascii"],
+  "aliases": ["image ascii", "image to-ascii"],
   "examples": [],
   "inputKind": ["image", "file"],
   "outputKind": ["text"],

@@ -48,7 +48,9 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     outputKind: ['csv', 'text'],
     webUrl: `${WEB_BASE}/csv-cleaner`,
     optionsSchema: CsvOptions,
-    examples: [{ title: 'Clean CSV', command: 'txv csv clean users.csv' }],
+    examples: [
+      { title: 'Clean CSV', command: 'txv csv clean --file users.csv' },
+    ],
     stability: 'stable',
     execute: (input, options) => {
       const opts = CsvOptions.parse(options);
@@ -67,7 +69,9 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     outputKind: ['json'],
     webUrl: `${WEB_BASE}/csv-to-json`,
     optionsSchema: CsvOptions,
-    examples: [{ title: 'Convert CSV', command: 'txv csv to-json users.csv' }],
+    examples: [
+      { title: 'Convert CSV', command: 'txv csv to-json --file users.csv' },
+    ],
     stability: 'stable',
     execute: (input, options) => {
       const opts = CsvOptions.parse(options);
@@ -89,7 +93,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     examples: [
       {
         title: 'CSV to Markdown',
-        command: 'txv csv to-markdown-table users.csv --out users.md',
+        command: 'txv csv to-markdown-table --file users.csv --out users.md',
       },
     ],
     stability: 'stable',
@@ -112,7 +116,9 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     outputKind: ['csv', 'text'],
     webUrl: `${WEB_BASE}/json-to-csv`,
     optionsSchema: CsvOptions,
-    examples: [{ title: 'JSON to CSV', command: 'txv json to-csv users.json' }],
+    examples: [
+      { title: 'JSON to CSV', command: 'txv json to-csv --file users.json' },
+    ],
     stability: 'stable',
     execute: (input, options) => {
       const opts = CsvOptions.parse(options);
@@ -132,7 +138,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     webUrl: `${WEB_BASE}/json-to-yaml`,
     optionsSchema: z.object({}),
     examples: [
-      { title: 'JSON to YAML', command: 'txv json to-yaml data.json' },
+      { title: 'JSON to YAML', command: 'txv json to-yaml --file data.json' },
     ],
     stability: 'stable',
     execute: (input) => textResult(jsonToYaml(requireText(input))),
@@ -152,7 +158,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     examples: [
       {
         title: 'JSON to Markdown',
-        command: 'txv json to-markdown-table users.json',
+        command: 'txv json to-markdown-table --file users.json',
       },
     ],
     stability: 'stable',
@@ -171,7 +177,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     webUrl: `${WEB_BASE}/yaml-to-json`,
     optionsSchema: z.object({}),
     examples: [
-      { title: 'YAML to JSON', command: 'txv yaml to-json data.yaml' },
+      { title: 'YAML to JSON', command: 'txv yaml to-json --file data.yaml' },
     ],
     stability: 'stable',
     execute: (input) => jsonResult(yamlToJson(requireText(input))),
@@ -188,7 +194,9 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     outputKind: ['text'],
     webUrl: `${WEB_BASE}/xml-formatter`,
     optionsSchema: XmlFormatOptions,
-    examples: [{ title: 'Format XML', command: 'txv xml format data.xml' }],
+    examples: [
+      { title: 'Format XML', command: 'txv xml format --file data.xml' },
+    ],
     stability: 'stable',
     execute: (input, options) => {
       const opts = XmlFormatOptions.parse(options);
@@ -207,7 +215,9 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     outputKind: ['json'],
     webUrl: `${WEB_BASE}/xml-to-json`,
     optionsSchema: z.object({}),
-    examples: [{ title: 'XML to JSON', command: 'txv xml to-json data.xml' }],
+    examples: [
+      { title: 'XML to JSON', command: 'txv xml to-json --file data.xml' },
+    ],
     stability: 'stable',
     execute: (input) => jsonResult(xmlToJson(requireText(input))),
   },
@@ -226,7 +236,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     examples: [
       {
         title: 'Markdown to HTML',
-        command: 'txv markdown to-html README.md --out README.html',
+        command: 'txv markdown to-html --file README.md --out README.html',
       },
     ],
     stability: 'stable',
@@ -247,7 +257,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     examples: [
       {
         title: 'HTML to Markdown',
-        command: 'txv html to-markdown page.html --out page.md',
+        command: 'txv html to-markdown --file page.html --out page.md',
       },
     ],
     stability: 'stable',
@@ -318,7 +328,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     examples: [
       {
         title: 'Markdown table to JSON',
-        command: 'txv markdown table-to-json table.md',
+        command: 'txv markdown table-to-json --file table.md',
       },
     ],
     stability: 'stable',
@@ -339,7 +349,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     examples: [
       {
         title: 'Markdown table to CSV',
-        command: 'txv markdown table-to-csv table.md',
+        command: 'txv markdown table-to-csv --file table.md',
       },
     ],
     stability: 'stable',
@@ -363,7 +373,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
     webUrl: `${WEB_BASE}/markdown-table-generator`,
     optionsSchema: CsvOptions,
     examples: [
-      { title: 'Create table', command: 'txv table create users.csv' },
+      { title: 'Create table', command: 'txv table create --file users.csv' },
     ],
     stability: 'stable',
     execute: (input, options) => {

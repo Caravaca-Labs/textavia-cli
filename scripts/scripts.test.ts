@@ -77,16 +77,40 @@ describe('agent skill generator', () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'textavia-skills-'));
     try {
       expect(() => generateAgentSkills({ outputDir })).not.toThrow();
-      const skillPath = join(outputDir, 'json-formatter', 'SKILL.md');
+      const skillPath = join(outputDir, 'textavia-json-tools', 'SKILL.md');
       expect(existsSync(skillPath)).toBe(true);
-      expect(readFileSync(skillPath, 'utf8')).toContain('txv json format');
-      const markdownSkillPath = join(outputDir, 'markdown-table', 'SKILL.md');
+      const skill = readFileSync(skillPath, 'utf8');
+      expect(skill).toContain('name: textavia-json-tools');
+      expect(skill).toContain('metadata:');
+      expect(skill).toContain('txv json format');
+      const markdownSkillPath = join(
+        outputDir,
+        'textavia-markdown-table-tools',
+        'SKILL.md',
+      );
       expect(existsSync(markdownSkillPath)).toBe(true);
       expect(readFileSync(markdownSkillPath, 'utf8')).toContain(
         'txv table create',
       );
     } finally {
       rmSync(outputDir, { recursive: true, force: true });
+    }
+  });
+
+  it('can generate package skills and a repo mirror in one run', () => {
+    const packageDir = mkdtempSync(join(tmpdir(), 'textavia-package-skills-'));
+    const mirrorDir = mkdtempSync(join(tmpdir(), 'textavia-mirror-skills-'));
+    try {
+      expect(() =>
+        generateAgentSkills({ outputDirs: [packageDir, mirrorDir] }),
+      ).not.toThrow();
+      const relativeSkill = join('textavia-base64-debugger', 'SKILL.md');
+      expect(readFileSync(join(packageDir, relativeSkill), 'utf8')).toBe(
+        readFileSync(join(mirrorDir, relativeSkill), 'utf8'),
+      );
+    } finally {
+      rmSync(packageDir, { recursive: true, force: true });
+      rmSync(mirrorDir, { recursive: true, force: true });
     }
   });
 });

@@ -5,7 +5,7 @@
   "description": "Drops lines that are empty after trimming.",
   "category": "lines",
   "command": "txv run lines.remove-empty",
-  "aliases": ["remove-empty"],
+  "aliases": ["remove-empty", "text remove-empty-lines"],
   "examples": [
     {
       "title": "Remove empty",

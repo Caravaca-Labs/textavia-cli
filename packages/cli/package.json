@@ -4,6 +4,27 @@
   "description": "Fast, local-first command-line toolkit for text, data, encoding, formatting, and developer utilities.",
   "license": "MIT",
   "type": "module",
+  "homepage": "https://textavia.com/developers/textavia-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caravaca-Labs/textavia.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/Caravaca-Labs/textavia/issues"
+  },
+  "keywords": [
+    "cli",
+    "text-tools",
+    "developer-tools",
+    "agent-skills",
+    "pi-package",
+    "json",
+    "base64",
+    "csv",
+    "markdown",
+    "privacy"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
@@ -17,7 +38,13 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": ["dist", "skills", "README.md", "LICENSE"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "pi": {
+    "skills": ["./skills"]
+  },
   "scripts": {
     "build": "tsc -b",
     "typecheck": "tsc --noEmit"

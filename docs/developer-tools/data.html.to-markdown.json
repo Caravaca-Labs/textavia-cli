@@ -5,11 +5,11 @@
   "description": "Converts common HTML block and inline tags to Markdown and strips unsupported tags.",
   "category": "data",
   "command": "txv run data.html.to-markdown",
-  "aliases": ["html to-markdown", "html-to-markdown"],
+  "aliases": ["html to-markdown", "html-to-markdown", "markdown from-html"],
   "examples": [
     {
       "title": "HTML to Markdown",
-      "command": "txv html to-markdown page.html --out page.md"
+      "command": "txv html to-markdown --file page.html --out page.md"
     }
   ],
   "webUrl": "https://textavia.com/tools/html-to-markdown",

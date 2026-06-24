@@ -9,7 +9,7 @@
   "examples": [
     {
       "title": "Markdown to HTML",
-      "command": "txv markdown to-html README.md --out README.html"
+      "command": "txv markdown to-html --file README.md --out README.html"
     }
   ],
   "webUrl": "https://textavia.com/tools/markdown-to-html",

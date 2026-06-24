@@ -63,7 +63,9 @@ export const devUtilityTools: readonly TextaviaToolDefinition[] = [
     outputKind: ['json'],
     webUrl: `${WEB_BASE}/jwt-decoder`,
     optionsSchema: z.object({}),
-    examples: [{ title: 'Decode JWT', command: 'txv jwt decode token.txt' }],
+    examples: [
+      { title: 'Decode JWT', command: 'txv jwt decode --file token.txt' },
+    ],
     stability: 'stable',
     execute: (input) =>
       jsonResult(decodeJwt(requireText(input)), {

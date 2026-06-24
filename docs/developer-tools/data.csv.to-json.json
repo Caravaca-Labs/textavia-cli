@@ -9,7 +9,7 @@
   "examples": [
     {
       "title": "Convert CSV",
-      "command": "txv csv to-json users.csv"
+      "command": "txv csv to-json --file users.csv"
     }
   ],
   "webUrl": "https://textavia.com/tools/csv-to-json",

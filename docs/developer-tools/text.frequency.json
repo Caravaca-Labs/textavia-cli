@@ -5,7 +5,7 @@
   "description": "Produces a case-insensitive word frequency map.",
   "category": "text",
   "command": "txv run text.frequency",
-  "aliases": ["frequency"],
+  "aliases": ["frequency", "word-frequency", "text word-frequency"],
   "examples": [
     {
       "title": "Frequency",

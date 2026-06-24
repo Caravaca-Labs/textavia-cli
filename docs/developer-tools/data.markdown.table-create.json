@@ -9,7 +9,7 @@
   "examples": [
     {
       "title": "Create table",
-      "command": "txv table create users.csv"
+      "command": "txv table create --file users.csv"
     }
   ],
   "webUrl": "https://textavia.com/tools/markdown-table-generator",

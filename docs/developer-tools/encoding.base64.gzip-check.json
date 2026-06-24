@@ -2,15 +2,20 @@
   "id": "encoding.base64.gzip-check",
   "name": "Base64 gzip check",
   "summary": "Check whether Base64 content is gzipped.",
-  "description": "Future tool: detects gzip-compressed Base64 payloads.",
+  "description": "Decodes Base64 locally and checks for a gzip payload.",
   "category": "encoding",
   "command": "txv run encoding.base64.gzip-check",
-  "aliases": [],
-  "examples": [],
+  "aliases": ["base64 gzip-check"],
+  "examples": [
+    {
+      "title": "Gzip check",
+      "command": "txv base64 gzip-check H4sI --json"
+    }
+  ],
   "webUrl": "https://textavia.com/tools/base64-gzip-check",
   "inputKind": ["text"],
   "outputKind": ["json"],
-  "stability": "future",
+  "stability": "stable",
   "requiresNetwork": false,
   "requiresFilesystem": false
 }

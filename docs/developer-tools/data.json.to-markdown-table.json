@@ -9,7 +9,7 @@
   "examples": [
     {
       "title": "JSON to Markdown",
-      "command": "txv json to-markdown-table users.json"
+      "command": "txv json to-markdown-table --file users.json"
     }
   ],
   "webUrl": "https://textavia.com/tools/json-to-markdown-table",
