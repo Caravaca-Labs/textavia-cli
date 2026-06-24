@@ -6,6 +6,12 @@ MCP server exposing Textavia tools generated from the shared registry.
 npx @textavia/mcp
 ```
 
+MCP Registry name:
+
+```text
+io.github.caravaca-labs/textavia-mcp
+```
+
 ## Links
 
 - [Repo MCP docs](https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/mcp.md)

@@ -68,9 +68,22 @@ describe('release readiness metadata', () => {
 
   it('keeps MCP publishable and agent skills bundled in textavia', () => {
     const mcp = readJson(resolve(root, 'packages/mcp/package.json'));
+    const rootServer = readJson(resolve(root, 'server.json'));
+    const server = readJson(resolve(root, 'packages/mcp/server.json'));
     const skills = readJson(
       resolve(root, 'packages/agent-skills/package.json'),
     );
+    expect(rootServer).toEqual(server);
+    expect(mcp.mcpName).toBe('io.github.caravaca-labs/textavia-mcp');
+    expect(server.name).toBe(mcp.mcpName);
+    expect(server.packages).toEqual([
+      {
+        registryType: 'npm',
+        identifier: '@textavia/mcp',
+        version: mcp.version,
+        transport: { type: 'stdio' },
+      },
+    ]);
     expect(mcp.repository).toEqual({
       type: 'git',
       url: 'git+https://github.com/Caravaca-Labs/textavia-cli.git',
@@ -80,7 +93,7 @@ describe('release readiness metadata', () => {
       url: 'https://github.com/Caravaca-Labs/textavia-cli/issues',
     });
     expect(mcp.bin).toEqual({ 'textavia-mcp': './dist/server.js' });
-    expect(mcp.files).toEqual(['dist']);
+    expect(mcp.files).toEqual(['dist', 'server.json', 'README.md', 'LICENSE']);
     expect(mcp.homepage).toBe(
       'https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/mcp.md',
     );

@@ -1,6 +1,7 @@
 {
   "name": "@textavia/mcp",
   "version": "0.1.0",
+  "mcpName": "io.github.caravaca-labs/textavia-mcp",
   "description": "MCP server exposing Textavia tools generated from the shared registry.",
   "license": "MIT",
   "type": "module",
@@ -34,7 +35,7 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": ["dist", "server.json", "README.md", "LICENSE"],
   "publishConfig": {
     "access": "public"
   },

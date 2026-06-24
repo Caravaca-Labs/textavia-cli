@@ -28,6 +28,9 @@ import {
 import { registerStandardTools } from '@textavia/plugin-standard';
 import { z } from 'zod';
 
+export const MCP_SERVER_NAME = 'io.github.caravaca-labs/textavia-mcp';
+export const MCP_SERVER_VERSION = '0.1.0';
+
 /** Runtime config for MCP exposure and execution. */
 export interface TextaviaMcpConfig {
   readonly enabledCategories?: readonly ToolCategory[];
@@ -59,7 +62,7 @@ export interface GeneratedMcpTool {
 export function buildMcpRegistry(): ToolRegistry {
   const registry = createToolRegistry({
     cliName: 'textavia-mcp',
-    version: '0.1.0',
+    version: MCP_SERVER_VERSION,
   });
   registerStandardTools(registry);
   return registry;
@@ -116,7 +119,10 @@ export function createTextaviaMcpServer(
   config: TextaviaMcpConfig = {},
   registry = buildMcpRegistry(),
 ): McpServer {
-  const server = new McpServer({ name: 'textavia', version: '0.1.0' });
+  const server = new McpServer({
+    name: MCP_SERVER_NAME,
+    version: MCP_SERVER_VERSION,
+  });
   const toolsByName = new Map(
     buildMcpToolList(registry, config).map((tool) => [tool.name, tool.toolId]),
   );

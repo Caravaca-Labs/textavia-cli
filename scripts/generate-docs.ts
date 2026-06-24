@@ -127,6 +127,12 @@ Run the server:
 npx @textavia/mcp
 \`\`\`
 
+MCP Registry name:
+
+\`\`\`text
+io.github.caravaca-labs/textavia-mcp
+\`\`\`
+
 Default behavior is local-first. Network tools are hidden unless enabled by config, and filesystem use can be disabled by the MCP host config.
 
 ## What it exposes
