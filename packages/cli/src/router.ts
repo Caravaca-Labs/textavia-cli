@@ -176,6 +176,28 @@ async function runNamespaceCommand(
     printHelp(deps);
     return 0;
   }
+  // Prefer an explicit two-word command when present so namespace-like aliases
+  // such as "qr" can still support commands like "qr generate".
+  const operation = parsed.positionals[1];
+  const namespaceTool =
+    operation === undefined
+      ? undefined
+      : deps.registry.resolveCommand(namespace, operation);
+  if (namespaceTool !== undefined) {
+    return executeTool({
+      registry: deps.registry,
+      tool: namespaceTool,
+      parsed,
+      positionalInput: positionalInputFrom(parsed, 2),
+      mode: parsed.globals.json === true ? 'agent' : 'human',
+      proc: deps.proc,
+      prompt: deps.prompt,
+      startedAt,
+      allowNetwork,
+      allowUnsafe,
+      configDefaults: mergeDefaults(config),
+    });
+  }
   // Per R4.5: a bare alias like "slug" resolves to a tool, and the next
   // positional is treated as text input (never as a file path).
   const aliasTool = deps.registry.resolveAlias(namespace);
@@ -195,7 +217,6 @@ async function runNamespaceCommand(
     });
   }
   // Otherwise interpret as <namespace> <operation> [input].
-  const operation = parsed.positionals[1];
   const tool =
     operation === undefined
       ? undefined
@@ -356,6 +377,47 @@ async function runAgent(
     deps.proc.stdout.write(`${JSON.stringify(manifest, null, 2)}\n`);
     return 0;
   }
+  if (sub === 'tools') {
+    const manifest: AgentManifest = deps.registry.manifest({
+      includeExperimental: findFlag(parsed, 'experimental'),
+      includeUnavailable: findFlag(parsed, 'all'),
+    });
+    deps.proc.stdout.write(
+      `${JSON.stringify({ tools: manifest.tools }, null, 2)}\n`,
+    );
+    return 0;
+  }
+  if (sub === 'explain') {
+    const toolId = parsed.positionals[2];
+    if (toolId === undefined) {
+      throw new UsageError('txv agent explain requires a tool id.');
+    }
+    const tool =
+      deps.registry.get(toolId) ?? deps.registry.resolveAlias(toolId);
+    if (tool === undefined) {
+      throw new UsageError(`Unknown tool: ${toolId}`);
+    }
+    deps.proc.stdout.write(
+      `${JSON.stringify(
+        {
+          id: tool.id,
+          name: tool.name,
+          summary: tool.summary,
+          description: tool.description,
+          command: `txv run ${tool.id}`,
+          inputKind: tool.inputKind,
+          outputKind: tool.outputKind,
+          stability: tool.stability,
+          requiresNetwork: tool.requiresNetwork,
+          requiresFilesystem: tool.requiresFilesystem,
+          requiresOptionalPlugin: tool.requiresOptionalPlugin,
+        },
+        null,
+        2,
+      )}\n`,
+    );
+    return 0;
+  }
   if (sub === 'run') {
     const toolId = parsed.positionals[2];
     if (toolId === undefined) {
@@ -385,7 +447,7 @@ async function runAgent(
     });
   }
   throw new UsageError(`Unknown agent subcommand: ${sub ?? ''}`, {
-    hint: 'Use `agent run <tool-id>` or `agent manifest`.',
+    hint: 'Use `agent run <tool-id>`, `agent manifest`, `agent tools`, or `agent explain <tool-id>`.',
   });
 }
 
@@ -396,7 +458,9 @@ function printHelp(deps: RouterDeps): void {
   out.write('       txv run <tool-id> [input] [options]\n');
   out.write('       txv tools list|search|info|docs\n');
   out.write('       txv recipe <name> [input] [options]\n');
-  out.write('       txv agent run <tool-id> | txv agent manifest\n\n');
+  out.write(
+    '       txv agent run <tool-id> | txv agent manifest | txv agent tools | txv agent explain <tool-id>\n\n',
+  );
   out.write('Run `txv tools list` to see available tools.\n');
 }
 

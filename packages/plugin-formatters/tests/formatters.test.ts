@@ -39,6 +39,6 @@ describe('formatter plugin', () => {
         allowUnsafe: false,
       },
     );
-    expect(result?.output).toBe('a {\n  color:red;\n}');
+    expect(result?.output).toBe('a {\n  color: red;\n}\n');
   });
 });

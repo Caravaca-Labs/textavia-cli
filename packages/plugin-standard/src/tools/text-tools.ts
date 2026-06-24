@@ -209,7 +209,7 @@ export const textTools: readonly TextaviaToolDefinition[] = [
   {
     id: 'text.remove-formatting',
     name: 'Remove formatting',
-    aliases: [],
+    aliases: ['text strip-formatting', 'strip-formatting'],
     category: 'text',
     summary: 'Remove zero-width and control characters.',
     description:
@@ -273,7 +273,7 @@ export const textTools: readonly TextaviaToolDefinition[] = [
   {
     id: 'text.frequency',
     name: 'Word frequency',
-    aliases: ['frequency'],
+    aliases: ['frequency', 'word-frequency', 'text word-frequency'],
     category: 'text',
     summary: 'Count occurrences of each word.',
     description: 'Produces a case-insensitive word frequency map.',
@@ -291,7 +291,7 @@ export const textTools: readonly TextaviaToolDefinition[] = [
   {
     id: 'text.syllables',
     name: 'Syllable count',
-    aliases: ['syllables'],
+    aliases: ['syllables', 'syllable-count', 'text syllable-count'],
     category: 'text',
     summary: 'Estimate syllables in a word.',
     description: 'Estimates syllable count using a heuristic vowel-group rule.',

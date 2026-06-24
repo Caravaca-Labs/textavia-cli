@@ -18,6 +18,8 @@ interface TextaviaPluginModule {
   readonly standardPlugin?: { register(registry: ToolRegistry): void };
   readonly formatterPlugin?: { register(registry: ToolRegistry): void };
   readonly mediaPlugin?: { register(registry: ToolRegistry): void };
+  readonly stylePlugin?: { register(registry: ToolRegistry): void };
+  readonly dataPlugin?: { register(registry: ToolRegistry): void };
   readonly registerStandardTools?: (registry: ToolRegistry) => void;
   readonly default?: {
     name: string;
@@ -46,7 +48,9 @@ export async function loadOptionalPlugin(
       module.default ??
       module.standardPlugin ??
       module.formatterPlugin ??
-      module.mediaPlugin;
+      module.mediaPlugin ??
+      module.stylePlugin ??
+      module.dataPlugin;
     if (plugin !== undefined && typeof plugin.register === 'function') {
       plugin.register(registry);
       return true;

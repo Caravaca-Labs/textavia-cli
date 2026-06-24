@@ -235,7 +235,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
   {
     id: 'data.html.to-markdown',
     name: 'HTML to Markdown',
-    aliases: ['html to-markdown', 'html-to-markdown'],
+    aliases: ['html to-markdown', 'html-to-markdown', 'markdown from-html'],
     category: 'data',
     summary: 'Convert HTML to Markdown.',
     description:
@@ -290,7 +290,7 @@ export const dataTools: readonly TextaviaToolDefinition[] = [
   {
     id: 'data.html.strip',
     name: 'HTML strip',
-    aliases: ['html strip'],
+    aliases: ['html strip', 'text strip-html'],
     category: 'data',
     summary: 'Remove HTML tags.',
     description:

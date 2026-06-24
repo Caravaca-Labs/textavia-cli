@@ -16,6 +16,8 @@ export default defineConfig({
       '@textavia/plugin-standard': pkg('plugin-standard'),
       '@textavia/plugin-formatters': pkg('plugin-formatters'),
       '@textavia/plugin-media': pkg('plugin-media'),
+      '@textavia/plugin-style': pkg('plugin-style'),
+      '@textavia/plugin-data': pkg('plugin-data'),
       '@textavia/mcp': pkg('mcp'),
       textavia: pkg('cli'),
     },

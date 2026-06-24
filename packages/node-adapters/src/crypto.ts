@@ -13,12 +13,20 @@ import {
 import type { CryptoAdapter } from '@textavia/core';
 
 /** Algorithms supported by the hash tools. */
-export type HashAlgorithm = 'md5' | 'sha1' | 'sha256' | 'sha512';
+export type HashAlgorithm =
+  | 'md5'
+  | 'sha1'
+  | 'sha224'
+  | 'sha256'
+  | 'sha384'
+  | 'sha512';
 
 const SUPPORTED_ALGORITHMS: readonly HashAlgorithm[] = [
   'md5',
   'sha1',
+  'sha224',
   'sha256',
+  'sha384',
   'sha512',
 ];
 

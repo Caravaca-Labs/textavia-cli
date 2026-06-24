@@ -1,16 +1,19 @@
 /**
  * @fileoverview Optional formatter plugin.
  *
- * The first implementation keeps dependencies light and deterministic. The
- * package replaces standard placeholder tools when loaded by the CLI.
+ * Uses established formatters where practical while staying outside the
+ * default Textavia package.
  */
 
 import {
   ParseError,
+  type ResolvedInput,
   type TextaviaToolDefinition,
   type ToolRegistry,
   requireText,
 } from '@textavia/core';
+import prettier from 'prettier';
+import { format as formatSql } from 'sql-formatter';
 import { z } from 'zod';
 
 const WEB_BASE = 'https://textavia.com/tools';
@@ -25,45 +28,97 @@ interface FormatterSpec {
   readonly kind: string;
   readonly name: string;
   readonly webSlug: string;
-  readonly format: (input: string, indent: number) => string;
+  readonly format: (input: string, indent: number) => Promise<string> | string;
 }
 
-const SPECS: readonly FormatterSpec[] = [
+const PRETTIER_SPECS: readonly (Omit<FormatterSpec, 'format'> & {
+  readonly parser: string;
+})[] = [
   {
     id: 'format.html',
     kind: 'html',
     name: 'HTML formatter',
     webSlug: 'html-formatter',
-    format: formatMarkup,
+    parser: 'html',
   },
   {
     id: 'format.css',
     kind: 'css',
     name: 'CSS formatter',
     webSlug: 'css-formatter',
-    format: formatCssLike,
-  },
-  {
-    id: 'format.js',
-    kind: 'js',
-    name: 'JavaScript formatter',
-    webSlug: 'javascript-formatter',
-    format: formatCodeLike,
-  },
-  {
-    id: 'format.ts',
-    kind: 'ts',
-    name: 'TypeScript formatter',
-    webSlug: 'typescript-formatter',
-    format: formatCodeLike,
+    parser: 'css',
   },
   {
     id: 'format.scss',
     kind: 'scss',
     name: 'SCSS formatter',
     webSlug: 'scss-formatter',
-    format: formatCssLike,
+    parser: 'scss',
   },
+  {
+    id: 'format.less',
+    kind: 'less',
+    name: 'Less formatter',
+    webSlug: 'less-formatter',
+    parser: 'less',
+  },
+  {
+    id: 'format.js',
+    kind: 'js',
+    name: 'JavaScript formatter',
+    webSlug: 'javascript-formatter',
+    parser: 'babel',
+  },
+  {
+    id: 'format.jsx',
+    kind: 'jsx',
+    name: 'JSX formatter',
+    webSlug: 'jsx-formatter',
+    parser: 'babel',
+  },
+  {
+    id: 'format.ts',
+    kind: 'ts',
+    name: 'TypeScript formatter',
+    webSlug: 'typescript-formatter',
+    parser: 'typescript',
+  },
+  {
+    id: 'format.tsx',
+    kind: 'tsx',
+    name: 'TSX formatter',
+    webSlug: 'tsx-formatter',
+    parser: 'typescript',
+  },
+  {
+    id: 'format.yaml',
+    kind: 'yaml',
+    name: 'YAML formatter',
+    webSlug: 'yaml-formatter',
+    parser: 'yaml',
+  },
+  {
+    id: 'format.graphql',
+    kind: 'graphql',
+    name: 'GraphQL formatter',
+    webSlug: 'graphql-formatter',
+    parser: 'graphql',
+  },
+  {
+    id: 'format.markdown',
+    kind: 'markdown',
+    name: 'Markdown formatter',
+    webSlug: 'markdown-formatter',
+    parser: 'markdown',
+  },
+];
+
+const SPECS: readonly FormatterSpec[] = [
+  ...PRETTIER_SPECS.map((spec) => ({
+    ...spec,
+    format: (input: string, indent: number) =>
+      prettier.format(input, { parser: spec.parser, tabWidth: indent }),
+  })),
   {
     id: 'format.xml',
     kind: 'xml',
@@ -72,58 +127,92 @@ const SPECS: readonly FormatterSpec[] = [
     format: formatMarkup,
   },
   {
-    id: 'format.yaml',
-    kind: 'yaml',
-    name: 'YAML formatter',
-    webSlug: 'yaml-formatter',
-    format: formatYamlLike,
+    id: 'format.toml',
+    kind: 'toml',
+    name: 'TOML formatter',
+    webSlug: 'toml-formatter',
+    format: formatToml,
   },
   {
-    id: 'format.graphql',
-    kind: 'graphql',
-    name: 'GraphQL formatter',
-    webSlug: 'graphql-formatter',
-    format: formatCodeLike,
-  },
-  {
-    id: 'format.markdown',
-    kind: 'markdown',
-    name: 'Markdown formatter',
-    webSlug: 'markdown-formatter',
-    format: formatMarkdown,
+    id: 'format.sql',
+    kind: 'sql',
+    name: 'SQL formatter',
+    webSlug: 'sql-formatter',
+    format: (input: string, indent: number) =>
+      formatSql(input, { tabWidth: indent, keywordCase: 'upper' }),
   },
 ];
 
+const MINIFIERS: readonly {
+  readonly id: string;
+  readonly kind: string;
+  readonly minify: (input: string) => string;
+}[] = [
+  { id: 'format.minify.html', kind: 'html', minify: minifyMarkup },
+  { id: 'format.minify.css', kind: 'css', minify: minifyCss },
+  { id: 'format.minify.js', kind: 'js', minify: minifyJs },
+  { id: 'format.minify.json', kind: 'json', minify: minifyJson },
+  { id: 'format.minify.xml', kind: 'xml', minify: minifyMarkup },
+];
+
 /** All formatter tool definitions exposed by this optional plugin. */
-export const formatterTools: readonly TextaviaToolDefinition[] = SPECS.map(
-  (spec) => ({
-    id: spec.id,
-    name: spec.name,
-    aliases: [`format ${spec.kind}`],
-    category: 'format',
-    summary: `Format ${spec.kind.toUpperCase()} source.`,
-    description: `${spec.name} normalizes indentation and whitespace locally. Use project-native formatters for language-specific style enforcement.`,
-    inputKind: ['text', 'file'],
-    outputKind: ['text'],
-    webUrl: `${WEB_BASE}/${spec.webSlug}`,
-    optionsSchema: FormatOptions,
-    examples: [
-      {
-        title: `Format ${spec.kind}`,
-        command: `txv format ${spec.kind} --file input.${spec.kind}`,
+export const formatterTools: readonly TextaviaToolDefinition[] = [
+  ...SPECS.map(
+    (spec): TextaviaToolDefinition => ({
+      id: spec.id,
+      name: spec.name,
+      aliases: [`format ${spec.kind}`],
+      category: 'format' as const,
+      summary: `Format ${spec.kind.toUpperCase()} source.`,
+      description: `${spec.name} formats source locally through the optional formatter plugin.`,
+      inputKind: ['text', 'file'] as const,
+      outputKind: ['text'] as const,
+      webUrl: `${WEB_BASE}/${spec.webSlug}`,
+      optionsSchema: FormatOptions,
+      examples: [
+        {
+          title: `Format ${spec.kind}`,
+          command: `txv format ${spec.kind} --file input.${spec.kind}`,
+        },
+      ],
+      stability: 'stable' as const,
+      requiresOptionalPlugin: FORMATTER_PLUGIN,
+      execute: async (input: ResolvedInput, options: unknown) => {
+        const opts = FormatOptions.parse(options);
+        return {
+          output: await spec.format(requireText(input), opts.indent ?? 2),
+          outputKind: 'text' as const,
+        };
       },
-    ],
-    stability: 'stable',
-    requiresOptionalPlugin: FORMATTER_PLUGIN,
-    execute: (input, options) => {
-      const opts = FormatOptions.parse(options);
-      return {
-        output: spec.format(requireText(input), opts.indent ?? 2),
+    }),
+  ),
+  ...MINIFIERS.map(
+    (spec): TextaviaToolDefinition => ({
+      id: spec.id,
+      name: `${spec.kind.toUpperCase()} minifier`,
+      aliases: [`minify ${spec.kind}`],
+      category: 'format' as const,
+      summary: `Minify ${spec.kind.toUpperCase()} source.`,
+      description: `Minifies ${spec.kind.toUpperCase()} source locally through the optional formatter plugin.`,
+      inputKind: ['text', 'file'] as const,
+      outputKind: ['text'] as const,
+      webUrl: `${WEB_BASE}/${spec.kind}-minifier`,
+      optionsSchema: z.object({}),
+      examples: [
+        {
+          title: `Minify ${spec.kind}`,
+          command: `txv minify ${spec.kind} --file input.${spec.kind}`,
+        },
+      ],
+      stability: 'stable' as const,
+      requiresOptionalPlugin: FORMATTER_PLUGIN,
+      execute: (input: ResolvedInput) => ({
+        output: spec.minify(requireText(input)),
         outputKind: 'text' as const,
-      };
-    },
-  }),
-);
+      }),
+    }),
+  ),
+];
 
 /** Registers formatter tools into a registry, replacing placeholders. */
 export function registerFormatterTools(registry: ToolRegistry): void {
@@ -181,50 +270,39 @@ function isOpeningTag(tag: string): boolean {
   );
 }
 
-function formatCssLike(input: string, indent: number): string {
+function formatToml(input: string): string {
   return input
-    .replaceAll('{', ' {\n')
-    .replaceAll(';', ';\n')
-    .replaceAll('}', '\n}\n')
     .split(/\r?\n/)
     .map((line) => line.trim())
     .filter(Boolean)
-    .reduce<{ depth: number; lines: string[] }>(
-      (state, line) => {
-        const nextDepth =
-          line === '}' ? Math.max(0, state.depth - 1) : state.depth;
-        state.lines.push(`${' '.repeat(nextDepth * indent)}${line}`);
-        state.depth = line.endsWith('{') ? nextDepth + 1 : nextDepth;
-        return state;
-      },
-      { depth: 0, lines: [] },
-    )
-    .lines.join('\n');
+    .sort((a, b) => a.localeCompare(b))
+    .join('\n');
 }
 
-function formatCodeLike(input: string): string {
+function minifyMarkup(input: string): string {
   return input
-    .split(/\r?\n/)
-    .map((line) => line.trimEnd())
-    .join('\n')
-    .replace(/\n{3,}/g, '\n\n')
+    .replace(/>\s+</g, '><')
+    .replace(/\s{2,}/g, ' ')
     .trim();
 }
 
-function formatYamlLike(input: string): string {
+function minifyCss(input: string): string {
   return input
-    .split(/\r?\n/)
-    .map((line) => line.trimEnd())
-    .join('\n')
-    .replace(/\n{3,}/g, '\n\n')
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s*([{}:;,>+~])\s*/g, '$1')
     .trim();
 }
 
-function formatMarkdown(input: string): string {
+function minifyJs(input: string): string {
   return input
-    .split(/\r?\n/)
-    .map((line) => line.trimEnd())
-    .join('\n')
-    .replace(/\n{3,}/g, '\n\n')
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/(^|\s)\/\/.*$/gm, '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s*([{}()[\];,:=+\-*/<>])\s*/g, '$1')
     .trim();
+}
+
+function minifyJson(input: string): string {
+  return JSON.stringify(JSON.parse(input));
 }

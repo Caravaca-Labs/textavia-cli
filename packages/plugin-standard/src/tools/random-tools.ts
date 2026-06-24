@@ -14,7 +14,7 @@ import { z } from 'zod';
 import { WEB_BASE, jsonResult, textResult } from './common.js';
 
 const UuidOptions = z.object({
-  count: z
+  count: z.coerce
     .number()
     .int()
     .min(1)
@@ -24,7 +24,7 @@ const UuidOptions = z.object({
 });
 
 const PasswordOptions = z.object({
-  length: z
+  length: z.coerce
     .number()
     .int()
     .min(1)
@@ -39,7 +39,7 @@ const PasswordOptions = z.object({
     .boolean()
     .optional()
     .describe('Require at least one of each enabled pool'),
-  count: z
+  count: z.coerce
     .number()
     .int()
     .min(1)
@@ -74,7 +74,7 @@ export const randomTools: readonly TextaviaToolDefinition[] = [
   {
     id: 'random.password',
     name: 'Random password',
-    aliases: ['password'],
+    aliases: ['password', 'password generate'],
     category: 'random',
     summary: 'Generate a cryptographically secure password.',
     description:

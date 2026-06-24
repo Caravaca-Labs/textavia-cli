@@ -9,6 +9,8 @@
     { "path": "packages/cli" },
     { "path": "packages/plugin-formatters" },
     { "path": "packages/plugin-media" },
+    { "path": "packages/plugin-style" },
+    { "path": "packages/plugin-data" },
     { "path": "packages/mcp" },
     { "path": "packages/agent-skills" }
   ]

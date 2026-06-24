@@ -17,19 +17,6 @@ import { z } from 'zod';
 import { formatJson, minifyJson, validateJson } from '../transforms/json.js';
 import { WEB_BASE, jsonResult, textResult } from './common.js';
 
-async function hashInput(
-  input: ResolvedInput,
-  algorithm: HashAlgorithm,
-): Promise<string> {
-  if (input.byteStream !== undefined) {
-    return hashStream(algorithm, input.byteStream);
-  }
-  if (input.bytes !== undefined) {
-    return hashValue(algorithm, input.bytes);
-  }
-  return hashValue(algorithm, requireText(input));
-}
-
 const JsonFormatOptions = z.object({
   indent: z
     .number()
@@ -43,7 +30,9 @@ const JsonFormatOptions = z.object({
 const ALGORITHMS: readonly { algorithm: HashAlgorithm; webSlug: string }[] = [
   { algorithm: 'md5', webSlug: 'md5-hash' },
   { algorithm: 'sha1', webSlug: 'sha1-hash' },
+  { algorithm: 'sha224', webSlug: 'sha224-hash' },
   { algorithm: 'sha256', webSlug: 'sha256-hash' },
+  { algorithm: 'sha384', webSlug: 'sha384-hash' },
   { algorithm: 'sha512', webSlug: 'sha512-hash' },
 ];
 
@@ -152,9 +141,26 @@ export const hashTools: readonly TextaviaToolDefinition[] = ALGORITHMS.map(
       const opts = z
         .object({ encoding: z.enum(['hex', 'base64']).optional() })
         .parse(options);
-      return textResult(await hashInput(input, algorithm), {
-        meta: { encoding: opts.encoding ?? 'hex' },
-      });
+      return textResult(
+        await hashInputWithEncoding(input, algorithm, opts.encoding ?? 'hex'),
+        {
+          meta: { encoding: opts.encoding ?? 'hex' },
+        },
+      );
     },
   }),
 );
+
+async function hashInputWithEncoding(
+  input: ResolvedInput,
+  algorithm: HashAlgorithm,
+  encoding: 'hex' | 'base64',
+): Promise<string> {
+  if (input.byteStream !== undefined) {
+    return hashStream(algorithm, input.byteStream, encoding);
+  }
+  if (input.bytes !== undefined) {
+    return hashValue(algorithm, input.bytes, encoding);
+  }
+  return hashValue(algorithm, requireText(input), encoding);
+}

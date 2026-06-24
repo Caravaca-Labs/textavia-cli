@@ -419,6 +419,25 @@ describe('CLI developer utilities', () => {
     expect(result.stdout).toContain('height="128"');
     expect(result.stdout).toContain('viewBox="0 0 ');
   });
+
+  it('routes explicit generator aliases before bare aliases', async () => {
+    const qr = await run(registry(), [
+      'qr',
+      'generate',
+      'https://textavia.com',
+    ]);
+    expect(qr.code).toBe(0);
+    expect(qr.stdout).toContain('<svg');
+
+    const password = await run(registry(), [
+      'password',
+      'generate',
+      '--length',
+      '12',
+    ]);
+    expect(password.code).toBe(0);
+    expect(password.stdout.trim()).toHaveLength(12);
+  });
 });
 
 describe('CLI recipes and config', () => {
@@ -602,6 +621,27 @@ describe('CLI agent mode', () => {
     const parsed = JSON.parse(result.stdout);
     expect(parsed.cli).toBe('txv');
     expect(parsed.tools.length).toBeGreaterThan(0);
+  });
+
+  it('agent tools emits the tool list only', async () => {
+    const result = await run(registry(), ['agent', 'tools']);
+    expect(result.code).toBe(0);
+    const parsed = JSON.parse(result.stdout);
+    expect(parsed.tools.length).toBeGreaterThan(0);
+    expect(parsed.cli).toBeUndefined();
+  });
+
+  it('agent explain emits machine-readable tool metadata', async () => {
+    const result = await run(registry(), [
+      'agent',
+      'explain',
+      'encoding.base64.normalize',
+    ]);
+    expect(result.code).toBe(0);
+    const parsed = JSON.parse(result.stdout);
+    expect(parsed.id).toBe('encoding.base64.normalize');
+    expect(parsed.stability).toBe('stable');
+    expect(parsed.command).toBe('txv run encoding.base64.normalize');
   });
 });
 

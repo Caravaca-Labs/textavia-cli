@@ -206,7 +206,7 @@ export const devUtilityTools: readonly TextaviaToolDefinition[] = [
   {
     id: 'dev.qr',
     name: 'QR SVG',
-    aliases: ['qr'],
+    aliases: ['qr', 'qr generate'],
     category: 'dev',
     summary: 'Generate a local QR code SVG.',
     description:

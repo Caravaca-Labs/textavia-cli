@@ -59,6 +59,8 @@ export async function main(argv: readonly string[]): Promise<number> {
   // Best-effort optional plugin loading; missing plugins are not an error here.
   await loadOptionalPlugin(registry, '@textavia/plugin-formatters');
   await loadOptionalPlugin(registry, '@textavia/plugin-media');
+  await loadOptionalPlugin(registry, '@textavia/plugin-style');
+  await loadOptionalPlugin(registry, '@textavia/plugin-data');
 
   const code = await runCli(argv, {
     registry,
@@ -73,8 +75,20 @@ export async function main(argv: readonly string[]): Promise<number> {
   return code;
 }
 
+function installBrokenPipeHandler(stream: NodeJS.WritableStream): void {
+  stream.on('error', (error: NodeJS.ErrnoException) => {
+    if (error.code === 'EPIPE') {
+      process.exitCode = 0;
+      return;
+    }
+    throw error;
+  });
+}
+
 // When executed directly (not imported), run main and exit with its code.
 if (import.meta.url === `file://${process.argv[1]}`) {
+  installBrokenPipeHandler(process.stdout);
+  installBrokenPipeHandler(process.stderr);
   main(process.argv.slice(2))
     .then((code) => {
       process.exitCode = code;

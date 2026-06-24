@@ -11,10 +11,13 @@ import { dataTools } from './tools/data-tools.js';
 import { hashTools, jsonTools } from './tools/dev-tools.js';
 import { devUtilityTools } from './tools/dev-utility-tools.js';
 import { base64FutureTools, encodingTools } from './tools/encoding-tools.js';
+import { extraTools } from './tools/extra-tools.js';
 import { linesTools } from './tools/lines-tools.js';
 import {
+  dataPlaceholderTools,
   formatterPlaceholderTools,
   mediaPlaceholderTools,
+  stylePlaceholderTools,
 } from './tools/optional-tools.js';
 import { randomTools } from './tools/random-tools.js';
 import { textTools } from './tools/text-tools.js';
@@ -35,8 +38,11 @@ export const standardToolDefinitions = [
   ...devUtilityTools,
   ...randomTools,
   ...timestampTools,
+  ...extraTools,
   ...formatterPlaceholderTools,
   ...mediaPlaceholderTools,
+  ...stylePlaceholderTools,
+  ...dataPlaceholderTools,
 ];
 
 /** Plugin descriptor consumed by the CLI plugin loader. */
@@ -66,8 +72,11 @@ export {
   jsonTools,
   hashTools,
   devUtilityTools,
+  extraTools,
   randomTools,
   timestampTools,
   formatterPlaceholderTools,
   mediaPlaceholderTools,
+  stylePlaceholderTools,
+  dataPlaceholderTools,
 };

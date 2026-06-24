@@ -1,10 +1,10 @@
 /**
  * @fileoverview Registry entries for encoding tools: Base64 and URL.
  *
- * Base64 handles text, bytes, and file input byte-safely. Metadata placeholders
- * for normalize, repair, detect, and gzip-check are registered as future tools.
+ * Base64 handles text, bytes, and file input byte-safely.
  */
 
+import { gunzipSync } from 'node:zlib';
 import {
   type ResolvedInput,
   type TextaviaToolDefinition,
@@ -27,6 +27,42 @@ import {
   encodeUrlComponent,
 } from '../transforms/url.js';
 import { WEB_BASE, jsonResult, textResult } from './common.js';
+
+function normalizeBase64Value(input: string): string {
+  const cleaned = input
+    .trim()
+    .replace(/\s+/g, '')
+    .replace(/-/g, '+')
+    .replace(/_/g, '/');
+  const padding = cleaned.length % 4 === 0 ? 0 : 4 - (cleaned.length % 4);
+  return `${cleaned}${'='.repeat(padding)}`;
+}
+
+function base64LooksValid(input: string): boolean {
+  return isValidBase64(normalizeBase64Value(input));
+}
+
+function gzipCheck(input: string): {
+  readonly gzipped: boolean;
+  readonly decodedBytes: number;
+  readonly uncompressedBytes?: number;
+} {
+  const decoded = decodeBase64ToBytes(normalizeBase64Value(input));
+  const gzipped = decoded[0] === 0x1f && decoded[1] === 0x8b;
+  if (!gzipped) {
+    return { gzipped, decodedBytes: decoded.byteLength };
+  }
+  try {
+    const uncompressed = gunzipSync(Buffer.from(decoded));
+    return {
+      gzipped,
+      decodedBytes: decoded.byteLength,
+      uncompressedBytes: uncompressed.byteLength,
+    };
+  } catch {
+    return { gzipped, decodedBytes: decoded.byteLength };
+  }
+}
 
 function inputBytesOrText(input: ResolvedInput): {
   bytes?: Uint8Array;
@@ -227,63 +263,97 @@ export const encodingTools: readonly TextaviaToolDefinition[] = [
   },
 ];
 
-/** Metadata-only future placeholders for Base64 operations not yet implemented. */
+/** Additional Base64 diagnostics and repair tools. */
 export const base64FutureTools: readonly TextaviaToolDefinition[] = [
   {
     id: 'encoding.base64.normalize',
     name: 'Base64 normalize',
-    aliases: [],
+    aliases: ['base64 normalize'],
     category: 'encoding',
     summary: 'Normalize a Base64 string (whitespace and padding).',
     description:
-      'Future tool: normalizes whitespace and padding in a Base64 string.',
+      'Normalizes whitespace, URL-safe alphabet variants, and padding.',
     inputKind: ['text'],
     outputKind: ['text'],
     optionsSchema: z.object({}),
-    examples: [],
-    stability: 'future',
+    examples: [
+      {
+        title: 'Normalize Base64',
+        command: 'txv base64 normalize "SGV sbG8"',
+        output: 'SGVsbG8=',
+      },
+    ],
+    stability: 'stable',
     webUrl: `${WEB_BASE}/base64-normalize`,
+    execute: (input) => textResult(normalizeBase64Value(requireText(input))),
   },
   {
     id: 'encoding.base64.repair',
     name: 'Base64 repair',
-    aliases: [],
+    aliases: ['base64 repair'],
     category: 'encoding',
     summary: 'Attempt to repair a malformed Base64 string.',
-    description: 'Future tool: repairs common Base64 formatting errors.',
+    description:
+      'Repairs common copy/paste issues such as whitespace, missing padding, and URL-safe alphabet characters.',
     inputKind: ['text'],
     outputKind: ['text'],
     optionsSchema: z.object({}),
-    examples: [],
-    stability: 'future',
+    examples: [
+      {
+        title: 'Repair Base64',
+        command: 'txv base64 repair "SGVsbG8"',
+        output: 'SGVsbG8=',
+      },
+    ],
+    stability: 'stable',
     webUrl: `${WEB_BASE}/base64-repair`,
+    execute: (input) => textResult(normalizeBase64Value(requireText(input))),
   },
   {
     id: 'encoding.base64.detect',
     name: 'Base64 detect',
-    aliases: [],
+    aliases: ['base64 detect'],
     category: 'encoding',
     summary: 'Detect whether text is likely Base64.',
-    description: 'Future tool: heuristic detection of Base64 content.',
+    description:
+      'Uses a conservative local heuristic to detect Base64-looking text.',
     inputKind: ['text'],
     outputKind: ['json'],
     optionsSchema: z.object({}),
-    examples: [],
-    stability: 'future',
+    examples: [
+      {
+        title: 'Detect Base64',
+        command: 'txv base64 detect SGVsbG8= --json',
+      },
+    ],
+    stability: 'stable',
     webUrl: `${WEB_BASE}/base64-detect`,
+    execute: (input) => {
+      const text = requireText(input);
+      return jsonResult({
+        likelyBase64: text.trim().length >= 8 && base64LooksValid(text),
+        normalized: normalizeBase64Value(text),
+      });
+    },
   },
   {
     id: 'encoding.base64.gzip-check',
     name: 'Base64 gzip check',
-    aliases: [],
+    aliases: ['base64 gzip-check'],
     category: 'encoding',
     summary: 'Check whether Base64 content is gzipped.',
-    description: 'Future tool: detects gzip-compressed Base64 payloads.',
+    description: 'Decodes Base64 locally and checks for a gzip payload.',
     inputKind: ['text'],
     outputKind: ['json'],
     optionsSchema: z.object({}),
-    examples: [],
-    stability: 'future',
+    examples: [
+      {
+        title: 'Gzip check',
+        command: 'txv base64 gzip-check H4sI --json',
+      },
+    ],
+    stability: 'stable',
     webUrl: `${WEB_BASE}/base64-gzip-check`,
+    execute: (input) => jsonResult(gzipCheck(requireText(input))),
   },
 ];

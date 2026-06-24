@@ -64,14 +64,15 @@ describe('standard plugin registry assembly', () => {
     expect(registry.resolveAlias('uuid')?.id).toBe('random.uuid');
   });
 
-  it('marks future base64 tools as unavailable and excludes them from the manifest', () => {
+  it('includes base64 diagnostic tools as available stable tools', () => {
     const registry = buildRegistry();
     const normalize = registry.get('encoding.base64.normalize');
-    expect(normalize?.stability).toBe('future');
+    expect(normalize?.stability).toBe('stable');
+    expect(normalize?.execute).toBeDefined();
     const manifest = registry.manifest();
     expect(
       manifest.tools.find((t) => t.id === 'encoding.base64.normalize'),
-    ).toBeUndefined();
+    ).toBeDefined();
   });
 
   it('generates a manifest with available tools only', () => {

@@ -53,6 +53,10 @@ function prefersBytes(tool: TextaviaToolDefinition): boolean {
   );
 }
 
+function prefersFileBytes(tool: TextaviaToolDefinition): boolean {
+  return tool.inputKind.includes('bytes');
+}
+
 function resolveEncoding(encoding: string | undefined): TextEncoding {
   const value = encoding ?? 'utf8';
   // Narrow to a supported encoding; default to utf8 for anything unexpected.
@@ -153,7 +157,7 @@ async function resolveFile(
   encoding: TextEncoding,
   maxInputBytes?: number,
 ): Promise<ResolvedInput> {
-  if (prefersBytes(tool)) {
+  if (prefersFileBytes(tool)) {
     const bytes = await readBytesFile(path);
     assertSize(bytes.byteLength, maxInputBytes);
     return {

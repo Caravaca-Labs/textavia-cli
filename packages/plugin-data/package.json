@@ -1,7 +1,7 @@
 {
-  "name": "@textavia/plugin-formatters",
+  "name": "@textavia/plugin-data",
   "version": "0.1.0",
-  "description": "Optional heavier code formatters (JS, TS, CSS, HTML, SCSS, GraphQL, Markdown) for Textavia.",
+  "description": "Optional Excel and Google Sheets import/export tools for Textavia.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -20,9 +20,7 @@
   },
   "dependencies": {
     "@textavia/core": "workspace:*",
-    "@textavia/node-adapters": "workspace:*",
-    "prettier": "^3.6.2",
-    "sql-formatter": "^15.6.10",
+    "xlsx": "^0.18.5",
     "zod": "^3.23.8"
   },
   "devDependencies": {

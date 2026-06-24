@@ -51,7 +51,7 @@ export const linesTools: readonly TextaviaToolDefinition[] = [
   {
     id: 'lines.remove-empty',
     name: 'Remove empty lines',
-    aliases: ['remove-empty'],
+    aliases: ['remove-empty', 'text remove-empty-lines'],
     category: 'lines',
     summary: 'Remove empty lines.',
     description: 'Drops lines that are empty after trimming.',
@@ -165,7 +165,7 @@ export const linesTools: readonly TextaviaToolDefinition[] = [
   {
     id: 'lines.remove-duplicates',
     name: 'Remove duplicate lines',
-    aliases: ['remove-duplicates', 'dedupe'],
+    aliases: ['remove-duplicates', 'dedupe', 'text remove-duplicates'],
     category: 'lines',
     summary: 'Remove duplicate lines.',
     description:
