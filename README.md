@@ -182,6 +182,19 @@ Prefer a browser UI?
 - [Textavia privacy scrubber](https://textavia.com/tools/privacy-scrubber)
 - [Textavia CSV to JSON converter](https://textavia.com/tools/csv-to-json)
 
+Text style tools:
+
+- [Textavia glitch text converter](https://textavia.com/tools/glitch-text-converter)
+- [Textavia Discord fonts generator](https://textavia.com/tools/discord-fonts-generator)
+- [Textavia mirror text generator](https://textavia.com/tools/mirror-text-generator)
+- [Textavia lowercase converter](https://textavia.com/tools/lowercase)
+- [Textavia aesthetic text generator](https://textavia.com/tools/aesthetic-text-generator)
+- [Textavia Instagram fonts](https://textavia.com/tools/instagram-fonts)
+- [Textavia invisible text generator](https://textavia.com/tools/invisible-text-generator)
+- [Textavia remove underscores tool](https://textavia.com/tools/remove-underscores)
+- [Textavia wide text generator](https://textavia.com/tools/wide-text)
+- [Textavia Zalgo text generator](https://textavia.com/tools/zalgo)
+
 ## Privacy
 
 - Network is off by default; network tools require `--allow-network`.
