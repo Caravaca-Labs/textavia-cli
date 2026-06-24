@@ -3,12 +3,12 @@
   "name": "io.github.caravaca-labs/textavia-mcp",
   "title": "Textavia MCP",
   "description": "Local-first MCP server for text, JSON, Base64, CSV, regex, and developer utilities.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@textavia/mcp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "transport": {
         "type": "stdio"
       }

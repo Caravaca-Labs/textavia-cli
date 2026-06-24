@@ -1,6 +1,6 @@
 {
   "name": "@textavia/mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "mcpName": "io.github.caravaca-labs/textavia-mcp",
   "description": "MCP server exposing Textavia tools generated from the shared registry.",
   "license": "MIT",

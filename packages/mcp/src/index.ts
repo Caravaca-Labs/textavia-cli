@@ -29,7 +29,7 @@ import { registerStandardTools } from '@textavia/plugin-standard';
 import { z } from 'zod';
 
 export const MCP_SERVER_NAME = 'io.github.caravaca-labs/textavia-mcp';
-export const MCP_SERVER_VERSION = '0.1.0';
+export const MCP_SERVER_VERSION = '0.1.1';
 
 /** Runtime config for MCP exposure and execution. */
 export interface TextaviaMcpConfig {
