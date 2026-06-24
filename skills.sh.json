@@ -1,0 +1,26 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Developer Tools",
+      "description": "Skills for JSON, Base64, regex, and local developer conversion workflows.",
+      "skills": [
+        "textavia-json-tools",
+        "textavia-base64-debugger",
+        "textavia-regex-helper",
+        "textavia-dev-converters"
+      ]
+    },
+    {
+      "title": "Data Cleanup",
+      "description": "Skills for CSV, Markdown tables, text cleanup, and privacy-safe redaction.",
+      "skills": [
+        "textavia-csv-cleaner",
+        "textavia-markdown-table-tools",
+        "textavia-text-cleaner",
+        "textavia-privacy-scrubber"
+      ]
+    }
+  ]
+}

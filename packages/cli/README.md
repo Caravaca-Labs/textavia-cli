@@ -4,6 +4,7 @@
 [![npm package](https://img.shields.io/npm/v/textavia?label=npm)](https://www.npmjs.com/package/textavia)
 [![Pi package](https://img.shields.io/badge/Pi-package-3B82F6)](https://pi.dev/packages?search=textavia)
 [![Agent skills](https://img.shields.io/badge/agent_skills-SKILL.md-0F766E)](https://github.com/Caravaca-Labs/textavia-cli/blob/main/docs/agent-skills.md)
+[![skills.sh](https://skills.sh/b/caravaca-labs/textavia-cli)](https://skills.sh/caravaca-labs/textavia-cli)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Fast, local-first command-line toolkit for text, data, encoding, formatting,
@@ -76,6 +77,12 @@ Pi can load the bundled skills directly from this npm package:
 
 ```sh
 pi install npm:textavia
+```
+
+skills.sh-compatible agents can install the repo skills directly from GitHub:
+
+```sh
+npx skills add Caravaca-Labs/textavia-cli --skill '*' --yes
 ```
 
 The package manifest declares:

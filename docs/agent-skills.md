@@ -16,6 +16,12 @@ For Pi:
 pi install npm:textavia
 ```
 
+For skills.sh-compatible agents:
+
+```sh
+npx skills add Caravaca-Labs/textavia-cli --skill '*' --yes
+```
+
 The package manifest declares:
 
 ```json
