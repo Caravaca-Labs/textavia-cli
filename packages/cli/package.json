@@ -1,6 +1,6 @@
 {
   "name": "textavia",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fast, local-first command-line toolkit for text, data, encoding, formatting, and developer utilities.",
   "license": "MIT",
   "type": "module",

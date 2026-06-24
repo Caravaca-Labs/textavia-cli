@@ -7,12 +7,14 @@
  * passthrough tool options stay deterministic and testable.
  */
 
+import { realpathSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { Command } from 'commander';
 import { GLOBAL_OPTIONS } from './global-options.js';
 import { buildCliRegistry, loadOptionalPlugin } from './registry-builder.js';
 import { runCli } from './router.js';
 
-export const CLI_VERSION = '0.1.0';
+export const CLI_VERSION = '0.1.1';
 export const CLI_NAME = 'txv';
 
 /** Builds a Commander program used to render help and version output. */
@@ -85,8 +87,23 @@ function installBrokenPipeHandler(stream: NodeJS.WritableStream): void {
   });
 }
 
+export function isDirectCliEntry(
+  moduleUrl: string,
+  argvPath = process.argv[1],
+): boolean {
+  if (!argvPath) {
+    return false;
+  }
+  const modulePath = fileURLToPath(moduleUrl);
+  try {
+    return realpathSync(modulePath) === realpathSync(argvPath);
+  } catch {
+    return modulePath === argvPath;
+  }
+}
+
 // When executed directly (not imported), run main and exit with its code.
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (isDirectCliEntry(import.meta.url)) {
   installBrokenPipeHandler(process.stdout);
   installBrokenPipeHandler(process.stderr);
   main(process.argv.slice(2))

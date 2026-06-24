@@ -9,6 +9,7 @@ import {
 } from '@textavia/core';
 import { describe, expect, it } from 'vitest';
 import { z } from 'zod';
+import { CLI_VERSION } from '../src/cli.js';
 import { buildCliRegistry } from '../src/registry-builder.js';
 import { runCli } from '../src/router.js';
 
@@ -42,14 +43,14 @@ async function run(
   });
   const code = await runCli(argv, {
     registry,
-    version: '0.1.0',
+    version: CLI_VERSION,
     proc: { cwd: options.cwd ?? process.cwd(), stdin, stdout, stderr },
   });
   return { stdout: out, stderr: err, code };
 }
 
 function registry(): ToolRegistry {
-  return buildCliRegistry({ cliName: 'txv', version: '0.1.0' });
+  return buildCliRegistry({ cliName: 'txv', version: CLI_VERSION });
 }
 
 function networkRegistry(): ToolRegistry {
@@ -655,6 +656,6 @@ describe('CLI help and version', () => {
   it('prints version', async () => {
     const result = await run(registry(), ['version']);
     expect(result.code).toBe(0);
-    expect(result.stdout.trim()).toBe('0.1.0');
+    expect(result.stdout.trim()).toBe('0.1.1');
   });
 });

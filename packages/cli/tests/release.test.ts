@@ -1,6 +1,9 @@
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { mkdtempSync, readFileSync, rmSync, symlinkSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { describe, expect, it } from 'vitest';
+import { isDirectCliEntry } from '../src/cli.js';
 
 const root = resolve(new URL('../../..', import.meta.url).pathname);
 
@@ -41,6 +44,18 @@ describe('release readiness metadata', () => {
     expect(pkg.pi).toEqual({ skills: ['./skills'] });
     expect(pkg.keywords).toContain('agent-skills');
     expect(pkg.keywords).toContain('pi-package');
+  });
+
+  it('detects npm bin symlinks as direct CLI execution', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'txv-bin-'));
+    try {
+      const target = resolve(root, 'packages/cli/src/cli.ts');
+      const link = join(dir, 'txv');
+      symlinkSync(target, link);
+      expect(isDirectCliEntry(pathToFileURL(target).href, link)).toBe(true);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
   });
 
   it('keeps MCP publishable and agent skills bundled in textavia', () => {
